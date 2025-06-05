@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.log
+*.pot
+*.mo
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+
+# Django
+*.sqlite3
+*.db
+db.sqlite3
+media/
+staticfiles/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Migrations
+**/migrations/*.py
+!**/migrations/__init__.py
+**/migrations/*.pyc
+
+# Cache
+.cache/
+*.cache
+*.tmp
+*.bak
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+
+# Env vars or secrets
+.env
+.env.*
+
+# Test output
+junit-xml-report.xml
+test-results/
+
+# Logs
+*.log
+logs/
