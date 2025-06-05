@@ -69,6 +69,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'stock_analysis.wsgi.application'
 
+#ALLOWED_HOSTS = ['Mishan123.pythonanywhere.com']
+
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
