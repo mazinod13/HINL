@@ -1,0 +1,45 @@
+{# templates/cms/entrysheet_list.html #}
+{% extends "cms/base.html" %}
+{% block content %}
+<h2>Entry List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Symbol</th>
+      <th>Script</th>
+      <th>Sector</th>
+      <th>Type</th>
+      <th>Kitta</th>
+      <th>Billed Amount</th>
+      <th>Rate</th>
+      <th>Broker</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for entry in entries %}
+    <tr>
+      <td>{{ entry.date }}</td>
+      <td>{{ entry.symbol }}</td>
+      <td>{{ entry.script }}</td>
+      <td>{{ entry.sector }}</td>
+      <td>{{ entry.transaction }}</td>
+      <td>{{ entry.kitta }}</td>
+      <td>{{ entry.billed_amount }}</td>
+      <td>{{ entry.rate }}</td>
+      <td>{{ entry.broker }}</td>
+      <td>
+        <a href="{% url 'cms:entry_edit' entry.pk %}" class="btn btn-sm btn-warning">Edit</a>
+<a href="{% url 'cms:entry_delete' entry.pk %}" class="btn btn-sm btn-danger">Delete</a>
+
+
+      </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="10">No entries found.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+

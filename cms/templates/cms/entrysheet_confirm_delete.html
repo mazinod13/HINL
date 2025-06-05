@@ -1,0 +1,11 @@
+{# templates/cms/entrysheet_confirm_delete.html #}
+{% extends "cms/base.html" %}
+{% block content %}
+<h2>Delete Entry</h2>
+<p>Are you sure you want to delete the entry <strong>{{ object }}</strong>?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Confirm Delete</button>
+  <a href="{% url 'cms:entrysheet_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

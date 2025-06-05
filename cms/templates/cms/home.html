@@ -1,0 +1,10 @@
+{# templates/cms/home.html #}
+{% extends "cms/base.html" %}
+{% block content %}
+<div class="jumbotron text-center">
+  <h1>Welcome to the EntrySheet App</h1>
+  <p class="lead">Use the buttons below to view or add entries.</p>
+  <a href="{% url 'cms:entrysheet_list' %}" class="btn btn-primary btn-lg m-2">View Entries</a>
+<a class="btn btn-success btn-lg ms-2" href="{% url 'cms:entrysheet_editable_list' %}">➕ Add Entry</a>
+</div>
+{% endblock %}
