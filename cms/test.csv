@@ -1,0 +1,3 @@
+date,symbol,script,sector,transaction_type,kitta,billed_amount,rate,broker
+2024-06-01,NABIL,Nabil Bank Ltd,Commercial Bank,Buy,100,100000,100,ABC Securities
+2024-06-02,NRIC,NIC Asia Bank,Commercial Bank,Sell,50,50000,1000,MNO Securities

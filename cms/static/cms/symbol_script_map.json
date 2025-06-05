@@ -1,0 +1,3438 @@
+[
+  {
+    "Symbol": "ACEDBL",
+    "Script": "Ace Development Bank Ltd"
+  },
+  {
+    "Symbol": "ACEDPO",
+    "Script": "Ace Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "ACLBSL",
+    "Script": "Aarambha Chautari Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "ACLBSLP",
+    "Script": "Aarambha Chautari Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "ADBL",
+    "Script": "Agricultural Development Bank Limited"
+  },
+  {
+    "Symbol": "ADBLD83",
+    "Script": "10.35% Agricultural Bank Debenture 2083"
+  },
+  {
+    "Symbol": "ADLB",
+    "Script": "Adarsha Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "AEFL",
+    "Script": "Alpic Everest Finance Co. Ltd."
+  },
+  {
+    "Symbol": "AEFLPO",
+    "Script": "Alpic Everest Finance Limited Promotor Share"
+  },
+  {
+    "Symbol": "AFC",
+    "Script": "Annunapurna Finance Company Ltd."
+  },
+  {
+    "Symbol": "AFL",
+    "Script": "Api Finance Limited"
+  },
+  {
+    "Symbol": "AHL",
+    "Script": "Asian Hydropower Limited"
+  },
+  {
+    "Symbol": "AHPC",
+    "Script": "Arun Valley Hydropower Development Co. Ltd."
+  },
+  {
+    "Symbol": "AIC",
+    "Script": "Alliance Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "AIL",
+    "Script": "Ajod Insurance Limited"
+  },
+  {
+    "Symbol": "AKBSL",
+    "Script": "Adhikhola Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "AKBSLP",
+    "Script": "Adhikhola Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "AKJCL",
+    "Script": "Ankhu Khola Jalvidhyut Company Ltd"
+  },
+  {
+    "Symbol": "AKPL",
+    "Script": "Arun Kabeli Power Ltd."
+  },
+  {
+    "Symbol": "ALBSL",
+    "Script": "Asha Laghubitta Bittiya Sanstha Ltd"
+  },
+  {
+    "Symbol": "ALBSLP",
+    "Script": "Asha Laghubitta Bittiya Sanstha Ltd Promoter Share"
+  },
+  {
+    "Symbol": "ALDBL",
+    "Script": "Alpine Development Bank Limited"
+  },
+  {
+    "Symbol": "ALICL",
+    "Script": "Asian Life Insurance Co. Limited"
+  },
+  {
+    "Symbol": "ALICLP",
+    "Script": "Asian Life Insurance Co. Ltd Promoter Share"
+  },
+  {
+    "Symbol": "AMFI",
+    "Script": "Arambha Microfinance Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "ANLB",
+    "Script": "Aatmanirbhar Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "APEX",
+    "Script": "Apex Development Bank Ltd."
+  },
+  {
+    "Symbol": "API",
+    "Script": "Api Power Company Ltd."
+  },
+  {
+    "Symbol": "ARDBL",
+    "Script": "Araniko Development Bank Limited"
+  },
+  {
+    "Symbol": "ARDBLP",
+    "Script": "Araniko Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "AVU",
+    "Script": "Arun Vanaspati Udhyog Limited"
+  },
+  {
+    "Symbol": "AVYAN",
+    "Script": "Aviyan Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "AXIS",
+    "Script": "Axis Development Bank Limited"
+  },
+  {
+    "Symbol": "BARUN",
+    "Script": "Barun Hydropower Co. Ltd."
+  },
+  {
+    "Symbol": "BBBL",
+    "Script": "Bhrikuti Vikash Bank Limited"
+  },
+  {
+    "Symbol": "BBBLN",
+    "Script": "Bagheshwori Development Bank Limited"
+  },
+  {
+    "Symbol": "BBBLNP",
+    "Script": "Bagheshowari Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "BBBLPO",
+    "Script": "Bhrikuti Bikash Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "BBC",
+    "Script": "Bishal Bazar Company Limited"
+  },
+  {
+    "Symbol": "BDBL",
+    "Script": "Business Development Bank Limited"
+  },
+  {
+    "Symbol": "BEDC",
+    "Script": "Bhugol Energy Development Company Limited"
+  },
+  {
+    "Symbol": "BFC",
+    "Script": "Best Finance Company Ltd."
+  },
+  {
+    "Symbol": "BFCL",
+    "Script": "Bhaktapur Finance Co. Ltd."
+  },
+  {
+    "Symbol": "BFCPO",
+    "Script": "Best Finance Co. Limited Promoter Share"
+  },
+  {
+    "Symbol": "BFIL",
+    "Script": "Bhajuratna Finance & Saving Co. Ltd."
+  },
+  {
+    "Symbol": "BFL",
+    "Script": "Butwal Finance Ltd."
+  },
+  {
+    "Symbol": "BFLPO",
+    "Script": "Butwal Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "BGDBL",
+    "Script": "Bagmati Development Bank Ltd."
+  },
+  {
+    "Symbol": "BGDBLP",
+    "Script": "Bagmati Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "BGWT",
+    "Script": "Bhagawati Hydropower Development Company Limited"
+  },
+  {
+    "Symbol": "BHBL",
+    "Script": "Bhargav Bikash Bank Ltd."
+  },
+  {
+    "Symbol": "BHBLPO",
+    "Script": "Bhargav Bikash Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "BHDC",
+    "Script": "Bindhyabasini Hydropower Development Company Limited"
+  },
+  {
+    "Symbol": "BHL",
+    "Script": "Balephi Hydropower Limited"
+  },
+  {
+    "Symbol": "BHPL",
+    "Script": "Barahi Hydropower Public Limited"
+  },
+  {
+    "Symbol": "BJFL",
+    "Script": "Birgunj Finance Ltd."
+  },
+  {
+    "Symbol": "BJM",
+    "Script": "Biratnagar Jute Mills Limited"
+  },
+  {
+    "Symbol": "BLDBL",
+    "Script": "Biratlaxmi Bikas Bank Limited"
+  },
+  {
+    "Symbol": "BLDBLP",
+    "Script": "Biratlaxmi Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "BNHC",
+    "Script": "Buddha Bhumi Nepal Hydropower Company Limited"
+  },
+  {
+    "Symbol": "BNL",
+    "Script": "Bottlers Nepal (Balaju) Limited"
+  },
+  {
+    "Symbol": "BNT",
+    "Script": "Bottlers Nepal (Terai) Limited"
+  },
+  {
+    "Symbol": "BOAN",
+    "Script": "Bank Of Asia Nepal Limited"
+  },
+  {
+    "Symbol": "BOKD86",
+    "Script": "8.5% Bok Debenture 2086"
+  },
+  {
+    "Symbol": "BOKL",
+    "Script": "Bank Of Kathmandu Ltd."
+  },
+  {
+    "Symbol": "BOKLPO",
+    "Script": "Bank Of Kathmandu Lumbini Limited Promoter Share"
+  },
+  {
+    "Symbol": "BOKPO",
+    "Script": "Bank Of Kathmandu Limited Promoter Share"
+  },
+  {
+    "Symbol": "BPCL",
+    "Script": "Butwal Power Company Limited"
+  },
+  {
+    "Symbol": "BPW",
+    "Script": "BPW Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "BRTBL",
+    "Script": "Bright Development Bank Ltd"
+  },
+  {
+    "Symbol": "BSBL",
+    "Script": "Bishwa Bikas Bank Limited"
+  },
+  {
+    "Symbol": "BSBLPO",
+    "Script": "Bishwa Bikas Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "BSL",
+    "Script": "Birat Shoe Limited"
+  },
+  {
+    "Symbol": "BSM",
+    "Script": "Butwal Spinning Mills Limited"
+  },
+  {
+    "Symbol": "BUDBL",
+    "Script": "Business Universal Development Bank Ltd."
+  },
+  {
+    "Symbol": "BUDBLP",
+    "Script": "Business Universal Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "C30MF",
+    "Script": "Citizens Super 30 Mutual Fund"
+  },
+  {
+    "Symbol": "CBBL",
+    "Script": "Chhimek Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "CBBLPO",
+    "Script": "Chhimek Laghubitta Bikas Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "CBL",
+    "Script": "Civil Bank Ltd"
+  },
+  {
+    "Symbol": "CBLD88",
+    "Script": "Civil Bank Debenture 2088"
+  },
+  {
+    "Symbol": "CBLPO",
+    "Script": "Civil Bank Ltd Promoter Share"
+  },
+  {
+    "Symbol": "CCBD88",
+    "Script": "Century Debenture 2088"
+  },
+  {
+    "Symbol": "CCBL",
+    "Script": "Century Commercial Bank Ltd."
+  },
+  {
+    "Symbol": "CCBLPO",
+    "Script": "Century Commercial Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "CDBL",
+    "Script": "City Development Bank Limited"
+  },
+  {
+    "Symbol": "CDBLPO",
+    "Script": "City Development Bank Ltd. Promoter"
+  },
+  {
+    "Symbol": "CEDBL",
+    "Script": "Clean Energy Development Bank Limited"
+  },
+  {
+    "Symbol": "CEDBLP",
+    "Script": "Clean Energy Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "CEFL",
+    "Script": "City Express Finance Co. Limited"
+  },
+  {
+    "Symbol": "CEFLPO",
+    "Script": "City Express Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "CFCL",
+    "Script": "Central Finance Co. Ltd."
+  },
+  {
+    "Symbol": "CFCLPO",
+    "Script": "Central Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "CFL",
+    "Script": "Crystal Finance Ltd."
+  },
+  {
+    "Symbol": "CGH",
+    "Script": "Chandragiri Hills Limited"
+  },
+  {
+    "Symbol": "CHCL",
+    "Script": "Chilime Hydropower Company Limited"
+  },
+  {
+    "Symbol": "CHDC",
+    "Script": "CEDB Hydropower Development Company Limited"
+  },
+  {
+    "Symbol": "CHL",
+    "Script": "Chhyangdi Hydropower Ltd."
+  },
+  {
+    "Symbol": "CHLBS",
+    "Script": "Chautari Laghubitta Bittya Sanstha Ltd"
+  },
+  {
+    "Symbol": "CIT",
+    "Script": "Citizen Investment Trust"
+  },
+  {
+    "Symbol": "CITY",
+    "Script": "City Hotel Limited"
+  },
+  {
+    "Symbol": "CIVIC",
+    "Script": "Civic Development Bank Ltd"
+  },
+  {
+    "Symbol": "CIZBD86",
+    "Script": "10.25% Citizens Bank Debenture 2086"
+  },
+  {
+    "Symbol": "CKHL",
+    "Script": "Chirkhwa Hydropower Limited"
+  },
+  {
+    "Symbol": "CLI",
+    "Script": "Citizen Life Insurance Company Limited"
+  },
+  {
+    "Symbol": "CMB",
+    "Script": "Capital Merchant Bank & Finance Co. Ltd."
+  },
+  {
+    "Symbol": "CMBF",
+    "Script": "Cmb Finance Limited"
+  },
+  {
+    "Symbol": "CMBFLP",
+    "Script": "Capital Merchant Bank. & Fin. Promoter Share"
+  },
+  {
+    "Symbol": "CMBFPO",
+    "Script": "Cmb Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "CMBSL",
+    "Script": "Civil Merchant Bittiya Santha Ltd."
+  },
+  {
+    "Symbol": "CMBSLP",
+    "Script": "Civil Merchant Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "CMF1",
+    "Script": "Citizens Mutual Fund -1"
+  },
+  {
+    "Symbol": "CMF2",
+    "Script": "Citizens Mutual Fund 2"
+  },
+  {
+    "Symbol": "CNDBL",
+    "Script": "Country Development Bank Ltd."
+  },
+  {
+    "Symbol": "CNDBLP",
+    "Script": "Country Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "CORBL",
+    "Script": "Corporate Development Bank Limited"
+  },
+  {
+    "Symbol": "CSDBL",
+    "Script": "Cosmos Development Bank Ltd."
+  },
+  {
+    "Symbol": "CTBNL",
+    "Script": "Commerz And Trust Bank Nepal Ltd."
+  },
+  {
+    "Symbol": "CYCL",
+    "Script": "Cyc Nepal Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "CZBIL",
+    "Script": "Citizens Bank International Limited"
+  },
+  {
+    "Symbol": "CZBILP",
+    "Script": "Citizens Bank International Limited Promoter Share"
+  },
+  {
+    "Symbol": "DBBL",
+    "Script": "Deva Bikas Bank Limited"
+  },
+  {
+    "Symbol": "DBBLPO",
+    "Script": "Dev Bikasbank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "DCBL",
+    "Script": "Development Credit Bank Limited"
+  },
+  {
+    "Symbol": "DDBL",
+    "Script": "Deprosc Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "DDBLPO",
+    "Script": "Deprosc Laghubitta Promoter Share"
+  },
+  {
+    "Symbol": "DHPL",
+    "Script": "Dibyashwori Hydropower Ltd."
+  },
+  {
+    "Symbol": "DLBS",
+    "Script": "Dhaulagiri Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "DOLTI",
+    "Script": "Dolti Power Company Limited"
+  },
+  {
+    "Symbol": "DORDI",
+    "Script": "Dordi Khola Jal Bidyut Company Limited"
+  },
+  {
+    "Symbol": "EBL",
+    "Script": "Everest Bank Limited"
+  },
+  {
+    "Symbol": "EBLCP",
+    "Script": "Everest Bank Ltd (Pre)."
+  },
+  {
+    "Symbol": "EBLD86",
+    "Script": "8.5% Everest Bank Debenture"
+  },
+  {
+    "Symbol": "EBLPO",
+    "Script": "Everest Bank Ltd.Promoter"
+  },
+  {
+    "Symbol": "EDBL",
+    "Script": "Excel Development Bank Ltd."
+  },
+  {
+    "Symbol": "EDBLPO",
+    "Script": "Excel Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "EFL",
+    "Script": "Everest Finance Ltd."
+  },
+  {
+    "Symbol": "EFLPO",
+    "Script": "Everest Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "EHPL",
+    "Script": "Eastern Hydropower Limited"
+  },
+  {
+    "Symbol": "EIC",
+    "Script": "Everest Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "EICPO",
+    "Script": "Everest Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "EKBL",
+    "Script": "Ekata Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "ENL",
+    "Script": "Emerging Nepal Limited"
+  },
+  {
+    "Symbol": "ESC",
+    "Script": "National Pro. And Eco. Dev. Centre"
+  },
+  {
+    "Symbol": "FBBL",
+    "Script": "Fewa Bikas Bank Limited"
+  },
+  {
+    "Symbol": "FBBLPO",
+    "Script": "Fewa Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "FFCL",
+    "Script": "Fewa Finance Co. Ltd."
+  },
+  {
+    "Symbol": "FFCLPO",
+    "Script": "Fewa Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "FHL",
+    "Script": "Fleur Himalayan Limited"
+  },
+  {
+    "Symbol": "FMDBL",
+    "Script": "First Micro Finance Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "FMDBLP",
+    "Script": "First Micro Finance Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "FOWAD",
+    "Script": "Forward Microfinance Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "FOWADP",
+    "Script": "Forward Community Microfinance Bittiya Sanstha Ltd Promoter Share"
+  },
+  {
+    "Symbol": "GABL",
+    "Script": "Gaumukhee Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "GBBD85",
+    "Script": "Garima Debenture 2085"
+  },
+  {
+    "Symbol": "GBBL",
+    "Script": "Garima Bikas Bank Limited"
+  },
+  {
+    "Symbol": "GBBLPO",
+    "Script": "Garima Bikas Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "GBD80/81",
+    "Script": "10.25% Global IME Bank Ltd. Debenture 2080/81"
+  },
+  {
+    "Symbol": "GBILD86/87",
+    "Script": "Global IME Bank Limited Debenture 2086/87"
+  },
+  {
+    "Symbol": "GBIME",
+    "Script": "Global IME Bank Limited"
+  },
+  {
+    "Symbol": "GBIMEP",
+    "Script": "Global IME Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GBLBS",
+    "Script": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "GBLBSP",
+    "Script": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GCIL",
+    "Script": "Ghorahi Cement Industry Limited"
+  },
+  {
+    "Symbol": "GDBL",
+    "Script": "Gandaki Bikas Bank Limited"
+  },
+  {
+    "Symbol": "GDBL1",
+    "Script": "Gandaki Bikas Banklimited"
+  },
+  {
+    "Symbol": "GDBLPO",
+    "Script": "Gandaki Bikas Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "GDBNL",
+    "Script": "Gurkha Development Bank Limited"
+  },
+  {
+    "Symbol": "GFCL",
+    "Script": "Goodwill Finance Limited"
+  },
+  {
+    "Symbol": "GFCLPO",
+    "Script": "Goodwill Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GFL",
+    "Script": "General Finance Ltd."
+  },
+  {
+    "Symbol": "GFLK",
+    "Script": "Gorkha Finance Ltd."
+  },
+  {
+    "Symbol": "GFLKPO",
+    "Script": "Gorkha Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "GFLPO",
+    "Script": "General Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "GGBSL",
+    "Script": "Ghodighoda Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "GHL",
+    "Script": "Ghalemdi Hydro Limited"
+  },
+  {
+    "Symbol": "GIBF1",
+    "Script": "Global IME Balanced Fund-1"
+  },
+  {
+    "Symbol": "GIC",
+    "Script": "General Insurance Company Nepal Ltd"
+  },
+  {
+    "Symbol": "GILB",
+    "Script": "Global IME Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "GILBPO",
+    "Script": "Global IME Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GIMES1",
+    "Script": "Global IME Samunnat Scheme-1"
+  },
+  {
+    "Symbol": "GLBSL",
+    "Script": "Gurans Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "GLH",
+    "Script": "Greenlife Hydropower Limited"
+  },
+  {
+    "Symbol": "GLICL",
+    "Script": "Gurans Life Insurance Company Ltd."
+  },
+  {
+    "Symbol": "GLICLP",
+    "Script": "Guras Life Insurance Company Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GMFBS",
+    "Script": "Ganapati Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "GMFIL",
+    "Script": "Guheshowori Merchant Bank & Finance Co. Ltd."
+  },
+  {
+    "Symbol": "GMFILP",
+    "Script": "Guheyshwori Merchant & Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GRAND",
+    "Script": "Grand Bank Nepal Limited"
+  },
+  {
+    "Symbol": "GRANDP",
+    "Script": "Grand Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "GRDBL",
+    "Script": "Green Development Bank Ltd."
+  },
+  {
+    "Symbol": "GRDBLP",
+    "Script": "Green Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GRU",
+    "Script": "Gorakhkali Rubber Udhyog Limited"
+  },
+  {
+    "Symbol": "GSDBL",
+    "Script": "Gaurishankar Development Bank Ltd."
+  },
+  {
+    "Symbol": "GSDBLP",
+    "Script": "Gaurishankar Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GUFL",
+    "Script": "Gurkhas Finance Ltd."
+  },
+  {
+    "Symbol": "GUFLPO",
+    "Script": "Gurkhas Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "GULMI",
+    "Script": "Gulmi Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "GVL",
+    "Script": "Green Ventures Limited"
+  },
+  {
+    "Symbol": "GWFD83",
+    "Script": "12 % Goodwill Finance Limited Debenture 2083"
+  },
+  {
+    "Symbol": "H8020",
+    "Script": "Himalayan 80-20"
+  },
+  {
+    "Symbol": "HAMA",
+    "Script": "Hama Merchant & Finance Ltd."
+  },
+  {
+    "Symbol": "HAMAPO",
+    "Script": "Hama Merchant & Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "HAMRO",
+    "Script": "Hamro Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "HAMROP",
+    "Script": "Hamro Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "HATH",
+    "Script": "Hathway Finance Company Limited"
+  },
+  {
+    "Symbol": "HATHPO",
+    "Script": "Hathway Finance Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "HATHY",
+    "Script": "Hathway Investment Nepal Limited"
+  },
+  {
+    "Symbol": "HBDL",
+    "Script": "H&B Development Bank"
+  },
+  {
+    "Symbol": "HBDLPO",
+    "Script": "H&B Development Bank Promoter Share"
+  },
+  {
+    "Symbol": "HBL",
+    "Script": "Himalayan Bank Limited"
+  },
+  {
+    "Symbol": "HBLD83",
+    "Script": "10% Himalayan Bank Debenture 2083"
+  },
+  {
+    "Symbol": "HBLPO",
+    "Script": "Himalayan Bank Ltd. Promoter"
+  },
+  {
+    "Symbol": "HBT",
+    "Script": "Harisiddhi Brick And Tiles Limited"
+  },
+  {
+    "Symbol": "HDHPC",
+    "Script": "Himal Dolakha Hydropower Company Limited"
+  },
+  {
+    "Symbol": "HDL",
+    "Script": "Himalayan Distillery Limited"
+  },
+  {
+    "Symbol": "HEI",
+    "Script": "Himalayan Everest Insurance Limited"
+  },
+  {
+    "Symbol": "HEIP",
+    "Script": "Himalayan Everest Insurance Limited Promoter"
+  },
+  {
+    "Symbol": "HFL",
+    "Script": "Himalayan Finance Limited (Bittiya Sanstha)"
+  },
+  {
+    "Symbol": "HGI",
+    "Script": "Himalayan Gen.Insurance Co.Ltd."
+  },
+  {
+    "Symbol": "HGIC",
+    "Script": "Himalyan General Insurance Co."
+  },
+  {
+    "Symbol": "HGIPO",
+    "Script": "Himalayan General Insurance Co. Ltd Promoter Share"
+  },
+  {
+    "Symbol": "HHL",
+    "Script": "Himalayan Hydropower Limited"
+  },
+  {
+    "Symbol": "HIDCL",
+    "Script": "Hydorelectricity Investment And Development Company Ltd"
+  },
+  {
+    "Symbol": "HIDCLP",
+    "Script": "Hydorelectricity Investment And Development Company Limited Promoter"
+  },
+  {
+    "Symbol": "HLBSL",
+    "Script": "Himalayan Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "HLI",
+    "Script": "Himalayan Life Insurance Limited"
+  },
+  {
+    "Symbol": "HPPL",
+    "Script": "Himalayan Power Partner Ltd."
+  },
+  {
+    "Symbol": "HRL",
+    "Script": "Himalayan Reinsurance Limited"
+  },
+  {
+    "Symbol": "HTL",
+    "Script": "Himgiri Textile Industries Limited"
+  },
+  {
+    "Symbol": "HURJA",
+    "Script": "Himalaya Urja Bikas Company Limited"
+  },
+  {
+    "Symbol": "ICFC",
+    "Script": "Icfc Finance Limited"
+  },
+  {
+    "Symbol": "ICFCD83",
+    "Script": "12% Icfc Finance Limited Debenture 2083"
+  },
+  {
+    "Symbol": "ICFCPO",
+    "Script": "Icfc Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "IDBL",
+    "Script": "Infrastructure Development Bank Ltd."
+  },
+  {
+    "Symbol": "IDBLPO",
+    "Script": "Infrastructure Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "IFIL",
+    "Script": "Imperial Financial Inst. Ltd."
+  },
+  {
+    "Symbol": "IGI",
+    "Script": "IGI Prudential insurance Limited"
+  },
+  {
+    "Symbol": "IGIPO",
+    "Script": "IGI Prudential insurance Limited. Promoter Share"
+  },
+  {
+    "Symbol": "IHL",
+    "Script": "Ingwa Hydropower Limited"
+  },
+  {
+    "Symbol": "ILBS",
+    "Script": "Infinity Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "ILBSP",
+    "Script": "Infinity Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "ILFC",
+    "Script": "International Leasing & Finance Co. Ltd."
+  },
+  {
+    "Symbol": "ILI",
+    "Script": "IME Life Insurance Company Limited"
+  },
+  {
+    "Symbol": "IMEFI",
+    "Script": "Ime Financial Institution"
+  },
+  {
+    "Symbol": "IMEFIP",
+    "Script": "Ime Financial Institution Promoter Share"
+  },
+  {
+    "Symbol": "INDB",
+    "Script": "Innovative Development Bank Ltd."
+  },
+  {
+    "Symbol": "INDBL",
+    "Script": "International Development Bank Ltd"
+  },
+  {
+    "Symbol": "JALPA",
+    "Script": "Jalpa Samudayik Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "JBBL",
+    "Script": "Jyoti Bikas Bank Limited"
+  },
+  {
+    "Symbol": "JBBLPO",
+    "Script": "Jyoti Bikash Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "JBLB",
+    "Script": "Jeevan Bikas Laghubitta Bittya Sanstha Ltd"
+  },
+  {
+    "Symbol": "JBLBP",
+    "Script": "Jeevan Bikas Laghubitta Laghubitta Bittya Sanstha Ltd Promoter"
+  },
+  {
+    "Symbol": "JBNL",
+    "Script": "Janata Bank Nepal Ltd."
+  },
+  {
+    "Symbol": "JBNLPO",
+    "Script": "Janata Bank Nepal Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "JEFL",
+    "Script": "Jebils Finance Ltd."
+  },
+  {
+    "Symbol": "JEFLPO",
+    "Script": "Jebils Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "JFL",
+    "Script": "Janaki Finance Company Limited"
+  },
+  {
+    "Symbol": "JFLPO",
+    "Script": "Janaki Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "JHBL",
+    "Script": "Jhimruk Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "JLI",
+    "Script": "Jyoti Life Insurance Company Limited"
+  },
+  {
+    "Symbol": "JOSHI",
+    "Script": "Joshi Hydropower Development Company Ltd"
+  },
+  {
+    "Symbol": "JSLBB",
+    "Script": "Janautthan Samudayic Laghubitta Bittya Sanstha Limited"
+  },
+  {
+    "Symbol": "JSLBBP",
+    "Script": "Janautthan Samudayic Laghubitta Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "JSM",
+    "Script": "Jyoti Sinning Mills Limited"
+  },
+  {
+    "Symbol": "KADBL",
+    "Script": "Kanchan Development Bank Limited"
+  },
+  {
+    "Symbol": "KADBLP",
+    "Script": "Kanchan Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "KAFIL",
+    "Script": "Kaski Finance Limited"
+  },
+  {
+    "Symbol": "KAFILP",
+    "Script": "Kaski Finanace Ltd. Promoter"
+  },
+  {
+    "Symbol": "KBBL",
+    "Script": "Kailash Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "KBBLPO",
+    "Script": "Kailash Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "KBL",
+    "Script": "Kumari Bank Limited"
+  },
+  {
+    "Symbol": "KBLD86",
+    "Script": "10.25% Kbl Debenture 2086"
+  },
+  {
+    "Symbol": "KBLPO",
+    "Script": "Kumari Bank Limited Promotor Share"
+  },
+  {
+    "Symbol": "KBSH",
+    "Script": "Kutheli Bukhari Small Hydropower Limited"
+  },
+  {
+    "Symbol": "KCDBL",
+    "Script": "Kalinchowk Development Bank Ltd."
+  },
+  {
+    "Symbol": "KDBL",
+    "Script": "Kasthamandap Development Bank Limited"
+  },
+  {
+    "Symbol": "KDBLPO",
+    "Script": "Kasthamandap Dev. Bank Ltd Promoter Share"
+  },
+  {
+    "Symbol": "KDBY",
+    "Script": "Kumari Dhanabriddhi Yojana"
+  },
+  {
+    "Symbol": "KDL",
+    "Script": "Kalinchowk Darshan Limited"
+  },
+  {
+    "Symbol": "KEBL",
+    "Script": "Kabeli Bikas Bank Limited"
+  },
+  {
+    "Symbol": "KEF",
+    "Script": "Kumari Equity Fund"
+  },
+  {
+    "Symbol": "KFLPO",
+    "Script": "Kathmandu Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "KHDBL",
+    "Script": "Khandbari Development Bank Ltd"
+  },
+  {
+    "Symbol": "KIST",
+    "Script": "Kist Merchant Banking & Finance Lt"
+  },
+  {
+    "Symbol": "KISTPO",
+    "Script": "Kist Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "KKBL",
+    "Script": "Kakre Bihar Bikash Bank Ltd"
+  },
+  {
+    "Symbol": "KKHC",
+    "Script": "Khanikhola Hydropower Co. Ltd."
+  },
+  {
+    "Symbol": "KLBS",
+    "Script": "Khaptad Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "KLBSL",
+    "Script": "Kisan Lagubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "KLBSLP",
+    "Script": "Kisan Laghubitta Laghubitta Bittya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "KMBL",
+    "Script": "Kamana Bikas Bank Limited"
+  },
+  {
+    "Symbol": "KMBLPO",
+    "Script": "Kamana Bikas Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "KMBSL",
+    "Script": "Kuber Merchant Bittya Sanstha Ltd."
+  },
+  {
+    "Symbol": "KMCDB",
+    "Script": "Kalika Laghubitta Bittiya Sanstha Ltd"
+  },
+  {
+    "Symbol": "KMCDBP",
+    "Script": "Kalika Microcredit Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "KMFL",
+    "Script": "Kisan Microfinance Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "KNBL",
+    "Script": "Kankai Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "KNBLPO",
+    "Script": "Kankai Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "KPCL",
+    "Script": "Kalika Power Company Ltd"
+  },
+  {
+    "Symbol": "KRBL",
+    "Script": "Karnali Development Bank Limited"
+  },
+  {
+    "Symbol": "KRBLPO",
+    "Script": "Karnali Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "KSBBL",
+    "Script": "Kamana Sewa Bikas Bank Limited"
+  },
+  {
+    "Symbol": "KSBBLP",
+    "Script": "Kamana Sewa Bikas Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "KSLY",
+    "Script": "Kumari Sabal Yojana"
+  },
+  {
+    "Symbol": "LBBL",
+    "Script": "Lumbini Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "LBBLPO",
+    "Script": "Lumbini Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "LBFIL",
+    "Script": "Lord Buddha Finance Limited"
+  },
+  {
+    "Symbol": "LBLD86",
+    "Script": "10% Laxmi Bank Debenture 2086"
+  },
+  {
+    "Symbol": "LBLD88",
+    "Script": "8.5% Laxmi Bank Debenture 2088"
+  },
+  {
+    "Symbol": "LBLPO",
+    "Script": "Laxmi Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "LEC",
+    "Script": "Liberty Energy Company Limited"
+  },
+  {
+    "Symbol": "LEMF",
+    "Script": "Laxmi Equity Fund"
+  },
+  {
+    "Symbol": "LFC",
+    "Script": "Lalitpur Finance Ltd."
+  },
+  {
+    "Symbol": "LFCPO",
+    "Script": "Lalitpur Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "LFLC",
+    "Script": "Lumbini Finance Ltd."
+  },
+  {
+    "Symbol": "LFLCPO",
+    "Script": "Lumbini Finance Ltd Promoter Share"
+  },
+  {
+    "Symbol": "LGIL",
+    "Script": "Lumbini General Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "LGILPO",
+    "Script": "Lumbini General Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "LICN",
+    "Script": "Life Insurance Corporation (Nepal) Limited"
+  },
+  {
+    "Symbol": "LLBS",
+    "Script": "Laxmi Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "LSL",
+    "Script": "Laxmi Sunrise Bank Limited"
+  },
+  {
+    "Symbol": "LUBL",
+    "Script": "Lumbini Bank Limited"
+  },
+  {
+    "Symbol": "LUBLPO",
+    "Script": "Lumbini Bank Limited Promotor Share"
+  },
+  {
+    "Symbol": "LUK",
+    "Script": "Laxmi Capital Market Limited"
+  },
+  {
+    "Symbol": "LVF1",
+    "Script": "Laxmi Value Fund-1"
+  },
+  {
+    "Symbol": "LVF2",
+    "Script": "Laxmi Value Fund 2"
+  },
+  {
+    "Symbol": "MAKAR",
+    "Script": "Makar Jitumaya Suri Hydropower Limited"
+  },
+  {
+    "Symbol": "MANDU",
+    "Script": "Mandu Hydropower Limited"
+  },
+  {
+    "Symbol": "MBBL",
+    "Script": "Mahakali Bikas Bank Limited"
+  },
+  {
+    "Symbol": "MBBLPO",
+    "Script": "Mahakali Bikas Bank Ltd. Promoter"
+  },
+  {
+    "Symbol": "MBJC",
+    "Script": "Madhya Bhotekoshi Jalavidyut Company Limited"
+  },
+  {
+    "Symbol": "MBL",
+    "Script": "Machhapuchhre Bank Limited"
+  },
+  {
+    "Symbol": "MBLD2085",
+    "Script": "10.25% Machhapuchhre Bank Debenture 2085"
+  },
+  {
+    "Symbol": "MBLPO",
+    "Script": "Machhapuchhre Bank Limited Promotor Share"
+  },
+  {
+    "Symbol": "MCHL",
+    "Script": "Menchhiyam Hydropower Limited"
+  },
+  {
+    "Symbol": "MDB",
+    "Script": "Miteri Development Bank Limited"
+  },
+  {
+    "Symbol": "MDBL",
+    "Script": "Malika Bikas Bank Limited"
+  },
+  {
+    "Symbol": "MDBLPO",
+    "Script": "Malika Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "MDBPO",
+    "Script": "Miteri Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "MEGA",
+    "Script": "Mega Bank Nepal Ltd."
+  },
+  {
+    "Symbol": "MEGAPO",
+    "Script": "Mega Bank Nepal Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "MEHL",
+    "Script": "Manakamana Engineering Hydropower Limited"
+  },
+  {
+    "Symbol": "MEL",
+    "Script": "Modi Energy Limited"
+  },
+  {
+    "Symbol": "MEN",
+    "Script": "Mountain Energy Nepal Limited"
+  },
+  {
+    "Symbol": "MERO",
+    "Script": "Mero Microfinance Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "MEROPO",
+    "Script": "Mero Microfinance Bittiya Sanstha Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "METRO",
+    "Script": "Metro Development Bank Limited"
+  },
+  {
+    "Symbol": "MFIL",
+    "Script": "Manjushree Finance Ltd."
+  },
+  {
+    "Symbol": "MFILPO",
+    "Script": "Manjushree Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "MFL",
+    "Script": "Maha Laxmi Finance Ltd."
+  },
+  {
+    "Symbol": "MFLD85",
+    "Script": "9.5% Manjushree Finance Limited Debenture 2085"
+  },
+  {
+    "Symbol": "MFLPO",
+    "Script": "Maha Laxmi Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "MGBL",
+    "Script": "Madhyamanchal Gramin Development Bank Ltd."
+  },
+  {
+    "Symbol": "MHCL",
+    "Script": "Molung Hydropower Company Limited"
+  },
+  {
+    "Symbol": "MHL",
+    "Script": "Mandakini Hydropower Limited"
+  },
+  {
+    "Symbol": "MHNL",
+    "Script": "Mountain Hydro Nepal Limited"
+  },
+  {
+    "Symbol": "MIDBL",
+    "Script": "Mission Development Bank Ltd."
+  },
+  {
+    "Symbol": "MIDBLP",
+    "Script": "Mission Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "MKCL",
+    "Script": "Muktinath Krishi Company Limited"
+  },
+  {
+    "Symbol": "MKDBL",
+    "Script": "Manakamana Development Bank Limited"
+  },
+  {
+    "Symbol": "MKHC",
+    "Script": "Maya Khola Hydropower Company Limited"
+  },
+  {
+    "Symbol": "MKHL",
+    "Script": "Mai Khola Hydropower Limited"
+  },
+  {
+    "Symbol": "MKJC",
+    "Script": "Mailung Khola Jal Vidhyut Company Limited"
+  },
+  {
+    "Symbol": "MKLB",
+    "Script": "Manakamana Smart Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "MLBBL",
+    "Script": "Mithila Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "MLBBLP",
+    "Script": "Mithila Laghubitta Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "MLBL",
+    "Script": "Mahalaxmi Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "MLBL1",
+    "Script": "Mahalaxmi Bikasbank Limited"
+  },
+  {
+    "Symbol": "MLBLPO",
+    "Script": "Mahalxmi Bikas Bank Ltd. Promotor Share"
+  },
+  {
+    "Symbol": "MLBS",
+    "Script": "Manushi Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "MLBSL",
+    "Script": "Mahila Lagubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "MMDBL",
+    "Script": "Mount Makalu Development Bank Ltd."
+  },
+  {
+    "Symbol": "MMF1",
+    "Script": "Mega Mutual Fund -1"
+  },
+  {
+    "Symbol": "MMFDB",
+    "Script": "Mirmire Laghubitta Bittya Sanstha Limited"
+  },
+  {
+    "Symbol": "MMFDBP",
+    "Script": "Mirmire Microfinance Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "MMKJL",
+    "Script": "Mathillo Mailun Khola Jalvidhyut Limited"
+  },
+  {
+    "Symbol": "MNBBL",
+    "Script": "Muktinath Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "MNBBLP",
+    "Script": "Muktinath Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "MPFL",
+    "Script": "Multipurpose Finance Company Limited"
+  },
+  {
+    "Symbol": "MPFLPO",
+    "Script": "Multipurpose Finance Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "MSBBL",
+    "Script": "Manaslu Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "MSHL",
+    "Script": "Mid Solu Hydropower Limited"
+  },
+  {
+    "Symbol": "MSLB",
+    "Script": "Mahuli Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "MSLBP",
+    "Script": "Mahuli Samudayik Laghubitta Bittiya Sanstha Ltd Promoter Share"
+  },
+  {
+    "Symbol": "MSM",
+    "Script": "Morang Sugar Mills Limited"
+  },
+  {
+    "Symbol": "MSMBS",
+    "Script": "Mahila Sahayatra Microfinance Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "MTBL",
+    "Script": "Matribhumi Development Bank Ltd."
+  },
+  {
+    "Symbol": "NABB",
+    "Script": "Nepal Aawas Finance Limited"
+  },
+  {
+    "Symbol": "NABBC",
+    "Script": "Narayani Development Bank Limited"
+  },
+  {
+    "Symbol": "NABBCP",
+    "Script": "Narayani Development Bank Limited Promoter"
+  },
+  {
+    "Symbol": "NABBPO",
+    "Script": "Nepal Aawas Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "NABIL",
+    "Script": "Nabil Bank Limited"
+  },
+  {
+    "Symbol": "NABILP",
+    "Script": "Nabil Bank Limited Promotor Share"
+  },
+  {
+    "Symbol": "NADDF",
+    "Script": "Nic Asia Debt Fund"
+  },
+  {
+    "Symbol": "NADEP",
+    "Script": "Nadep Laghubittiya Bittya Sanstha Ltd."
+  },
+  {
+    "Symbol": "NAGRO",
+    "Script": "Nepal Agro Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "NBB",
+    "Script": "Nepal Bangladesh Bank Limited"
+  },
+  {
+    "Symbol": "NBBD2085",
+    "Script": "10.25% Nbbl Debenture 2085"
+  },
+  {
+    "Symbol": "NBBL",
+    "Script": "Nagbeli Laghubitta Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "NBBLPO",
+    "Script": "Nagbeli Laghubitta Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NBBPO",
+    "Script": "Nepal Bangladesh Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "NBBU",
+    "Script": "Nepal Bitumin And Barrel Udhyog Limited"
+  },
+  {
+    "Symbol": "NBCK",
+    "Script": "Nepal Byapar Bikash Company(Koshi) Limited"
+  },
+  {
+    "Symbol": "NBF1",
+    "Script": "Nabil Balance Fund 1"
+  },
+  {
+    "Symbol": "NBF2",
+    "Script": "Nabil Balanced Fund-2"
+  },
+  {
+    "Symbol": "NBF3",
+    "Script": "Nabil Balanced Fund-3"
+  },
+  {
+    "Symbol": "NBFL",
+    "Script": "Nepal Bangladesh Finance & Leasing Co. Ltd."
+  },
+  {
+    "Symbol": "NBILPO",
+    "Script": "Nb Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NBL",
+    "Script": "Nepal Bank Limited"
+  },
+  {
+    "Symbol": "NBLD82",
+    "Script": "10% Nabil Debenture 2082"
+  },
+  {
+    "Symbol": "NBLD85",
+    "Script": "Nabil Debenture 2085"
+  },
+  {
+    "Symbol": "NBLD87",
+    "Script": "8.5% Nepal Bank Debenture 2087"
+  },
+  {
+    "Symbol": "NBSL",
+    "Script": "Namaste Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "NCCB",
+    "Script": "Nepal Credit And Commercial Bank Limited"
+  },
+  {
+    "Symbol": "NCCBPO",
+    "Script": "Nepal Credit & Commercial Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NCCD86",
+    "Script": "9.5% Ncc Debenture 2086"
+  },
+  {
+    "Symbol": "NCDB",
+    "Script": "Nepal Community Development Bank Ltd."
+  },
+  {
+    "Symbol": "NCDBL",
+    "Script": "Nepal Consumer Development Bank Ltd."
+  },
+  {
+    "Symbol": "NCDBPO",
+    "Script": "Nepal Community Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NCM",
+    "Script": "Nidc Capital Markets Ltd."
+  },
+  {
+    "Symbol": "NCMMF",
+    "Script": "Ncm Mutual Fund"
+  },
+  {
+    "Symbol": "NCMPO",
+    "Script": "Nidc Capital Markets Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NDB",
+    "Script": "Nepal Development Bank Limited"
+  },
+  {
+    "Symbol": "NDBPO",
+    "Script": "Nepal Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "NDEP",
+    "Script": "Ndep Development Bank"
+  },
+  {
+    "Symbol": "NDFL",
+    "Script": "Nava Durga Finance Co. Ltd."
+  },
+  {
+    "Symbol": "NEF",
+    "Script": "Nabil Equity Fund"
+  },
+  {
+    "Symbol": "NEFL",
+    "Script": "Nepal Express Finance Ltd."
+  },
+  {
+    "Symbol": "NEFLPO",
+    "Script": "Nepal Express Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "NESDO",
+    "Script": "Nesdo Sambridha Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "NFC",
+    "Script": "National Finance Co. Ltd"
+  },
+  {
+    "Symbol": "NFCF",
+    "Script": "Nabil Flexi Cap Fund"
+  },
+  {
+    "Symbol": "NFD",
+    "Script": "Nepal Film Development Company Limited"
+  },
+  {
+    "Symbol": "NFL",
+    "Script": "Narayani Finance Ltd."
+  },
+  {
+    "Symbol": "NFS",
+    "Script": "Nepal Finance Ltd."
+  },
+  {
+    "Symbol": "NFSPO",
+    "Script": "Nepal Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NGBBL",
+    "Script": "Nepal Grameen Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "NGBBLP",
+    "Script": "Nepal Grameen Bikas Bank Ltd.-P"
+  },
+  {
+    "Symbol": "NGBL",
+    "Script": "Nilgiri Bikas Bank Limited"
+  },
+  {
+    "Symbol": "NGPL",
+    "Script": "Ngadi Group Power Ltd."
+  },
+  {
+    "Symbol": "NHDL",
+    "Script": "Nepal Hydro Developers Ltd."
+  },
+  {
+    "Symbol": "NHMF",
+    "Script": "Nepal Housing & Merchant Finance Ltd."
+  },
+  {
+    "Symbol": "NHMFPO",
+    "Script": "Nepal Housing & Merchant Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NHPC",
+    "Script": "National Hydro Power Company Limited"
+  },
+  {
+    "Symbol": "NIB",
+    "Script": "Nepal Investment Bank Limited"
+  },
+  {
+    "Symbol": "NIBD2082",
+    "Script": "10.5 % Nepal Investment Debenture 2082"
+  },
+  {
+    "Symbol": "NIBD84",
+    "Script": "8.5% Nepal Investment Bank Debenture 2084"
+  },
+  {
+    "Symbol": "NIBLGF",
+    "Script": "NIBL Growth Fund"
+  },
+  {
+    "Symbol": "NIBLPF",
+    "Script": "Nibl Pragati Fund"
+  },
+  {
+    "Symbol": "NIBLSF",
+    "Script": "Nibl Sahabhagita Fund"
+  },
+  {
+    "Symbol": "NIBPO",
+    "Script": "Nepal Investment Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NIBSF1",
+    "Script": "Nibl Samriddhi Fund 1"
+  },
+  {
+    "Symbol": "NIBSF2",
+    "Script": "Nibl Samriddhi Fund -2"
+  },
+  {
+    "Symbol": "NICA",
+    "Script": "Nic Asia Bank Ltd."
+  },
+  {
+    "Symbol": "NICAD8182",
+    "Script": "Nic Asia Debenture 2081/82"
+  },
+  {
+    "Symbol": "NICAD8283",
+    "Script": "11% Nic Asia Debenture 082/83"
+  },
+  {
+    "Symbol": "NICAP",
+    "Script": "Nic Asia Bank Limted Promoter Share"
+  },
+  {
+    "Symbol": "NICB",
+    "Script": "Nepal Ind & Commerc.Bank"
+  },
+  {
+    "Symbol": "NICBF",
+    "Script": "Nic Asia Balanced Fund"
+  },
+  {
+    "Symbol": "NICD83/84",
+    "Script": "10.25% Nic Asia Debenture 2083/84"
+  },
+  {
+    "Symbol": "NICFC",
+    "Script": "Nic Asia Flexi Cap Fund"
+  },
+  {
+    "Symbol": "NICGF",
+    "Script": "Nic Asia Growth Fund"
+  },
+  {
+    "Symbol": "NICL",
+    "Script": "Nepal Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "NICLBSL",
+    "Script": "Nic Asia Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "NICLBSLP",
+    "Script": "Nic Asia Laghubitta bittya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "NICLPO",
+    "Script": "Nepal Insurance Co. Ltd Promoter Share"
+  },
+  {
+    "Symbol": "NICSF",
+    "Script": "Nic Asia Select Fund 30"
+  },
+  {
+    "Symbol": "NIDC",
+    "Script": "Nidc Development Bank Ltd."
+  },
+  {
+    "Symbol": "NIFRA",
+    "Script": "Nepal Infrastructure Bank Limited"
+  },
+  {
+    "Symbol": "NIFRAUR85/86",
+    "Script": "NIFRA Uraj Rinpatra7%-2085/86"
+  },
+  {
+    "Symbol": "NIL",
+    "Script": "Neco Insurance Limited"
+  },
+  {
+    "Symbol": "NILPO",
+    "Script": "Neco Insurace Co. Ltd. Promoter"
+  },
+  {
+    "Symbol": "NIMB",
+    "Script": "Nepal Investment Mega Bank Limited"
+  },
+  {
+    "Symbol": "NIMBPO",
+    "Script": "Nepal Investment Mega Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NKU",
+    "Script": "Nepal Khadya Udhyog Limited"
+  },
+  {
+    "Symbol": "NLBBL",
+    "Script": "Nerude Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "NLBBLP",
+    "Script": "Nerude Laghubita Bikas Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "NLG",
+    "Script": "Nlg Insurance Company Ltd."
+  },
+  {
+    "Symbol": "NLGPO",
+    "Script": "Nlg Insurance Company Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NLIC",
+    "Script": "Nepal Life Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "NLICL",
+    "Script": "National Life Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "NLICLP",
+    "Script": "National Life Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NLICP",
+    "Script": "Nepal Life Insurance Co. Ltd. Promoter"
+  },
+  {
+    "Symbol": "NLO",
+    "Script": "Nepal Lube Oil Limited"
+  },
+  {
+    "Symbol": "NMB",
+    "Script": "Nmb Bank Limited"
+  },
+  {
+    "Symbol": "NMB50",
+    "Script": "Nmb 50"
+  },
+  {
+    "Symbol": "NMBD2085",
+    "Script": "10 % Nmb Debenture 2085"
+  },
+  {
+    "Symbol": "NMBD87/88",
+    "Script": "Nmb Debenture 8.50% - 2087/88"
+  },
+  {
+    "Symbol": "NMBHF1",
+    "Script": "Nmb Hybrid Fund L-1"
+  },
+  {
+    "Symbol": "NMBMF",
+    "Script": "Nmb Microfinance Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "NMBPO",
+    "Script": "Nmb Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "NMBSBF",
+    "Script": "NMB Saral Bachat Fund - E"
+  },
+  {
+    "Symbol": "NMBSBFE",
+    "Script": "Nmb Saral Bachat Fund E"
+  },
+  {
+    "Symbol": "NMBSF1",
+    "Script": "Nmb Sulav Investment Fund-1"
+  },
+  {
+    "Symbol": "NMFBS",
+    "Script": "National Microfinance Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "NMFBSP",
+    "Script": "National Microfinance Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "NNFC",
+    "Script": "Narayani National Finance Limited"
+  },
+  {
+    "Symbol": "NNFCPO",
+    "Script": "Narayani National Finance Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "NNLB",
+    "Script": "Naya Nepal Laghubitta Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "NNLBPO",
+    "Script": "Naya Nepal Laghubitta Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NRIC",
+    "Script": "Nepal Reinsurance Company Limited"
+  },
+  {
+    "Symbol": "NRICP",
+    "Script": "Nepal Reinsurance Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "NRM",
+    "Script": "Nepal Republic Media Limited"
+  },
+  {
+    "Symbol": "NRN",
+    "Script": "Nrn Infrastructure And Development Limited"
+  },
+  {
+    "Symbol": "NSIF2",
+    "Script": "NMB Sulav Investment Fund - 2"
+  },
+  {
+    "Symbol": "NSLB",
+    "Script": "Naya Sarathi Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "NSLBP",
+    "Script": "Naya Sarathi Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "NSLMB",
+    "Script": "Nepal Shree Lanka Merchant Banking & Finance Ltd"
+  },
+  {
+    "Symbol": "NSM",
+    "Script": "Nepal Share Markets Ltd."
+  },
+  {
+    "Symbol": "NSMPO",
+    "Script": "Nepal Share Markets Limited Promoter Share"
+  },
+  {
+    "Symbol": "NTC",
+    "Script": "Nepal Doorsanchar Company Limited"
+  },
+  {
+    "Symbol": "NTL",
+    "Script": "Nepal Tading Limited"
+  },
+  {
+    "Symbol": "NUBL",
+    "Script": "Nirdhan Utthan Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "NUBLPO",
+    "Script": "Nirdhan Utthan Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "NVG",
+    "Script": "Nepal Vanaspati Ghee Udhyog Limited"
+  },
+  {
+    "Symbol": "NWC",
+    "Script": "Nepal Welfare Company Limited"
+  },
+  {
+    "Symbol": "NWCL",
+    "Script": "Nepal Warehousing Company Limited"
+  },
+  {
+    "Symbol": "NYADI",
+    "Script": "Nyadi Hydropower Limited"
+  },
+  {
+    "Symbol": "ODBL",
+    "Script": "Om Development Bank Ltd."
+  },
+  {
+    "Symbol": "ODBLPO",
+    "Script": "Om Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "OFL",
+    "Script": "Om Finance Ltd."
+  },
+  {
+    "Symbol": "OFLPO",
+    "Script": "Om Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "OHL",
+    "Script": "Oriental Hotels Limited"
+  },
+  {
+    "Symbol": "PADBL",
+    "Script": "Pacific Development Bank Limited"
+  },
+  {
+    "Symbol": "PADBLP",
+    "Script": "Pacific Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PBD85",
+    "Script": "8.75 % Prime Debenture 2085"
+  },
+  {
+    "Symbol": "PBD88",
+    "Script": "10% Prime Debenture 2088"
+  },
+  {
+    "Symbol": "PBLD84",
+    "Script": "10% Prabhu Bank Debenture 2084"
+  },
+  {
+    "Symbol": "PBLD86",
+    "Script": "10.25% Prabhu Bank Debenture 2086"
+  },
+  {
+    "Symbol": "PBLD87",
+    "Script": "8.5% Prabhu Bank Debenture 2087"
+  },
+  {
+    "Symbol": "PBSL",
+    "Script": "Pathibhara Bikas Bank Limited"
+  },
+  {
+    "Symbol": "PCBL",
+    "Script": "Prime Commercial Bank Ltd."
+  },
+  {
+    "Symbol": "PCBLP",
+    "Script": "Prime Commercial Bank Promoter Share"
+  },
+  {
+    "Symbol": "PDB",
+    "Script": "Public Development Bank Limited"
+  },
+  {
+    "Symbol": "PDBL",
+    "Script": "Paschimanchal Bikash Bank Limited"
+  },
+  {
+    "Symbol": "PDBLPO",
+    "Script": "Paschimanchal Bikash Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PFC",
+    "Script": "Paschimanchal Finance Co. Ltd."
+  },
+  {
+    "Symbol": "PFCL",
+    "Script": "Peoples Finance Ltd."
+  },
+  {
+    "Symbol": "PFCLL",
+    "Script": "Premier Finance Co. Ltd."
+  },
+  {
+    "Symbol": "PFCLPO",
+    "Script": "Peoples Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "PFCPO",
+    "Script": "Paschimanchal Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PFIL",
+    "Script": "Prudential Finance Company Limited"
+  },
+  {
+    "Symbol": "PFILPO",
+    "Script": "Prudential Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PFL",
+    "Script": "Pokhara Finance Ltd."
+  },
+  {
+    "Symbol": "PFLBS",
+    "Script": "Patan Finance Limited"
+  },
+  {
+    "Symbol": "PFLBSP",
+    "Script": "Patan Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "PFLPO",
+    "Script": "Pokhara Finance Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "PGBL",
+    "Script": "Purwanchal Grameen Bikash Bank Limited"
+  },
+  {
+    "Symbol": "PHCL",
+    "Script": "Peoples Hydropower Company Limited"
+  },
+  {
+    "Symbol": "PIC",
+    "Script": "Premier Insurance Company (Nepal) Limited"
+  },
+  {
+    "Symbol": "PICL",
+    "Script": "Prudential Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "PICLPO",
+    "Script": "Prudential Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PICPO",
+    "Script": "Premier Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PLI",
+    "Script": "Prabhu Life Insurance Limited"
+  },
+  {
+    "Symbol": "PLIC",
+    "Script": "Prime Life Insurance Company Limited"
+  },
+  {
+    "Symbol": "PLICPO",
+    "Script": "Prime Life Insurance Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "PMHPL",
+    "Script": "Panchakanya Mai Hydropower Ltd"
+  },
+  {
+    "Symbol": "PMLI",
+    "Script": "Prabhu Mahalaxmi Life Insurance Limited"
+  },
+  {
+    "Symbol": "PPCL",
+    "Script": "Panchthar Power Compant Limited"
+  },
+  {
+    "Symbol": "PPL",
+    "Script": "People'S Power Limited"
+  },
+  {
+    "Symbol": "PRBBL",
+    "Script": "Prabhu Bikas Bank Limited"
+  },
+  {
+    "Symbol": "PRBL",
+    "Script": "Professional Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "PRDBL",
+    "Script": "Professional Diyalo Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "PRDBLP",
+    "Script": "Professional Diyalo Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PRFLPO",
+    "Script": "Prabhu Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PRIN",
+    "Script": "Prabhu Insurance Ltd."
+  },
+  {
+    "Symbol": "PRINPO",
+    "Script": "Prabhu Insurance Company Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "PROFL",
+    "Script": "Progressive Finance Limited"
+  },
+  {
+    "Symbol": "PROFLP",
+    "Script": "Progressive Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "PRSF",
+    "Script": "Prabhu Smart Fund"
+  },
+  {
+    "Symbol": "PRVU",
+    "Script": "Prabhu Bank Limited"
+  },
+  {
+    "Symbol": "PRVUPO",
+    "Script": "Prabhu Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "PSF",
+    "Script": "Prabhu Select Fund"
+  },
+  {
+    "Symbol": "PURBL",
+    "Script": "Purnima Bikash Bank Ltd."
+  },
+  {
+    "Symbol": "PURBLP",
+    "Script": "Purnima Bikash Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "RADHI",
+    "Script": "Radhi Bidyut Company Ltd"
+  },
+  {
+    "Symbol": "RARA",
+    "Script": "Rara Bikas Bank Limited"
+  },
+  {
+    "Symbol": "RAWA",
+    "Script": "Rawa Energy Development Limited"
+  },
+  {
+    "Symbol": "RBBBL",
+    "Script": "Raptibheri Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "RBCL",
+    "Script": "Rastriya Beema Company Limited"
+  },
+  {
+    "Symbol": "RBCLPO",
+    "Script": "Rastriya Beema Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "RBSL",
+    "Script": "Resunga Bikas Bank Limited"
+  },
+  {
+    "Symbol": "RDBL",
+    "Script": "Rising Development Bank Ltd."
+  },
+  {
+    "Symbol": "REDBL",
+    "Script": "Reliable Development Bank Limited"
+  },
+  {
+    "Symbol": "REDBLP",
+    "Script": "Reliable Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "RFPL",
+    "Script": "River Falls Power Limited"
+  },
+  {
+    "Symbol": "RHGCL",
+    "Script": "Rapti Hydro And General Construction Limited"
+  },
+  {
+    "Symbol": "RHPL",
+    "Script": "Rasuwagadhi Hydropower Company Limited"
+  },
+  {
+    "Symbol": "RIBSL",
+    "Script": "Reliable Investment Bittiya Sanstha"
+  },
+  {
+    "Symbol": "RIBSLP",
+    "Script": "Reliable Investment Bittiya Sanstha Promoter Share"
+  },
+  {
+    "Symbol": "RIDI",
+    "Script": "Ridi Power Company Limited"
+  },
+  {
+    "Symbol": "RJM",
+    "Script": "Raghupati Jute Mills Limited"
+  },
+  {
+    "Symbol": "RLFL",
+    "Script": "Reliance Finance Ltd."
+  },
+  {
+    "Symbol": "RLFLPO",
+    "Script": "Reliance Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "RLI",
+    "Script": "Reliance Life Insurance Limited"
+  },
+  {
+    "Symbol": "RMBFI",
+    "Script": "Royal Merchant Bank & Finance Co. Ltd."
+  },
+  {
+    "Symbol": "RMBFPO",
+    "Script": "Royal Merchant Bank & Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "RMDC",
+    "Script": "Rmdc Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "RMDCPO",
+    "Script": "Rural Microfinance Development Centre Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "RMF1",
+    "Script": "Rbb Mutual Fund 1"
+  },
+  {
+    "Symbol": "RMF2",
+    "Script": "RBB Mutual Fund 2"
+  },
+  {
+    "Symbol": "RMFL",
+    "Script": "Reliable Microfinance Bittya Sanstha Ltd."
+  },
+  {
+    "Symbol": "RNLI",
+    "Script": "Reliable Nepal Life Insurance Limited"
+  },
+  {
+    "Symbol": "RRHP",
+    "Script": "Rairang Hydropower Development Company Ltd."
+  },
+  {
+    "Symbol": "RSDC",
+    "Script": "Rsdc Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "RSDCP",
+    "Script": "Rsdc Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "RULB",
+    "Script": "Rastra Utthan Laghubitta Sanstha Limited"
+  },
+  {
+    "Symbol": "RURU",
+    "Script": "Ru Ru Jalbidhyut Pariyojana Limited"
+  },
+  {
+    "Symbol": "SABSL",
+    "Script": "Sabaiko Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SABSLP",
+    "Script": "Sabaiko Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "SADBL",
+    "Script": "Shangrila Development Bank Ltd."
+  },
+  {
+    "Symbol": "SADBLP",
+    "Script": "Shangrila Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SAEF",
+    "Script": "Sanima Equity Fund"
+  },
+  {
+    "Symbol": "SAFL",
+    "Script": "Sagarmatha Finance Limited"
+  },
+  {
+    "Symbol": "SAFLPO",
+    "Script": "Sagarmatha Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "SAGF",
+    "Script": "Sanima Growth Fund"
+  },
+  {
+    "Symbol": "SAHAS",
+    "Script": "Sahas Urja Limited"
+  },
+  {
+    "Symbol": "SAJHA",
+    "Script": "Sajha Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "SALICO",
+    "Script": "Sagarmatha Lumbini Insurance Co. Limited"
+  },
+  {
+    "Symbol": "SAMAJ",
+    "Script": "Samaj Laghubittya Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SAND2085",
+    "Script": "Sanima Bank Limited Debenture"
+  },
+  {
+    "Symbol": "SANIMA",
+    "Script": "Sanima Bank Limited"
+  },
+  {
+    "Symbol": "SAPDBL",
+    "Script": "Saptakoshi Development Bank Ltd"
+  },
+  {
+    "Symbol": "SAPDBLP",
+    "Script": "Saptakoshi Development Bank Ltd Promoter Share"
+  },
+  {
+    "Symbol": "SBBL",
+    "Script": "Sanima Bikas Bank Limited"
+  },
+  {
+    "Symbol": "SBBLJ",
+    "Script": "Sahayogi Bikas Bank Limited"
+  },
+  {
+    "Symbol": "SBBLJP",
+    "Script": "Sahayogi Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SBCF",
+    "Script": "Sunrise Bluechip Fund"
+  },
+  {
+    "Symbol": "SBD87",
+    "Script": "8.5% Sanima Debenture 2087"
+  },
+  {
+    "Symbol": "SBI",
+    "Script": "Nepal Sbi Bank Limited"
+  },
+  {
+    "Symbol": "SBIBD86",
+    "Script": "10% Nepal Sbi Bank Debenture 2086"
+  },
+  {
+    "Symbol": "SBID83",
+    "Script": "10.25% Nepal Sbi Bank Debenture 2083"
+  },
+  {
+    "Symbol": "SBL",
+    "Script": "Siddhartha Bank Limited"
+  },
+  {
+    "Symbol": "SBLD2082",
+    "Script": "10.50% Sbl Debenture 2082"
+  },
+  {
+    "Symbol": "SBLD83",
+    "Script": "10.25% Sbl Debenture 2083"
+  },
+  {
+    "Symbol": "SBLD84",
+    "Script": "8.5% Sbl Debenture 2084"
+  },
+  {
+    "Symbol": "SBLPO",
+    "Script": "Siddhartha Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "SBPP",
+    "Script": "Shree Bhrikuti Pulp And Paper Limited"
+  },
+  {
+    "Symbol": "SBSL",
+    "Script": "Shikhar Finance Limited"
+  },
+  {
+    "Symbol": "SCB",
+    "Script": "Standard Chartered Bank Limited"
+  },
+  {
+    "Symbol": "SDBD87",
+    "Script": "Shangri-La Development Bank Debenture 2087"
+  },
+  {
+    "Symbol": "SDBL",
+    "Script": "Siddhartha Development Bank Ltd."
+  },
+  {
+    "Symbol": "SDBLPO",
+    "Script": "Siddhartha Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "SDESI",
+    "Script": "Swadeshi Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "SDFL",
+    "Script": "Suryadarshan Finance Company Limited"
+  },
+  {
+    "Symbol": "SDLBSL",
+    "Script": "Sadhana Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SEF",
+    "Script": "Siddhartha Equity Fund"
+  },
+  {
+    "Symbol": "SEOS",
+    "Script": "Siddhartha Equity Orineted Scheme"
+  },
+  {
+    "Symbol": "SETI",
+    "Script": "Seti Finance Limited"
+  },
+  {
+    "Symbol": "SETIPO",
+    "Script": "Seti Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SEWA",
+    "Script": "Sewa Bikas Bank Limited"
+  },
+  {
+    "Symbol": "SEWAPO",
+    "Script": "Sewa Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SFC",
+    "Script": "Samjhana Finance Co. Ltd."
+  },
+  {
+    "Symbol": "SFCL",
+    "Script": "Samriddhi Finance Company Limited"
+  },
+  {
+    "Symbol": "SFCLP",
+    "Script": "Samriddhi Finance Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "SFCPO",
+    "Script": "Samjhana Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SFEF",
+    "Script": "Sunrise Focused Equity Fund"
+  },
+  {
+    "Symbol": "SFFIL",
+    "Script": "Shrijana Finance (Bittaya Sanstha)"
+  },
+  {
+    "Symbol": "SFFILP",
+    "Script": "Shrijana Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SFL",
+    "Script": "Siddharth Finance Ltd."
+  },
+  {
+    "Symbol": "SFLPO",
+    "Script": "Siddhartha Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SFMF",
+    "Script": "Sunrise First Mutual Fund"
+  },
+  {
+    "Symbol": "SGHC",
+    "Script": "Swet-Ganga Hydropower & Construction Limited"
+  },
+  {
+    "Symbol": "SGI",
+    "Script": "Sanima General Insurance Limited"
+  },
+  {
+    "Symbol": "SGIC",
+    "Script": "Sanima GIC Insurance Limited"
+  },
+  {
+    "Symbol": "SHBL",
+    "Script": "Sahara Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "SHEL",
+    "Script": "Singati Hydro Energy Limited"
+  },
+  {
+    "Symbol": "SHINE",
+    "Script": "Shine Resunga Development Bank Ltd."
+  },
+  {
+    "Symbol": "SHINEP",
+    "Script": "Shine Resunga Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SHIVM",
+    "Script": "Shivam Cements Ltd"
+  },
+  {
+    "Symbol": "SHL",
+    "Script": "Soaltee Hotel Limited"
+  },
+  {
+    "Symbol": "SHLB",
+    "Script": "Shrijanshil Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SHPC",
+    "Script": "Sanima Mai Hydropower Ltd."
+  },
+  {
+    "Symbol": "SIC",
+    "Script": "Sagarmatha Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "SICL",
+    "Script": "Shikhar Insurance Co. Ltd."
+  },
+  {
+    "Symbol": "SICLPO",
+    "Script": "Shikhar Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SICPO",
+    "Script": "Sagarmatha Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SIFC",
+    "Script": "Shree Investment Finance Co. Ltd."
+  },
+  {
+    "Symbol": "SIFCPO",
+    "Script": "Shree Investment & Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SIGS1",
+    "Script": "Siddhartha Investment Growth Scheme-1"
+  },
+  {
+    "Symbol": "SIGS2",
+    "Script": "Siddhartha Investment Growth Scheme - 2"
+  },
+  {
+    "Symbol": "SIGS3",
+    "Script": "Siddhartha Investment Growth Scheme 3"
+  },
+  {
+    "Symbol": "SIKLES",
+    "Script": "Sikles Hydropower Limited"
+  },
+  {
+    "Symbol": "SIL",
+    "Script": "Siddhartha Insurance Ltd."
+  },
+  {
+    "Symbol": "SILPO",
+    "Script": "Siddhartha Insurance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SINDU",
+    "Script": "Sindhu Bikash Bank Ltd"
+  },
+  {
+    "Symbol": "SINDUP",
+    "Script": "Sindhu Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SJCL",
+    "Script": "Sanjen Jalavidhyut Company Limited"
+  },
+  {
+    "Symbol": "SJLIC",
+    "Script": "Suryajyoti Life Insurance Company Limited"
+  },
+  {
+    "Symbol": "SJLICP",
+    "Script": "SuryaJyoti Life Insurance Company Limited Promoter"
+  },
+  {
+    "Symbol": "SKBBL",
+    "Script": "Sana Kisan Bikas Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SKBBLP",
+    "Script": "Sana Kisan Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SKDBL",
+    "Script": "Saptakoshi Development Bank Ltd."
+  },
+  {
+    "Symbol": "SLBBL",
+    "Script": "Swarojgar Laghu Bitta Bikas Bank Ltd."
+  },
+  {
+    "Symbol": "SLBBLP",
+    "Script": "Swarojgar Laghu Bitta Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SLBS",
+    "Script": "Suryodaya Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "SLBSL",
+    "Script": "Samudayik Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SLBSP",
+    "Script": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "SLCF",
+    "Script": "Sanima Large Cap Fund"
+  },
+  {
+    "Symbol": "SLFL",
+    "Script": "Subha Laxmi Finance Co. Ltd."
+  },
+  {
+    "Symbol": "SLI",
+    "Script": "Sanima Life Insurance Limited"
+  },
+  {
+    "Symbol": "SLICL",
+    "Script": "Surya Life Insurance Company Limited"
+  },
+  {
+    "Symbol": "SLICLP",
+    "Script": "Surya Life Insurance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SLK",
+    "Script": "Subha Laxmi Kosh"
+  },
+  {
+    "Symbol": "SMATA",
+    "Script": "Samata Gharelu Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SMB",
+    "Script": "Support Microfinance Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "SMBF",
+    "Script": "Sagarmatha Merchant Banking And Finance Ltd."
+  },
+  {
+    "Symbol": "SMBPO",
+    "Script": "Support Microfinance Bittiya Sanstha Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SMF",
+    "Script": "Swastik Merchant Finance Co. Ltd."
+  },
+  {
+    "Symbol": "SMFBS",
+    "Script": "Swabhimaan Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SMFDB",
+    "Script": "Summit Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SMFDBP",
+    "Script": "Summit Micro Finance Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SMH",
+    "Script": "Super Mai Hydropower Limited"
+  },
+  {
+    "Symbol": "SMHL",
+    "Script": "Super Madi Hydropower Limited"
+  },
+  {
+    "Symbol": "SMJC",
+    "Script": "Sagarmatha Jalabidhyut Company Limited"
+  },
+  {
+    "Symbol": "SNLI",
+    "Script": "Sun Nepal Life Insurance Company Limited"
+  },
+  {
+    "Symbol": "SNMAPO",
+    "Script": "Sanima Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SODBL",
+    "Script": "Society Development Bank Ltd."
+  },
+  {
+    "Symbol": "SONA",
+    "Script": "Sonapur Minerals And Oil Limited"
+  },
+  {
+    "Symbol": "SPARS",
+    "Script": "Sparsha Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SPC",
+    "Script": "Samling Power Company Limited"
+  },
+  {
+    "Symbol": "SPDL",
+    "Script": "Synergy Power Development Ltd."
+  },
+  {
+    "Symbol": "SPHL",
+    "Script": "Sayapatri Hydropower Limited"
+  },
+  {
+    "Symbol": "SPIL",
+    "Script": "Siddhartha Premier Insurance Limited"
+  },
+  {
+    "Symbol": "SPILPO",
+    "Script": "Siddhartha Premier Insurance Limited Promoter Share"
+  },
+  {
+    "Symbol": "SPL",
+    "Script": "Shuvam Power Limited"
+  },
+  {
+    "Symbol": "SRBL",
+    "Script": "Sunrise Bank Limited"
+  },
+  {
+    "Symbol": "SRBLD83",
+    "Script": "10.25% Sunrise Bank Debenture 2083"
+  },
+  {
+    "Symbol": "SRBLPO",
+    "Script": "Sunrise Bank Ltd Promoter Share"
+  },
+  {
+    "Symbol": "SRD80",
+    "Script": "10% Sunrise Debenture 2080"
+  },
+  {
+    "Symbol": "SRLI",
+    "Script": "Sanima Reliance Life Insurance Limited"
+  },
+  {
+    "Symbol": "SRS",
+    "Script": "Shree Ram Sugar Mills Limited"
+  },
+  {
+    "Symbol": "SSHL",
+    "Script": "Shiva Shree Hydropower Ltd"
+  },
+  {
+    "Symbol": "SSIS",
+    "Script": "Siddhartha Systematic Investment Scheme"
+  },
+  {
+    "Symbol": "STC",
+    "Script": "Salt Trading Corporation"
+  },
+  {
+    "Symbol": "STFL",
+    "Script": "Standard Finance Ltd."
+  },
+  {
+    "Symbol": "STFLPO",
+    "Script": "Standard Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "SUBBL",
+    "Script": "Subhechha Bikas Bank Limited"
+  },
+  {
+    "Symbol": "SUBBLP",
+    "Script": "Subhechha Bikas Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SUPRME",
+    "Script": "Supreme Development Bank Ltd."
+  },
+  {
+    "Symbol": "SUPRMP",
+    "Script": "Supreme Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "SWBBL",
+    "Script": "Swabalamban Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SWBBLP",
+    "Script": "Swabalamban Bikas Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "SWMF",
+    "Script": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "SWMFPO",
+    "Script": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "SYFL",
+    "Script": "Synergy Finance Ltd."
+  },
+  {
+    "Symbol": "SYFLPO",
+    "Script": "Synergy Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "TAMOR",
+    "Script": "Sanima Middle Tamor Hydropower Limited"
+  },
+  {
+    "Symbol": "TBBL",
+    "Script": "Triveni Bikas Bank Limited"
+  },
+  {
+    "Symbol": "TBBLP",
+    "Script": "Triveni Bikas Bank Ltd Promoter Share"
+  },
+  {
+    "Symbol": "TDBL",
+    "Script": "Tourism Development Bank Limited"
+  },
+  {
+    "Symbol": "TDBLPO",
+    "Script": "Tourism Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "TMDBL",
+    "Script": "Tinau Mission Development Bank Limited"
+  },
+  {
+    "Symbol": "TMDBLP",
+    "Script": "Tinau Mission Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "TNBL",
+    "Script": "Tinau Development Bank Limited"
+  },
+  {
+    "Symbol": "TNBLPO",
+    "Script": "Tinau Development Bank Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "TPC",
+    "Script": "Terhathum Power Company Limited"
+  },
+  {
+    "Symbol": "TRH",
+    "Script": "Taragaon Regency Hotel Limited"
+  },
+  {
+    "Symbol": "TSHL",
+    "Script": "Three Star Hydropower Limited"
+  },
+  {
+    "Symbol": "TVCL",
+    "Script": "Trishuli Jal Vidhyut Company Limited"
+  },
+  {
+    "Symbol": "UAIL",
+    "Script": "United Ajod Insurance Limited"
+  },
+  {
+    "Symbol": "UBBL",
+    "Script": "Udhyam Bikas Bank Limited"
+  },
+  {
+    "Symbol": "UFCL",
+    "Script": "Union Finance Co. Ltd."
+  },
+  {
+    "Symbol": "UFCLPO",
+    "Script": "Union Finance Co. Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "UFIL",
+    "Script": "Unique Finance Ltd."
+  },
+  {
+    "Symbol": "UFILPO",
+    "Script": "Unique Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "UFL",
+    "Script": "United Finance Ltd."
+  },
+  {
+    "Symbol": "UFLK",
+    "Script": "Universal Finance Ltd."
+  },
+  {
+    "Symbol": "UFLKPO",
+    "Script": "Universal Finance Limited Promoter Share"
+  },
+  {
+    "Symbol": "UFLPO",
+    "Script": "United Finance Company Limited Promoter Share"
+  },
+  {
+    "Symbol": "UHEWA",
+    "Script": "Upper Hewakhola Hydropower Company Limited"
+  },
+  {
+    "Symbol": "UIC",
+    "Script": "United Insurance Co. (Nepal) Ltd."
+  },
+  {
+    "Symbol": "UICPO",
+    "Script": "United Insurance Co. (Nepal) Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "ULBSL",
+    "Script": "Upakar Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "ULHC",
+    "Script": "Upper Lohore Khola Hydropower Company Limited"
+  },
+  {
+    "Symbol": "ULI",
+    "Script": "Union Life Insurance Company Limited"
+  },
+  {
+    "Symbol": "UMB",
+    "Script": "Unnati Micorfinance Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "UMHL",
+    "Script": "United Modi Hydropower Ltd."
+  },
+  {
+    "Symbol": "UMRH",
+    "Script": "United Idi Mardi Rb Hydropower Limited"
+  },
+  {
+    "Symbol": "UNHPL",
+    "Script": "Union Hydropower Limited"
+  },
+  {
+    "Symbol": "UNL",
+    "Script": "Unilever Nepal Limited"
+  },
+  {
+    "Symbol": "UNLB",
+    "Script": "Unique Nepal Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "UPCL",
+    "Script": "Universal Power Company Ltd"
+  },
+  {
+    "Symbol": "UPPER",
+    "Script": "Upper Tamakoshi Hydropower Ltd"
+  },
+  {
+    "Symbol": "USHEC",
+    "Script": "Upper Solu Hydro Electric Company Limited"
+  },
+  {
+    "Symbol": "USHL",
+    "Script": "Upper Syange Hydropower Limited"
+  },
+  {
+    "Symbol": "USLB",
+    "Script": "Unnati Sahakarya Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "VBBL",
+    "Script": "Vibor Bikas Bank Limited"
+  },
+  {
+    "Symbol": "VFL",
+    "Script": "Valley Finance Limited"
+  },
+  {
+    "Symbol": "VLBS",
+    "Script": "Vijaya Laghubitta Bittiya Sanstha Ltd."
+  },
+  {
+    "Symbol": "VLBSPO",
+    "Script": "Vijaya Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "VLUCL",
+    "Script": "Vision Lumbini Urja Company Limited"
+  },
+  {
+    "Symbol": "VSDBL",
+    "Script": "Vibor Society Development Bank Limited"
+  },
+  {
+    "Symbol": "VSDBLP",
+    "Script": "Vibor Society Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "WDBL",
+    "Script": "Western Development Bank Limited"
+  },
+  {
+    "Symbol": "WDBLPO",
+    "Script": "Western Development Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "WMBFL",
+    "Script": "World Merchant Banking & Finance Ltd."
+  },
+  {
+    "Symbol": "WNLB",
+    "Script": "Wean Nepal Laghubitta Bittiya Sansthan Limited"
+  },
+  {
+    "Symbol": "WOMI",
+    "Script": "Womi Microfinance Bittiya Sansthan Limited"
+  },
+  {
+    "Symbol": "WOMIPO",
+    "Script": "Womi Microfinance Bittiya Sansthan Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "YETI",
+    "Script": "Yeti Development Bank Limited"
+  },
+  {
+    "Symbol": "YETIPO",
+    "Script": "Yeti Development Bank Promoter Share"
+  },
+  {
+    "Symbol": "YFL",
+    "Script": "Yeti Finance Ltd."
+  },
+  {
+    "Symbol": "YFLPO",
+    "Script": "Yeti Finance Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "YHL",
+    "Script": "Yak And Yeti Hotel Limited"
+  },
+  {
+    "Symbol": "ZFL",
+    "Script": "Zenith Finance Limited"
+  },
+  {
+    "Symbol": "SARBTM",
+    "Script": "Sarbottam Cement Limited"
+  },
+  {
+    "Symbol": "NICGF2",
+    "Script": "NIC ASIA Growth Fund-2"
+  },
+  {
+    "Symbol": "CITPO",
+    "Script": "Citizen Investment Trust Promoter Share"
+  },
+  {
+    "Symbol": "EBLD85",
+    "Script": "10.50% Everest Bank Limited Debenture 2085"
+  },
+  {
+    "Symbol": "HBLD86",
+    "Script": "Himalayan Bank Limited Bond, 2086"
+  },
+  {
+    "Symbol": "HLIPO",
+    "Script": "Himalayan Life Insurance Limited"
+  },
+  {
+    "Symbol": "JBBD87",
+    "Script": "Jyoti Bikash Bank Bond 2087"
+  },
+  {
+    "Symbol": "KBLD89",
+    "Script": "11% KBL Debenture 2089"
+  },
+  {
+    "Symbol": "KSBBLD87",
+    "Script": "9% Kamana Sewa Bikas Bank Limited Debenture 2087"
+  },
+  {
+    "Symbol": "MBLD87",
+    "Script": "8.5% Machhapuchchhre Debenture 2087"
+  },
+  {
+    "Symbol": "NICGF2",
+    "Script": "NIC ASIA Growth Fund-2"
+  },
+  {
+    "Symbol": "PMLIP",
+    "Script": "Prabhu Mahalaxmi Life Insurance Limited Promoter Share"
+  },
+  {
+    "Symbol": "SALICOPO",
+    "Script": "Sagarmatha Lumbini Insurance Co. Limited Promoter Share"
+  },
+  {
+    "Symbol": "SBID89",
+    "Script": "9% Nepal SBI Bank Rinpatra 2089"
+  },
+  {
+    "Symbol": "SDLBSLP",
+    "Script": "Sadhana Laghubitta Bittiya Sanstha Limited Promoter Shares"
+  },
+  {
+    "Symbol": "SMATAP",
+    "Script": "Samata Gharelu Laghubitta Bittiya Sanstha Limited Promoter"
+  },
+  {
+    "Symbol": "LBL",
+    "Script": "Laxmi Bank Limited"
+  },
+  {
+    "Symbol": "NMLBBL",
+    "Script": "Nerude Mirmire Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "LBBLD89",
+    "Script": "11% L.B.B.L. Debenture 2089"
+  },
+  {
+    "Symbol": "LSLPO",
+    "Script": "Laxmi Sunrise Bank Limited Promoter Share"
+  },
+  {
+    "Symbol": "MLBLD89",
+    "Script": "11% Mahalaxmi Debenture 2089"
+  },
+  {
+    "Symbol": "MND84/85",
+    "Script": "Muktinath Debenture 2084/85"
+  },
+  {
+    "Symbol": "NABILD87",
+    "Script": "9% Nabil Debenture 2087"
+  },
+  {
+    "Symbol": "NICAD 85/86",
+    "Script": "10% NIC Asia Debenture 2085/86"
+  },
+  {
+    "Symbol": "NICAD85/86",
+    "Script": "10% NIC Asia Debenture 2085/86"
+  },
+  {
+    "Symbol": "NICD88",
+    "Script": "NIC ASIA Rinpatra 2088"
+  },
+  {
+    "Symbol": "NIFRAP",
+    "Script": "Nepal Infrastructure Bank Limited Promoter"
+  },
+  {
+    "Symbol": "NIMBD90",
+    "Script": "10% NIMB Debenture 2090"
+  },
+  {
+    "Symbol": "RBBD83",
+    "Script": "8.5% RBBL Debenture 2083"
+  },
+  {
+    "Symbol": "SBLD89",
+    "Script": "10.75% SBL Debenture 2089"
+  },
+  {
+    "Symbol": "SCBD",
+    "Script": "10.30% Standard Chartered Bank Limited Debenture"
+  },
+  {
+    "Symbol": "KSY",
+    "Script": "Kumari Sabal Yojana"
+  },
+  {
+    "Symbol": "CIZBD90",
+    "Script": "10% Citizens Bank Debenture"
+  },
+  {
+    "Symbol": "NADEPP",
+    "Script": "Nadep Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+  },
+  {
+    "Symbol": "NIBLSTF",
+    "Script": "NIBL Stable Fund"
+  },
+  {
+    "Symbol": "USLBP",
+    "Script": "Unnati Sahakarya Laghubitta Bittiya Sanstha Limited Promoter Share"
+  },
+  {
+    "Symbol": "SMPDA",
+    "Script": "Sampada Laghubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "BOKD86KA",
+    "Script": "BOK Debenture 2086 KA"
+  },
+  {
+    "Symbol": "GBILD84/85",
+    "Script": "Global IME Bank Debenture, 2084/85"
+  },
+  {
+    "Symbol": "KBLD89",
+    "Script": "11% KBL Debenture 2089"
+  },
+  {
+    "Symbol": "MATRI",
+    "Script": "Matribhumi Lagubitta Bittiya Sanstha Limited"
+  },
+  {
+    "Symbol": "NMBD89/90",
+    "Script": "NMB Debenture 10.75%-2089/90"
+  },
+  {
+    "Symbol": "PBD84",
+    "Script": "10.15% Prime Debenture 2084"
+  },
+  {
+    "Symbol": "SBD89",
+    "Script": "10.25% Sanima Debenture 2089"
+  },
+  {
+    "Symbol": "GMLI",
+    "Script": "Guardian Micro Life Insurance Limited"
+  },
+  {
+    "Symbol": "MNMF1",
+    "Script": "Muktinath Mutual Fund 1"
+  },
+  {
+    "Symbol": "GSY",
+    "Script": "Garima Samriddhi Yojana"
+  },
+  {
+    "Symbol": "UAILPO",
+    "Script": "United Ajod Insurance Limited Promoter Share"
+  },
+  {
+    "Symbol": "NMIC",
+    "Script": "Nepal Micro Insurance Company Limited"
+  },
+  {
+    "Symbol": "SANFLF",
+    "Script": "Sanima Flexi Fund"
+  },
+  {
+    "Symbol": "MBLEF",
+    "Script": "MBL Equity Fund"
+  },
+  {
+    "Symbol": "RSY",
+    "Script": "Reliable Samriddhi Yojana"
+  }
+]

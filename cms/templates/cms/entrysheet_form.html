@@ -1,0 +1,11 @@
+{# templates/cms/entrysheet_form.html #}
+{% extends "cms/base.html" %}
+{% block content %}
+<h2>{{ view.object.pk|yesno:"Edit Entry,Add New Entry" }}</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }} {# Render form fields as paragraphs:contentReference[oaicite:13]{index=13} #}
+  <button type="submit" class="btn btn-primary">Save</button>
+  <a href="{% url 'cms:entrysheet_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
