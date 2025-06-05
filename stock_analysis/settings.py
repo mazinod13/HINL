@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cms',
+    'Frontend',
 ]
 
 MIDDLEWARE = [
@@ -68,11 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'stock_analysis.wsgi.application'
-
-#ALLOWED_HOSTS = ['Mishan123.pythonanywhere.com']
-
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
 
 
 # Database

@@ -18,9 +18,9 @@ class EntrySheet(models.Model):
     ]
 
     date = models.DateField()
-    symbol = models.CharField(max_length=10)
-    script = models.CharField(max_length=50)
-    sector = models.CharField(max_length=50)
+    symbol = models.CharField(max_length=150)
+    script = models.CharField(max_length=150)
+    sector = models.CharField(max_length=150)
 
     transaction = models.CharField(
         max_length=20,

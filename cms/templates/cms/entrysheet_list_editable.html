@@ -201,6 +201,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
+
+  // Prevent Enter key from submitting form unless the button is clicked
+  form.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      const isTextInput = ['text', 'number', 'date'].includes(e.target.type);
+      if (isTextInput) {
+        e.preventDefault(); // Prevent form submission
+      }
+    }
+  });
+});
+
 </script>
 
 

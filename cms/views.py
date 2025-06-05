@@ -85,7 +85,7 @@ def entry_sheet_editable_list(request):
                     symbol=request.POST.get('new_symbol'),
                     script=request.POST.get('new_script'),
                     sector=request.POST.get('new_sector'),
-                    transaction_type=request.POST.get('new_transaction_type'),
+                    transaction_type=request.POST.get('new_transaction'),
                     kitta=int(request.POST.get('new_kitta') or 0),
                     billed_amount=float(request.POST.get('new_billed_amount') or 0.0),
                     rate=float(request.POST.get('new_rate') or 0.0),
@@ -100,6 +100,7 @@ def entry_sheet_editable_list(request):
         return redirect('cms:entrysheet_editable_list')
 
     entries = EntrySheet.objects.all().order_by('-date')
+    
     return render(request, 'cms/entrysheet_list_editable.html', {'entries': entries})
 class EntrySheetUpdateView(UpdateView):
     model = EntrySheet
@@ -128,7 +129,7 @@ def upload_csv(request):
                 symbol=row['symbol'],
                 script=row['script'],
                 sector=row['sector'],
-                transaction_type=row['transaction_type'],
+                transaction=row['transaction'],
                 kitta=row['kitta'],
                 billed_amount=row['billed_amount'],
                 rate=row['rate'],
@@ -140,78 +141,147 @@ def upload_csv(request):
     return render(request, 'cms/upload_csv.html')
 
 #-----DASHBOARD---------#
+from django.views import View
+from django.shortcuts import render, redirect
+from django.db.models import Sum
+from django.http import JsonResponse
+import json
+from .models import EntrySheet
+
 class DashboardView(View):
     def get(self, request, symbol=None):
         symbols = EntrySheet.objects.values_list('symbol', flat=True).distinct()
 
         if not symbol:
-          if symbols:
-              return redirect('cms:dashboard_detail', symbol=symbols[0])
-        else:
-           return render(request, 'cms/dashboard.html', {'rows': [], 'symbols': [], 'current_symbol': None})
+            if symbols:
+                return redirect('cms:dashboard_detail', symbol=symbols[0])
+            else:
+                return render(request, 'cms/dashboard.html', {
+                    'rows': [],
+                    'symbols': [],
+                    'current_symbol': None,
+                    'summary': {}
+                })
 
+        entries = EntrySheet.objects.filter(symbol=symbol).order_by('date', 'id')
+        script_name = entries[0].script if entries else ""
 
-        entries = EntrySheet.objects.filter(symbol=symbol)
-
-        # Aggregate values
-        op_qty = entries.filter(transaction='Balance bd').aggregate(total=Sum('kitta'))['total'] or 0
-        op_amount = entries.filter(transaction='Balance bd').aggregate(total=Sum('billed_amount'))['total'] or 0
-
-        p_entries = entries.filter(transaction__in=[
-            'Buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)'
-        ])
-        p_qty = p_entries.aggregate(total=Sum('kitta'))['total'] or 0
-        p_amount = p_entries.aggregate(total=Sum('billed_amount'))['total'] or 0
-
-        s_entries = entries.filter(transaction__in=[
-            'Sale', 'Conversion(-)', 'Suspense(-)'
-        ])
-        s_qty = s_entries.aggregate(total=Sum('kitta'))['total'] or 0
-        s_amount = s_entries.aggregate(total=Sum('billed_amount'))['total'] or 0
-
-        cl_qty = op_qty + p_qty - s_qty
-
-        op_rate = (op_amount / op_qty) if op_qty else 0
-        p_rate = (p_amount / p_qty) if p_qty else 0
-        s_rate = (s_amount / s_qty) if s_qty else 0
-
-        avg_buy_rate = p_rate if p_qty else op_rate
-        cl_rate = avg_buy_rate
-        cl_amount = cl_qty * cl_rate
-
-        consumption = (op_amount + p_amount) - cl_amount
-        profit = s_amount - consumption
+        op_qty = 0
+        op_amount = 0
+        p_qty = 0
+        p_amount = 0
+        s_qty = 0
+        s_amount = 0
 
         rows = []
+
+        # Initial values
+        op_qty = 0
+        op_amount = 0
+
         for e in entries:
+            qty = e.kitta or 0
+            amount = e.billed_amount or 0
+            transaction = e.transaction
+
+            # Set opening values for this row (from previous closing)
+            row_op_qty = op_qty
+            row_op_amount = op_amount
+            row_op_rate = (row_op_amount / row_op_qty) if row_op_qty else 0
+
+            p_qty = 0
+            p_amount = 0
+            s_qty = 0
+            s_amount = 0
+
+            # Transaction logic
+            if transaction == 'Balance bd':
+                row_op_qty += qty
+                row_op_amount += amount
+            elif transaction in ['Buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
+                p_qty = qty
+                p_amount = amount
+            elif transaction in ['Sale', 'Conversion(-)', 'Suspense(-)']:
+                s_qty = qty
+                s_amount = amount
+
+            cl_qty = row_op_qty + p_qty - s_qty
+            p_rate = (p_amount / p_qty) if p_qty else 0
+            s_rate = (s_amount / s_qty) if s_qty else 0
+
+            if (p_qty + row_op_qty) != 0:
+                consumption = ((p_amount + row_op_amount) / (p_qty + row_op_qty)) * s_qty
+            else:
+                consumption = 0
+
+            cl_amount = row_op_amount + p_amount - consumption
+            cl_rate = (cl_amount / cl_qty) if cl_qty else 0
+            profit = s_amount - consumption
+
             rows.append({
                 'id': e.id,
                 'symbol': e.symbol,
                 'date': e.date,
                 'transaction': e.transaction,
-                'qty': e.kitta,
-                't_amount': e.billed_amount,
+                'qty': qty,
+                't_amount': amount,
                 'rate': e.rate,
-                'op_qty': op_qty,
-                'op_rate': op_rate,
-                'op_amount': op_amount,
+
+                'op_qty': round(row_op_qty, 2),
+                'op_rate': round(row_op_rate, 2),
+                'op_amount': round(row_op_amount, 2),
                 'p_qty': p_qty,
-                'p_rate': p_rate,
-                'p_amount': p_amount,
+                'p_rate': round(p_rate, 2),
+                'p_amount': round(p_amount, 2),
                 's_qty': s_qty,
-                's_rate': s_rate,
-                's_amount': s_amount,
-                'consumption': consumption,
-                'profit': profit,
+                's_rate': round(s_rate, 2),
+                's_amount': round(s_amount, 2),
+                'consumption': round(consumption, 2),
+                'profit': round(profit, 2),
                 'cl_qty': cl_qty,
-                'cl_rate': cl_rate,
-                'cl_amount': cl_amount,
+                'cl_rate': round(cl_rate, 2),
+                'cl_amount': round(cl_amount, 2),
             })
+
+            # Update op_qty/op_amount for next row
+            op_qty = cl_qty
+            op_amount = cl_amount
+        # Summary block should be outside the loop
+        if rows:
+            summary = {
+                "start_date": rows[0]["date"],
+                "end_date": rows[-1]["date"],
+                "total_p_qty": sum(row["p_qty"] for row in rows),
+                "total_p_amount": sum(row["p_amount"] for row in rows),
+                "total_s_qty": sum(row["s_qty"] for row in rows),
+                "total_s_amount": sum(row["s_amount"] for row in rows),
+                "closing_qty": rows[-1]["cl_qty"],
+                "closing_amount": rows[-1]["cl_amount"],
+                "closing_rate": rows[-1]["cl_rate"]           
+            }
+            summary["p_rate"] = summary["total_p_amount"] / summary["total_p_qty"] if summary["total_p_qty"] else 0
+            summary["s_rate"] = summary["total_s_amount"] / summary["total_s_qty"] if summary["total_s_qty"] else 0
+        else:
+            summary = {
+                "start_date": "",
+                "end_date": "",
+                "total_p_qty": 0,
+                "total_p_amount": 0,
+                "p_rate": 0,
+                "total_s_qty": 0,
+                "total_s_amount": 0,
+                "s_rate": 0,
+                "closing_qty": 0,
+                "closing_amount": 0,
+                "closing_rate": 0,
+            }
 
         return render(request, 'cms/dashboard.html', {
             'rows': rows,
             'symbols': symbols,
-            'current_symbol': symbol
+            'current_symbol': symbol,
+            'script_name': script_name,
+            'summary': summary,
         })
 
     def post(self, request, symbol=None):

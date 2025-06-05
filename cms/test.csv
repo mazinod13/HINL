@@ -1,3 +1,26 @@
-date,symbol,script,sector,transaction_type,kitta,billed_amount,rate,broker
-2024-06-01,NABIL,Nabil Bank Ltd,Commercial Bank,Buy,100,100000,100,ABC Securities
-2024-06-02,NRIC,NIC Asia Bank,Commercial Bank,Sell,50,50000,1000,MNO Securities
+date,symbol,script,sector,transaction,kitta,billed_amount,rate,broker
+2024-06-04,NABIL,Nabil Bank Ltd,Commercial Bank,Sell,40,4800,120,ABC Securities
+2024-06-05,NABIL,Nabil Bank Ltd,Commercial Bank,Bonus,10,0,0,Global Securities
+2024-06-06,NRIC,NIC Asia Bank,Commercial Bank,Buy,100,90000,900,XYZ Securities
+2024-06-07,NRIC,NIC Asia Bank,Commercial Bank,Sale,50,47500,950,XYZ Securities
+2024-06-08,ACEDBL,Ace Development Bank Ltd,Development Bank,Right,20,2000,100,ABC Securities
+2024-06-09,ACEDBL,Ace Development Bank Ltd,Development Bank,Sale,60,6600,110,PQR Securities
+2024-06-10,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance Institution,Sale,15,2250,150,XYZ Securities
+2024-06-11,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance Institution,Buy,25,2750,110,MNO Securities
+2024-06-12,MEGA, Mega Bank Nepal Ltd,Commercial Bank,Buy,200,160000,800,ABC Securities
+2024-06-13,MEGA,Mega Bank Nepal Ltd,Commercial Bank,Sale,50,42500,850,XYZ Securities
+2024-06-14,NABIL,Nabil Bank Ltd,Commercial Bank,IPO,30,0,0,Global Securities
+2024-06-15,NABIL,Nabil Bank Ltd,Commercial Bank,Conversion(+),10,1000,100,MNO Securities
+2024-06-16,NRIC,NIC Asia Bank,Commercial Bank,Conversion(-),5,500,100,PQR Securities
+2024-06-17,ACEDPO,Ace Development Bank Limited Promoter Share,Development Bank,Buy,60,5400,90,ABC Securities
+2024-06-18,ACEDPO,Ace Development Bank Limited Promoter Share,Development Bank,Sale,30,3300,110,XYZ Securities
+2024-06-19,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance Institution,Suspense(+),5,500,100,MNO Securities
+2024-06-20,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance Institution,Suspense(-),5,550,110,PQR Securities
+2024-06-21,MEGA,Mega Bank Nepal Ltd,Commercial Bank,Bonus,20,0,0,Global Securities
+2024-06-22,MEGA,Mega Bank Nepal Ltd,Commercial Bank,Right,10,800,80,ABC Securities
+2024-06-23,NABIL,Nabil Bank Ltd,Commercial Bank,Buy,70,7700,110,XYZ Securities
+2024-06-24,NRIC,NIC Asia Bank,Commercial Bank,Sale,30,3300,110,MNO Securities
+2024-06-25,ACEDBL,Ace Development Bank Ltd,Development Bank,Buy,80,8800,110,PQR Securities
+2024-06-26,ACEDBL,Ace Development Bank Ltd,Development Bank,Conversion(+),10,1000,100,Global Securities
+2024-06-27,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance Institution,Conversion(-),10,1200,120,ABC Securities
+2024-06-28,MEGA,Mega Bank Nepal Ltd,Commercial Bank,Sale,50,6000,120,XYZ Securities
