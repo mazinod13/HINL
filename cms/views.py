@@ -8,16 +8,9 @@ from django.http import JsonResponse
 from django.db.models import DecimalField,IntegerField
 from django.db.models import Sum, Case, When, F, Value
 from .models import EntrySheet
-
+from uuid import uuid4
 import csv
 import json
-
-def parse_date(d):
-    try:
-        return datetime.strptime(d, "%d-%m-%Y").date()
-    except Exception as e:
-        print("Date parse error:", e)
-        return None
 
 # Home view
 class HomeView(TemplateView):
@@ -28,7 +21,10 @@ class EntrySheetListView(ListView):
     model = EntrySheet
     template_name = "cms/entrysheet_list.html"
     context_object_name = "entries"
-
+#---unique ID----
+for entry in EntrySheet.objects.filter(unique_id__isnull=True):
+    entry.unique_id = str(uuid4())
+    entry.save()
 # Optional form-based create view (can be replaced by inline editable view)
 class EntrySheetCreateView(CreateView):
     model = EntrySheet
@@ -46,10 +42,25 @@ class EntrySheetCreateView(CreateView):
     ]
     success_url = reverse_lazy("cms:entrysheet_list")
 
+
+def parse_date(d):
+    if not d:
+        return None
+    d = d.strip()
+    formats = ["%Y/%m/%d", "%Y-%m-%d", "%d-%m-%Y"]
+    for fmt in formats:
+        try:
+            return datetime.strptime(d, fmt).date()
+        except ValueError:
+            continue
+    print("Date parse error: unsupported format ->", d)
+    return None
+
 def entry_sheet_editable_list(request):
     if request.method == 'POST':
         updated_entries = {}
 
+        # === Update existing entries ===
         for key, value in request.POST.items():
             if key.startswith('entry_') and key.count('_') >= 2:
                 _, entry_id, field = key.split('_', 2)
@@ -62,36 +73,36 @@ def entry_sheet_editable_list(request):
                 entry = updated_entries[entry_id]
 
                 try:
-                    # Cast values to appropriate types
                     if field == "date":
-                        value = datetime.strptime(value, "%Y-%m-%d").date()
-                    elif field in ["kitta"]:
+                        value = parse_date(value) if value else None
+                    elif field == "kitta":
                         value = int(value) if value else 0
                     elif field in ["rate", "billed_amount"]:
                         value = float(value) if value else 0.0
-
                     setattr(entry, field, value)
                 except Exception as e:
-                    messages.error(request, f"Error setting {field} for entry {entry_id}: {e}")
+                    messages.error(request, f"Error setting '{field}' to '{value}' for entry {entry_id}: {e}")
 
         for entry in updated_entries.values():
-            entry.save()
+            entry.save()  
 
-        # Handle new entry creation
-        if request.POST.get('new_symbol'):
+        # === Add new entry ===
+        if request.POST.get('new_symbol', '').strip():
             try:
+                new_date = parse_date(request.POST.get('new_date') or '')
                 new_entry = EntrySheet(
-                    date=parse_date(request.POST.get('new_date')),
-                    symbol=request.POST.get('new_symbol'),
+                    date=new_date,
+                    symbol=request.POST.get('new_symbol').strip(),
                     script=request.POST.get('new_script'),
                     sector=request.POST.get('new_sector'),
-                    transaction_type=request.POST.get('new_transaction'),
+                    transaction=request.POST.get('new_transaction'),
                     kitta=int(request.POST.get('new_kitta') or 0),
                     billed_amount=float(request.POST.get('new_billed_amount') or 0.0),
                     rate=float(request.POST.get('new_rate') or 0.0),
                     broker=request.POST.get('new_broker'),
                 )
-                new_entry.save()
+
+                new_entry.save()  
                 messages.success(request, "New entry added successfully.")
             except Exception as e:
                 messages.error(request, f"Error creating new entry: {e}")
@@ -99,9 +110,10 @@ def entry_sheet_editable_list(request):
         messages.success(request, "Entries saved successfully.")
         return redirect('cms:entrysheet_editable_list')
 
+    # === GET request ===
     entries = EntrySheet.objects.all().order_by('-date')
-    
     return render(request, 'cms/entrysheet_list_editable.html', {'entries': entries})
+
 class EntrySheetUpdateView(UpdateView):
     model = EntrySheet
     template_name = 'cms/entrysheet_edit.html'
@@ -114,32 +126,39 @@ class EntrySheetDeleteView(DeleteView):
     success_url = reverse_lazy('cms:entrysheet_list')
     
 def upload_csv(request):
-    if request.method == "POST":
-        csv_file = request.FILES.get("csv_file")
-        if not csv_file.name.endswith('.csv'):
-            messages.error(request, "This is not a CSV file.")
-            return redirect('cms:upload_csv')
-
-        decoded_file = csv_file.read().decode('utf-8').splitlines()
+    if request.method == "POST" and request.FILES.get("csv_file"):
+        csv_file = request.FILES["csv_file"]
+        decoded_file = csv_file.read().decode("utf-8").splitlines()
         reader = csv.DictReader(decoded_file)
 
         for row in reader:
-            EntrySheet.objects.create(
-                date=row['date'],
-                symbol=row['symbol'],
-                script=row['script'],
-                sector=row['sector'],
-                transaction=row['transaction'],
-                kitta=row['kitta'],
-                billed_amount=row['billed_amount'],
-                rate=row['rate'],
-                broker=row['broker'],
-            )
-        messages.success(request, "CSV uploaded successfully.")
-        return redirect('cms:entrysheet_list')
+            try:
+                # Convert date string to date object
+                date_obj = datetime.strptime(row["date"], "%Y-%m-%d").date()
 
-    return render(request, 'cms/upload_csv.html')
+                # Generate unique_id
+                unique_id = f"{date_obj.strftime('%Y%m%d')}{row['symbol']}"
 
+                EntrySheet.objects.create(
+                    date=date_obj,
+                    symbol=row["symbol"],
+                    script=row["script"],
+                    sector=row["sector"],
+                    transaction=row["transaction"],
+                    kitta=int(row["kitta"]),
+                    billed_amount=float(row["billed_amount"]),
+                    rate=float(row["rate"]),
+                    broker=row["broker"],
+                    unique_id=unique_id,
+                )
+            except Exception as e:
+                messages.error(request, f"Error processing row {row}: {e}")
+                continue
+
+        messages.success(request, "CSV uploaded and entries created successfully.")
+        return redirect("cms:entrysheet_list")
+
+    return render(request, "cms/upload_csv.html")
 #-----DASHBOARD---------#
 from django.views import View
 from django.shortcuts import render, redirect
@@ -195,7 +214,7 @@ class DashboardView(View):
             s_amount = 0
 
             # Transaction logic
-            if transaction == 'Balance bd':
+            if transaction == 'Balance b/d':
                 row_op_qty += qty
                 row_op_amount += amount
             elif transaction in ['Buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:

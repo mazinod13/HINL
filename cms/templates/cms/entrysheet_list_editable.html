@@ -82,7 +82,7 @@ fetch("{% static 'cms/symbol_script_map.json' %}")
     <tbody>
       {% for entry in entries %}
       <tr>
-       <td><input type="text" name="entry_{{ entry.id }}_date" value="{{ entry.date }}" class="date-input" placeholder="DD-MM-YYYY" maxlength="10"></td>
+        <td><input type="text" name="entry_{{ entry.id }}_date" value="{{ entry.date|date:'Y/m/d' }}" class="date-input" placeholder="YYYY/MM/DD" maxlength="10"></td>
         <td><input type="text" name="entry_{{ entry.id }}_symbol" value="{{ entry.symbol }}"></td>
         <td><input type="text" name="entry_{{ entry.id }}_script" value="{{ entry.script }}"></td>
         <td><input type="text" name="entry_{{ entry.id }}_sector" value="{{ entry.sector }}"></td>
@@ -108,32 +108,36 @@ fetch("{% static 'cms/symbol_script_map.json' %}")
       </tr>
       {% endfor %}
 
-      <!-- New entry row -->
-      <tr>
-       <td><input type="text" name="new_date" id="new_date" placeholder="DD-MM-YYYY" maxlength="10"></td>
-        <td><input type="text" name="new_symbol"></td>
-        <td><input type="text" name="new_script"></td>
-        <td><input type="text" name="new_sector"></td>
-        <td>
-          <select name="new_transaction">
-            <option value="Buy">Buy</option>
-            <option value="Sale">Sale</option>
-            <option value="Right">Right</option>
-            <option value="Bonus">Bonus</option>
-            <option value="Conversion(+)">Conversion(+)</option>
-            <option value="Conversion(-)">Conversion(-)</option>
-            <option value="Suspense(+)">Suspense(+)</option>
-            <option value="Suspense(-)">Suspense(-)</option>
-            <option value="IPO">IPO</option>
-            <option value="FPO">FPO</option>
-            <option value="Balance b/d">Balance b/d</option>
-          </select>
-        </td>
-        <td><input type="number" name="new_kitta"></td>
-        <td><input type="number" step="0.01" name="new_billed_amount"></td>
-        <td><input type="number" step="0.01" name="new_rate"></td>
-        <td><input type="text" name="new_broker"></td>
-      </tr>
+     <tr>
+  <td><input type="text" name="new_date"
+       placeholder="YYYY/MM/DD"
+       maxlength="10"
+       pattern="\d{4}/\d{2}/\d{2}"
+       required>
+</td>
+  <td><input type="text" name="new_symbol" required></td>
+  <td><input type="text" name="new_script"></td>
+  <td><input type="text" name="new_sector"></td>
+  <td>
+    <select name="new_transaction">
+      <option value="Buy">Buy</option>
+      <option value="Sale">Sale</option>
+      <option value="Right">Right</option>
+      <option value="Bonus">Bonus</option>
+      <option value="Conversion(+)">Conversion(+)</option>
+      <option value="Conversion(-)">Conversion(-)</option>
+      <option value="Suspense(+)">Suspense(+)</option>
+      <option value="Suspense(-)">Suspense(-)</option>
+      <option value="IPO">IPO</option>
+      <option value="FPO">FPO</option>
+      <option value="Balance b/d">Balance b/d</option>
+    </select>
+  </td>
+  <td><input type="number" name="new_kitta" value="0"></td>
+  <td><input type="number" step="0.01" name="new_billed_amount" value="0.00"></td>
+  <td><input type="number" step="0.01" name="new_rate" value="0.00" readonly></td>
+  <td><input type="text" name="new_broker"></td>
+</tr>
     </tbody>
   </table>
   <button type="submit" class="btn btn-primary">Save Changes</button>
@@ -144,27 +148,29 @@ fetch("{% static 'cms/symbol_script_map.json' %}")
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const formatDateInput = (input) => {
-    input.addEventListener('input', function (e) {
-      // Remove all non-digit characters
-      let value = this.value.replace(/\D/g, '').slice(0, 8);
-      let formatted = '';
+document.querySelector('form').addEventListener('submit', function (e) {
+  const datePattern = /^\d{4}\/\d{2}\/\d{2}$/;
 
-      if (value.length > 4) {
-        formatted = value.slice(0, 2) + '-' + value.slice(2, 4) + '-' + value.slice(4);
-      } else if (value.length > 2) {
-        formatted = value.slice(0, 2) + '-' + value.slice(2);
-      } else {
-        formatted = value;
-      }
+  document.querySelectorAll('input[name$="_date"], input[name="new_date"]').forEach(dateInput => {
+    const val = dateInput.value.trim();
+    if (val && !datePattern.test(val)) {
+      e.preventDefault();
+      alert(`Invalid date format in "${dateInput.name}". Please use YYYY/MM/DD.`);
+      dateInput.focus();
+    }
+  });
 
-      this.value = formatted;
-    });
-  };
-
-  document.querySelectorAll('input[name$="_date"], input[name="new_date"]').forEach(formatDateInput);
+  const symbol = document.querySelector('input[name="new_symbol"]').value.trim();
+  const date = document.querySelector('input[name="new_date"]').value.trim();
+  if (symbol && !date) {
+    e.preventDefault();
+    alert("Please enter a valid date for the new entry.");
+  } else if (date && !symbol) {
+    e.preventDefault();
+    alert("Please enter a symbol for the new entry.");
+  }
 });
+
 document.addEventListener('DOMContentLoaded', function () {
   // Function to calculate and update rate
   function attachRateCalculation(kittaInput, billedInput, rateInput) {
@@ -213,6 +219,18 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+});
+
+document.querySelector('form').addEventListener('submit', function (e) {
+  const symbol = document.querySelector('input[name="new_symbol"]').value.trim();
+  const date = document.querySelector('input[name="new_date"]').value.trim();
+  if (symbol && !date) {
+    e.preventDefault();
+    alert("Please enter a valid date for the new entry.");
+  } else if (date && !symbol) {
+    e.preventDefault();
+    alert("Please enter a symbol for the new entry.");
+  }
 });
 
 </script>

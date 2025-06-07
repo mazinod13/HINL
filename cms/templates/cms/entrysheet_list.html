@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Unique ID</th>
       <th>Date</th>
       <th>Symbol</th>
       <th>Script</th>
@@ -20,15 +21,17 @@
   <tbody>
     {% for entry in entries %}
     <tr>
-      <td>{{ entry.date }}</td>
-      <td>{{ entry.symbol }}</td>
-      <td>{{ entry.script }}</td>
-      <td>{{ entry.sector }}</td>
-      <td>{{ entry.transaction }}</td>
-      <td>{{ entry.kitta }}</td>
-      <td>{{ entry.billed_amount }}</td>
-      <td>{{ entry.rate }}</td>
-      <td>{{ entry.broker }}</td>
+      <td>{{ entry.unique_id }}</td>
+     <td>{{ entry.date|date:"Y/m/d" }}</td>
+<td>{{ entry.symbol }}</td>
+<td>{{ entry.script }}</td>
+<td>{{ entry.sector }}</td>
+<td>{{ entry.transaction }}</td>
+<td>{{ entry.kitta }}</td>
+<td>{{ entry.billed_amount }}</td>
+<td>{{ entry.rate }}</td>
+<td>{{ entry.broker }}</td>
+
       <td>
         <a href="{% url 'cms:entry_edit' entry.pk %}" class="btn btn-sm btn-warning">Edit</a>
 <a href="{% url 'cms:entry_delete' entry.pk %}" class="btn btn-sm btn-danger">Delete</a>

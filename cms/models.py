@@ -1,12 +1,14 @@
 # cms/models.py
 
+import uuid
+
 from django.db import models
 
 class EntrySheet(models.Model):
     TRANSACTION_CHOICES = [
         ('Buy', 'Buy'),
         ('Sale', 'Sale'),
-        ('Balance bd', 'Balance b/d'),
+        ('balance b/d', 'Balance b/d'),
         ('IPO', 'IPO'),
         ('FPO', 'FPO'),
         ('Bonus', 'Bonus'),
@@ -16,7 +18,14 @@ class EntrySheet(models.Model):
         ('Suspense(+)', 'Suspense(+)'),
         ('Suspense(-)', 'Suspense(-)'),
     ]
+    # models.py
+    unique_id = models.CharField(max_length=50, unique=True, blank=True)
 
+    def save(self, *args, **kwargs):
+        if not self.unique_id:
+            formatted_date = self.date.strftime('%Y%m%d')  # e.g., 20250606
+            self.unique_id = f"{self.symbol}{formatted_date}"
+        super().save(*args, **kwargs)
     date = models.DateField()
     symbol = models.CharField(max_length=150)
     script = models.CharField(max_length=150)
