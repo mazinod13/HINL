@@ -149,7 +149,6 @@ def upload_csv(request):
                     billed_amount=float(row["billed_amount"]),
                     rate=float(row["rate"]),
                     broker=row["broker"],
-                    unique_id=unique_id,
                 )
             except Exception as e:
                 messages.error(request, f"Error processing row {row}: {e}")

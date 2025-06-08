@@ -172,6 +172,22 @@ document.querySelector('form').addEventListener('submit', function (e) {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+  function autoFormatDateInput(input) {
+    input.addEventListener('input', function () {
+      let val = this.value.replace(/\D/g, '');  // Remove non-digits
+      if (val.length >= 4 && val.length <= 6) {
+        this.value = val.replace(/^(\d{4})(\d{1,2})/, '$1/$2');
+      } else if (val.length > 6) {
+        this.value = val.replace(/^(\d{4})(\d{2})(\d{2}).*/, '$1/$2/$3');
+      }
+    });
+  }
+
+  // Apply to all date fields (existing + new)
+  document.querySelectorAll('input[name$="_date"], input[name="new_date"]').forEach(autoFormatDateInput);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
   // Function to calculate and update rate
   function attachRateCalculation(kittaInput, billedInput, rateInput) {
     const calculate = () => {
