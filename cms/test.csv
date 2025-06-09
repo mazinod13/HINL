@@ -1,7 +1,41 @@
 date,symbol,script,sector,transaction,kitta,billed_amount,rate,broker
-2024-06-04,NABIL,Nabil Bank Ltd,Commercial Bank,Sell,40,4800,120,ABC Securities
-2024-06-05,NABIL,Nabil Bank Ltd,Commercial Bank,Bonus,10,0,0,Global Securities
-2024-06-06,NRIC,NIC Asia Bank,Commercial Bank,Buy,100,90000,900,XYZ Securities
-2024-06-07,NRIC,NIC Asia Bank,Commercial Bank,Sale,50,47500,950,XYZ Securities
-2024-06-08,ACEDBL,Ace Development Bank Ltd,Development Bank,Right,20,2000,100,ABC Securities
-2024-06-09,ACEDBL,Ace Development Bank Ltd,Development Bank,Sale,60,6600,110,PQR Securities
+2025-01-01,ACEDBL,Ace Development Bank Ltd.,Development Banks,Balance b/d,1000,100000.00,100.00,ABC Securities
+2025-01-03,ACEDBL,Ace Development Bank Ltd.,Development Banks,Buy,500,55000.00,110.00,XYZ Securities
+2025-01-05,ACEDBL,Ace Development Bank Ltd.,Development Banks,Sale,300,33000.00,110.00,PQR Securities
+2025-01-07,ACEDBL,Ace Development Bank Ltd.,Development Banks,Buy,200,22000.00,110.00,Global Securities
+2025-01-10,ACEDBL,Ace Development Bank Ltd.,Development Banks,Sale,100,11000.00,110.00,ABC Securities
+2025-01-12,ACEDPO,Ace Development Bank Limited Promoter Share,Development Banks,Balance b/d,800,80000.00,100.00,XYZ Securities
+2025-01-14,ACEDPO,Ace Development Bank Limited Promoter Share,Development Banks,Buy,400,44000.00,110.00,PQR Securities
+2025-01-16,ACEDPO,Ace Development Bank Limited Promoter Share,Development Banks,Sale,200,22000.00,110.00,Global Securities
+2025-01-18,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance,Balance b/d,1200,132000.00,110.00,ABC Securities
+2025-01-20,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance,Buy,600,66000.00,110.00,XYZ Securities
+2025-01-22,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance,Sale,400,44000.00,110.00,PQR Securities
+2025-01-24,ACLBSLP,Aarambha Chautari Laghubitta Bittiya Sanstha Limited Promoter Share,Microfinance,Balance b/d,1000,110000.00,110.00,Global Securities
+2025-01-26,ACLBSLP,Aarambha Chautari Laghubitta Bittiya Sanstha Limited Promoter Share,Microfinance,Buy,500,55000.00,110.00,ABC Securities
+2025-01-28,ACLBSLP,Aarambha Chautari Laghubitta Bittiya Sanstha Limited Promoter Share,Microfinance,Sale,300,33000.00,110.00,XYZ Securities
+2025-01-30,ADBL,Agricultural Development Bank Limited,Commercial Banks,Balance b/d,1500,165000.00,110.00,PQR Securities
+2025-02-01,ADBL,Agricultural Development Bank Limited,Commercial Banks,Buy,700,77000.00,110.00,Global Securities
+2025-02-03,ADBL,Agricultural Development Bank Limited,Commercial Banks,Sale,400,44000.00,110.00,ABC Securities
+2025-02-05,ADBLD83,10.35% Agricultural Bank Debenture 2083,Commercial Banks,Balance b/d,2000,220000.00,110.00,XYZ Securities
+2025-02-07,ADBLD83,10.35% Agricultural Bank Debenture 2083,Commercial Banks,Buy,1000,110000.00,110.00,PQR Securities
+2025-02-09,ADBLD83,10.35% Agricultural Bank Debenture 2083,Commercial Banks,Sale,600,66000.00,110.00,Global Securities
+2025-02-11,ADLB,Adarsha Laghubitta Bittiya Sanstha Limited,Microfinance,Balance b/d,900,99000.00,110.00,ABC Securities
+2025-02-13,ADLB,Adarsha Laghubitta Bittiya Sanstha Limited,Microfinance,Buy,450,49500.00,110.00,XYZ Securities
+2025-02-15,ADLB,Adarsha Laghubitta Bittiya Sanstha Limited,Microfinance,Sale,300,33000.00,110.00,PQR Securities
+2025-02-17,AEFL,Alpic Everest Finance Co. Ltd.,Finance,Balance b/d,1100,121000.00,110.00,Global Securities
+2025-02-19,AEFL,Alpic Everest Finance Co. Ltd.,Finance,Buy,550,60500.00,110.00,ABC Securities
+2025-02-21,AEFL,Alpic Everest Finance Co. Ltd.,Finance,Sale,400,44000.00,110.00,XYZ Securities
+2025-02-23,ACEDBL,Ace Development Bank Ltd.,Development Banks,Buy,300,33000.00,110.00,PQR Securities
+2025-02-25,ACEDBL,Ace Development Bank Ltd.,Development Banks,Sale,200,22000.00,110.00,Global Securities
+2025-02-27,ACEDPO,Ace Development Bank Limited Promoter Share,Development Banks,Buy,500,55000.00,110.00,ABC Securities
+2025-03-01,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance,Buy,300,33000.00,110.00,XYZ Securities
+2025-03-03,ACLBSL,Aarambha Chautari Laghubitta Bittiya Sanstha Limited,Microfinance,Sale,150,16500.00,110.00,PQR Securities
+2025-03-05,ACLBSLP,Aarambha Chautari Laghubitta Bittiya Sanstha Limited Promoter Share,Microfinance,Buy,400,44000.00,110.00,Global Securities
+2025-03-07,ADBL,Agricultural Development Bank Limited,Commercial Banks,Buy,500,55000.00,110.00,ABC Securities
+2025-03-09,ADBL,Agricultural Development Bank Limited,Commercial Banks,Sale,300,33000.00,110.00,XYZ Securities
+2025-03-11,ADBLD83,10.35% Agricultural Bank Debenture 2083,Commercial Banks,Buy,700,77000.00,110.00,PQR Securities
+2025-03-13,ADBLD83,10.35% Agricultural Bank Debenture 2083,Commercial Banks,Sale,400,44000.00,110.00,Global Securities
+2025-03-15,ADLB,Adarsha Laghubitta Bittiya Sanstha Limited,Microfinance,Buy,300,33000.00,110.00,ABC Securities
+2025-03-17,ADLB,Adarsha Laghubitta Bittiya Sanstha Limited,Microfinance,Sale,200,22000.00,110.00,XYZ Securities
+2025-03-19,AEFL,Alpic Everest Finance Co. Ltd.,Finance,Buy,400,44000.00,110.00,PQR Securities
+2025-03-21,AEFL,Alpic Everest Finance Co. Ltd.,Finance,Sale,300,33000.00,110.00,Global Securities

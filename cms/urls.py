@@ -7,6 +7,7 @@ from .views import (
     EntrySheetDeleteView,
     EntrySheetUpdateView,
     DashboardView,
+    TopStockListView,
     entry_sheet_editable_list,
     upload_csv,
 )
@@ -22,5 +23,6 @@ urlpatterns = [
     path('entries/editable/', entry_sheet_editable_list, name='entrysheet_editable_list'),
     path('upload-csv/', upload_csv, name='upload_csv'),
     path('dashboard/',DashboardView.as_view(),name='dashboard'),
-     path('dashboard/<str:symbol>/', DashboardView.as_view(), name='dashboard_detail'),
+    path('dashboard/<str:symbol>/', DashboardView.as_view(), name='dashboard_detail'),
+    path('stocks/', TopStockListView.as_view(), name='stock_list'),
 ]

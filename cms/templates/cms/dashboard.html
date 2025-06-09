@@ -2,9 +2,8 @@
 {% block content %}
 <div class="container-fluid">
   <div class="row">
-
     <!-- Sidebar -->
-    <nav class="col-md-2 d-none d-md-block bg-light sidebar py-4">
+    <nav class="col-12 col-md-2 bg-light sidebar py-4 mb-3 mb-md-0">
       <div class="position-sticky">
         <h5 class="px-3">Symbols</h5>
         <ul class="nav flex-column px-3">
@@ -20,11 +19,12 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="col-md-10 ms-sm-auto px-md-4 py-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3">
-        <h2>Dashboard - <span class="text-primary">{{ current_symbol }}</span> <br>
-  <small class="text-muted">{{ script_name }}</small>
-</h2>
+    <main class="col-12 col-md-10 ms-sm-auto px-md-4 py-4">
+      <div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
+        <div>
+          <h2 class="mb-1">CalculationSheet: <span class="text-primary">{{ current_symbol }}</span></h2>
+          <small class="text-muted">{{ script_name }}</small>
+        </div>
       </div>
 
       <!-- Summary Table -->
@@ -32,13 +32,12 @@
         <table class="table table-bordered align-middle table-sm text-center">
           <thead class="table-light">
             <tr>
-              <th>Start Date</th>
-              <th>End Date</th>
+              <th rowspan="2">Start Date</th>
+              <th rowspan="2">End Date</th>
               <th colspan="3">Total Purchase</th>
               <th colspan="3">Total Sales</th>
             </tr>
             <tr>
-              <th></th><th></th>
               <th>Kitta</th><th>Amount</th><th>Rate</th>
               <th>Kitta</th><th>Amount</th><th>Rate</th>
             </tr>
@@ -49,38 +48,50 @@
               <td>{{ summary.end_date }}</td>
               <td>{{ summary.total_p_qty }}</td>
               <td>{{ summary.total_p_amount }}</td>
-              <td>{{ summary.p_rate }}</td>
+              <td>{{ summary.p_rate | floatformat:3 }}</td>
               <td>{{ summary.total_s_qty }}</td>
               <td>{{ summary.total_s_amount }}</td>
-              <td>{{ summary.s_rate }}</td>
+              <td>{{ summary.s_rate | floatformat:3 }}</td>
             </tr>
             <tr class="fw-bold bg-light">
               <td colspan="2">Closing Balance</td>
               <td>{{ summary.closing_qty }}</td>
               <td>{{ summary.closing_amount }}</td>
-              <td>{{ summary.closing_rate }}</td>
+              <td>{{ summary.closing_rate | floatformat:3 }}</td>
               <td colspan="3"></td>
+            </tr>
+            <tr class="bg-success text-white fw-bold">
+              <td colspan="2">Profit</td>
+              <td colspan="6">{{ summary.profit | floatformat:2 }}</td>
+            </tr>
+            <tr class="bg-danger text-white fw-bold">
+              <td colspan="2">Unrealized Profit / (Loss)</td>
+              <td colspan="6">
+                {{ summary.unrealized_profit | floatformat:2 }} |
+                {{ summary.unrealized_percent | floatformat:2 }}%
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <!-- Main Data Table -->
+      <!-- Editable Data Table -->
       <div class="table-responsive mb-4">
-        <table class="table table-bordered table-striped table-hover text-center align-middle">
+        <table class="table table-bordered table-hover align-middle text-center small">
           <thead class="table-secondary">
             <tr>
-              <th>Date</th><th>Transaction</th><th>Qty</th><th>Amount</th><th>Rate</th>
+              <th>Unique_ID</th><th>Date</th><th>Transaction</th><th>Qty</th><th>Amount</th><th>Rate</th>
               <th>Op.QTY</th><th>Op.RATE</th><th>Op.AMOUNT</th>
               <th>P.QTY</th><th>P.RATE</th><th>P.AMOUNT</th>
               <th>S.QTY</th><th>S.RATE</th><th>S.AMOUNT</th>
-              <th>CONSUMPTION</th><th>PROFIT</th>
+              <th>Consumption</th><th>Profit</th>
               <th>Cl.QTY</th><th>Cl.RATE</th><th>Cl.AMOUNT</th>
             </tr>
           </thead>
           <tbody>
             {% for row in rows %}
             <tr>
+              <td>{{ row.unique_id }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="date">{{ row.date }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="transaction">{{ row.transaction }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="qty">{{ row.qty }}</td>
@@ -99,14 +110,13 @@
 
       <!-- Save Button -->
       <div class="text-end">
-        <button id="save-changes" class="btn btn-primary px-4">Save Changes</button>
+        <button id="save-changes" class="btn btn-lg btn-primary px-4">Save Changes</button>
       </div>
-
     </main>
   </div>
 </div>
 
-<!-- JavaScript -->
+<!-- JavaScript (Keep your script block the same) -->
 <script>
 function getCookie(name) {
   let cookieValue = null;
@@ -122,6 +132,7 @@ function getCookie(name) {
   }
   return cookieValue;
 }
+
 const csrftoken = getCookie('csrftoken');
 const editedItems = [];
 
@@ -129,7 +140,7 @@ document.querySelectorAll('.editable').forEach(el => {
   el.addEventListener('focusout', () => {
     const id = el.dataset.id;
     const field = el.dataset.field;
-    const value = el.innerText;
+    const value = el.innerText.trim();
     editedItems.push({ id, field, value });
   });
 });

@@ -1,0 +1,51 @@
+{% extends "cms/base.html" %}
+{% block content %}
+<div class="card shadow rounded-4 mt-4 border-0">
+  <div class="card-header bg-gradient bg-primary text-white fs-5 fw-semibold rounded-top-4 d-flex justify-content-between align-items-center">
+    <span><i class="bi bi-bar-chart-line-fill me-2"></i>Top Stock List</span>
+  </div>
+  <div class="card-body px-4">
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered align-middle text-center mb-0">
+        <thead class="table-dark text-nowrap">
+          <tr>
+            <th>Script</th>
+            <th>Kitta</th>
+            <th>Amount</th>
+            <th>Rate</th>
+            <th>BEP</th>
+            <th>Realized P</th>
+            <th>Unrealized P/L</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for stock in top_stocks %}
+          <tr>
+            <td>
+              <a href="{% url 'cms:dashboard_detail' stock.symbol %}" class="fw-semibold text-decoration-none text-primary">
+                {{ stock.symbol }}
+              </a>
+            </td>
+            <td class="fw-medium">{{ stock.closing_qty }}</td>
+            <td class="fw-medium">{{ stock.closing_amount|floatformat:2 }}</td>
+            <td class="fw-medium">{{ stock.closing_rate|floatformat:2 }}</td>
+            <td class="fw-medium">{{ stock.bep|floatformat:2 }}</td>
+            <td>
+              <span class="badge bg-success-subtle text-success-emphasis fw-semibold px-2 py-1">
+                {{ stock.profit|floatformat:2 }}
+              </span>
+            </td>
+            <td>
+              <span class="badge {% if stock.unrealized_profit >= 0 %}bg-success-subtle text-success-emphasis{% else %}bg-danger-subtle text-danger-emphasis{% endif %} fw-semibold px-2 py-1"
+                    title="{{ stock.unrealized_percent|floatformat:2 }}%">
+                {{ stock.unrealized_profit|floatformat:2 }}
+              </span>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

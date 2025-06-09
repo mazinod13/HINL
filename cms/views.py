@@ -5,12 +5,24 @@ from django.contrib import messages
 from datetime import datetime
 from django.views import View
 from django.http import JsonResponse
-from django.db.models import DecimalField,IntegerField
-from django.db.models import Sum, Case, When, F, Value
-from .models import EntrySheet
+from .models import EntrySheet,Calculation
 from uuid import uuid4
 import csv
 import json
+import random
+import string
+
+def generate_suffix(length=3):
+    chars = string.ascii_letters + string.digits
+    return ''.join(random.choices(chars, k=length))
+
+def generate_unique_id(date_obj):
+    date_str = date_obj.strftime('%Y%m%d')
+    while True:
+        suffix = generate_suffix()
+        unique_id = f"{date_str}{suffix}"
+        if not EntrySheet.objects.filter(unique_id=unique_id).exists():
+            return unique_id
 
 # Home view
 class HomeView(TemplateView):
@@ -21,10 +33,7 @@ class EntrySheetListView(ListView):
     model = EntrySheet
     template_name = "cms/entrysheet_list.html"
     context_object_name = "entries"
-#---unique ID----
-for entry in EntrySheet.objects.filter(unique_id__isnull=True):
-    entry.unique_id = str(uuid4())
-    entry.save()
+    
 # Optional form-based create view (can be replaced by inline editable view)
 class EntrySheetCreateView(CreateView):
     model = EntrySheet
@@ -126,20 +135,19 @@ class EntrySheetDeleteView(DeleteView):
     success_url = reverse_lazy('cms:entrysheet_list')
     
 def upload_csv(request):
+
     if request.method == "POST" and request.FILES.get("csv_file"):
+        print("DEBUG: CSV file detected in POST")
         csv_file = request.FILES["csv_file"]
         decoded_file = csv_file.read().decode("utf-8").splitlines()
         reader = csv.DictReader(decoded_file)
 
         for row in reader:
             try:
-                # Convert date string to date object
                 date_obj = datetime.strptime(row["date"], "%Y-%m-%d").date()
-
-                # Generate unique_id
-                unique_id = f"{date_obj.strftime('%Y%m%d')}{row['symbol']}"
-
+                unique_id = generate_unique_id(date_obj)
                 EntrySheet.objects.create(
+                    unique_id=unique_id,
                     date=date_obj,
                     symbol=row["symbol"],
                     script=row["script"],
@@ -152,20 +160,19 @@ def upload_csv(request):
                 )
             except Exception as e:
                 messages.error(request, f"Error processing row {row}: {e}")
+                print(f"ERROR processing row {row}: {e}")
                 continue
+
 
         messages.success(request, "CSV uploaded and entries created successfully.")
         return redirect("cms:entrysheet_list")
 
+    print("DEBUG: Rendering upload_csv.html template")
     return render(request, "cms/upload_csv.html")
-#-----DASHBOARD---------#
-from django.views import View
-from django.shortcuts import render, redirect
-from django.db.models import Sum
-from django.http import JsonResponse
-import json
-from .models import EntrySheet
 
+
+
+#-----Calculation Sheet---------#
 class DashboardView(View):
     def get(self, request, symbol=None):
         symbols = EntrySheet.objects.values_list('symbol', flat=True).distinct()
@@ -181,69 +188,56 @@ class DashboardView(View):
                     'summary': {}
                 })
 
-        entries = EntrySheet.objects.filter(symbol=symbol).order_by('date', 'id')
+        entries = EntrySheet.objects.filter(symbol=symbol).order_by('date', 'transaction', 'id')
         script_name = entries[0].script if entries else ""
 
         op_qty = 0
         op_amount = 0
-        p_qty = 0
-        p_amount = 0
-        s_qty = 0
-        s_amount = 0
-
         rows = []
 
-        # Initial values
-        op_qty = 0
-        op_amount = 0
-
-        for e in entries:
+        for idx, e in enumerate(entries):
             qty = e.kitta or 0
             amount = e.billed_amount or 0
             transaction = e.transaction
 
-            # Set opening values for this row (from previous closing)
+            p_qty = p_amount = s_qty = s_amount = 0
             row_op_qty = op_qty
             row_op_amount = op_amount
             row_op_rate = (row_op_amount / row_op_qty) if row_op_qty else 0
 
-            p_qty = 0
-            p_amount = 0
-            s_qty = 0
-            s_amount = 0
-
-            # Transaction logic
-            if transaction == 'Balance b/d':
-                row_op_qty += qty
-                row_op_amount += amount
-            elif transaction in ['Buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
-                p_qty = qty
-                p_amount = amount
-            elif transaction in ['Sale', 'Conversion(-)', 'Suspense(-)']:
-                s_qty = qty
-                s_amount = amount
-
-            cl_qty = row_op_qty + p_qty - s_qty
-            p_rate = (p_amount / p_qty) if p_qty else 0
-            s_rate = (s_amount / s_qty) if s_qty else 0
-
-            if (p_qty + row_op_qty) != 0:
-                consumption = ((p_amount + row_op_amount) / (p_qty + row_op_qty)) * s_qty
+            if transaction.lower() == 'balance b/d':
+                row_op_qty = qty
+                row_op_amount = amount
+                row_op_rate = (amount / qty) if qty else 0
+                cl_qty = row_op_qty
+                cl_amount = row_op_amount
+                cl_rate = row_op_rate
+                consumption = profit = p_rate = s_rate = 0
             else:
-                consumption = 0
+                if transaction in ['Buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
+                    p_qty = qty
+                    p_amount = amount
+                elif transaction in ['Sale', 'Conversion(-)', 'Suspense(-)']:
+                    s_qty = qty
+                    s_amount = amount
 
-            cl_amount = row_op_amount + p_amount - consumption
-            cl_rate = (cl_amount / cl_qty) if cl_qty else 0
-            profit = s_amount - consumption
+                cl_qty = row_op_qty + p_qty - s_qty
+                consumption = ((p_amount + row_op_amount) / (p_qty + row_op_qty)) * s_qty if (p_qty + row_op_qty) else 0
+                cl_amount = row_op_amount + p_amount - consumption
+                cl_rate = (cl_amount / cl_qty) if cl_qty else 0
+                p_rate = (p_amount / p_qty) if p_qty else 0
+                s_rate = (s_amount / s_qty) if s_qty else 0
+                profit = s_amount - consumption
 
             rows.append({
                 'id': e.id,
                 'symbol': e.symbol,
                 'date': e.date,
-                'transaction': e.transaction,
+                'transaction': transaction,
                 'qty': qty,
                 't_amount': amount,
                 'rate': e.rate,
+                'unique_id': e.unique_id,
 
                 'op_qty': round(row_op_qty, 2),
                 'op_rate': round(row_op_rate, 2),
@@ -261,10 +255,32 @@ class DashboardView(View):
                 'cl_amount': round(cl_amount, 2),
             })
 
-            # Update op_qty/op_amount for next row
+            # Update opening for next loop
             op_qty = cl_qty
             op_amount = cl_amount
-        # Summary block should be outside the loop
+
+            # Save calculations per entry INSIDE the loop
+            Calculation.objects.update_or_create(
+                entry=e,
+                defaults={
+                    'op_qty': row_op_qty,
+                    'op_rate': row_op_rate,
+                    'op_amount': row_op_amount,
+                    'p_qty': p_qty,
+                    'p_rate': p_rate,
+                    'p_amount': p_amount,
+                    's_qty': s_qty,
+                    's_rate': s_rate,
+                    's_amount': s_amount,
+                    'consumption': consumption,
+                    'profit': profit,
+                    'cl_qty': cl_qty,
+                    'cl_rate': cl_rate,
+                    'cl_amount': cl_amount,
+                }
+            )
+
+        # Summary calculations
         if rows:
             summary = {
                 "start_date": rows[0]["date"],
@@ -275,10 +291,21 @@ class DashboardView(View):
                 "total_s_amount": sum(row["s_amount"] for row in rows),
                 "closing_qty": rows[-1]["cl_qty"],
                 "closing_amount": rows[-1]["cl_amount"],
-                "closing_rate": rows[-1]["cl_rate"]           
+                "closing_rate": rows[-1]["cl_rate"],
             }
             summary["p_rate"] = summary["total_p_amount"] / summary["total_p_qty"] if summary["total_p_qty"] else 0
             summary["s_rate"] = summary["total_s_amount"] / summary["total_s_qty"] if summary["total_s_qty"] else 0
+            summary["profit"] = sum(row.get("profit", 0) for row in rows)
+
+            bep_rate = summary["p_rate"]
+            cl_qty = summary["closing_qty"]
+            cl_rate = summary["closing_rate"]
+
+            summary["unrealized_profit"] = cl_qty * (cl_rate - bep_rate)
+            summary["unrealized_percent"] = (
+                (summary["unrealized_profit"] / summary["total_p_amount"]) * 100
+                if summary["total_p_amount"] else 0
+            )
         else:
             summary = {
                 "start_date": "",
@@ -292,6 +319,9 @@ class DashboardView(View):
                 "closing_qty": 0,
                 "closing_amount": 0,
                 "closing_rate": 0,
+                "profit": 0,
+                "unrealized_profit": 0,
+                "unrealized_percent": 0
             }
 
         return render(request, 'cms/dashboard.html', {
@@ -320,3 +350,96 @@ class DashboardView(View):
                 EntrySheet.objects.filter(id=entry_id).update(**{field_map[field]: value})
 
         return JsonResponse({'status': 'success'})
+
+
+
+#-----TOP STOCKLISTS------
+class TopStockListView(View):
+    def get(self, request):
+        symbols = EntrySheet.objects.values_list('symbol', flat=True).distinct()
+        top_stocks = []
+
+        for symbol in symbols:
+            entries = EntrySheet.objects.filter(symbol=symbol).order_by('date', 'transaction', 'id')
+            if not entries.exists():
+                continue
+
+            op_qty = op_amount = 0
+            rows = []
+
+            for e in entries:
+                qty = e.kitta or 0
+                amount = e.billed_amount or 0
+                transaction = e.transaction
+
+                p_qty = p_amount = s_qty = s_amount = 0
+                row_op_qty = op_qty
+                row_op_amount = op_amount
+
+                if transaction.lower() == 'balance b/d':
+                    row_op_qty = qty
+                    row_op_amount = amount
+                    cl_qty = row_op_qty
+                    cl_amount = row_op_amount
+                    cl_rate = (cl_amount / cl_qty) if cl_qty else 0
+                    profit = consumption = 0
+                else:
+                    if transaction in ['Buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
+                        p_qty = qty
+                        p_amount = amount
+                    elif transaction in ['Sale', 'Conversion(-)', 'Suspense(-)']:
+                        s_qty = qty
+                        s_amount = amount
+
+                    cl_qty = row_op_qty + p_qty - s_qty
+                    avg_rate = (row_op_amount + p_amount) / (row_op_qty + p_qty) if (row_op_qty + p_qty) else 0
+                    consumption = avg_rate * s_qty
+                    cl_amount = row_op_amount + p_amount - consumption
+                    cl_rate = cl_amount / cl_qty if cl_qty else 0
+                    profit = s_amount - consumption
+
+                rows.append({
+                    'p_qty': p_qty, 'p_amount': p_amount,
+                    's_qty': s_qty, 's_amount': s_amount,
+                    'profit': profit,
+                    'cl_qty': cl_qty,
+                    'cl_amount': cl_amount,
+                    'cl_rate': cl_rate
+                })
+
+                op_qty = cl_qty
+                op_amount = cl_amount
+
+            total_p_qty = sum(row['p_qty'] for row in rows)
+            total_p_amount = sum(row['p_amount'] for row in rows)
+            total_s_qty = sum(row['s_qty'] for row in rows)
+            total_s_amount = sum(row['s_amount'] for row in rows)
+            profit = sum(row['profit'] for row in rows)
+            closing_qty = rows[-1]['cl_qty']
+            closing_amount = rows[-1]['cl_amount']
+            closing_rate = rows[-1]['cl_rate']
+            p_rate = total_p_amount / total_p_qty if total_p_qty else 0
+
+            unrealized_profit = closing_qty * (closing_rate - p_rate)
+            unrealized_percent = (unrealized_profit / total_p_amount) * 100 if total_p_amount else 0
+
+            top_stocks.append({
+    'symbol': symbol,
+    'script': entries.first().script,
+    'total_p_amount': total_p_amount,   # Total buy amount
+    'total_p_qty': total_p_qty,         # Total buy kitta
+    'total_s_amount': total_s_amount,   # Total sale amount
+    'closing_qty': closing_qty,         # Current holding (Kitta)
+    'closing_amount': closing_amount,   # Current value
+    'closing_rate': closing_rate,       # Current rate
+    'bep': p_rate,                      # Break-even price
+    'profit': profit,                   # Realized profit
+    'unrealized_profit': unrealized_profit,   # Unrealized P/L
+    'unrealized_percent': unrealized_percent
+})
+        # Optional: sort by profit descending
+        top_stocks = sorted(top_stocks, key=lambda x: x['profit'], reverse=True)
+
+        return render(request, 'cms/stock_list.html', {
+            'top_stocks': top_stocks
+        })

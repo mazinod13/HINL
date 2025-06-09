@@ -1,3438 +1,4297 @@
 [
   {
     "Symbol": "ACEDBL",
-    "Script": "Ace Development Bank Ltd"
+    "Script": "Ace Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "ACEDPO",
-    "Script": "Ace Development Bank Limited Promoter Share"
+    "Script": "Ace Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "ACLBSL",
-    "Script": "Aarambha Chautari Laghubitta Bittiya Sanstha Limited"
+    "Script": "Aarambha Chautari Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "ACLBSLP",
-    "Script": "Aarambha Chautari Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Aarambha Chautari Laghubitta Bittiya Sanstha Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "ADBL",
-    "Script": "Agricultural Development Bank Limited"
+    "Script": "Agricultural Development Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "ADBLD83",
-    "Script": "10.35% Agricultural Bank Debenture 2083"
+    "Script": "10.35% Agricultural Bank Debenture 2083",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "ADLB",
-    "Script": "Adarsha Laghubitta Bittiya Sanstha Limited"
+    "Script": "Adarsha Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "AEFL",
-    "Script": "Alpic Everest Finance Co. Ltd."
+    "Script": "Alpic Everest Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "AEFLPO",
-    "Script": "Alpic Everest Finance Limited Promotor Share"
+    "Script": "Alpic Everest Finance Limited Promotor Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "AFC",
-    "Script": "Annunapurna Finance Company Ltd."
+    "Script": "Annunapurna Finance Company Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "AFL",
-    "Script": "Api Finance Limited"
+    "Script": "Api Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "AHL",
-    "Script": "Asian Hydropower Limited"
+    "Script": "Asian Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "AHPC",
-    "Script": "Arun Valley Hydropower Development Co. Ltd."
+    "Script": "Arun Valley Hydropower Development Co. Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "AIC",
-    "Script": "Alliance Insurance Co. Ltd."
+    "Script": "Alliance Insurance Co. Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "AIL",
-    "Script": "Ajod Insurance Limited"
+    "Script": "Ajod Insurance Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "AKBSL",
-    "Script": "Adhikhola Laghubitta Bittiya Sanstha Limited"
+    "Script": "Adhikhola Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "AKBSLP",
-    "Script": "Adhikhola Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Adhikhola Laghubitta Bittiya Sanstha Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "AKJCL",
-    "Script": "Ankhu Khola Jalvidhyut Company Ltd"
+    "Script": "Ankhu Khola Jalvidhyut Company Ltd",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "AKPL",
-    "Script": "Arun Kabeli Power Ltd."
+    "Script": "Arun Kabeli Power Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "ALBSL",
-    "Script": "Asha Laghubitta Bittiya Sanstha Ltd"
+    "Script": "Asha Laghubitta Bittiya Sanstha Ltd",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "ALBSLP",
-    "Script": "Asha Laghubitta Bittiya Sanstha Ltd Promoter Share"
+    "Script": "Asha Laghubitta Bittiya Sanstha Ltd Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "ALDBL",
-    "Script": "Alpine Development Bank Limited"
+    "Script": "Alpine Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "ALICL",
-    "Script": "Asian Life Insurance Co. Limited"
+    "Script": "Asian Life Insurance Co. Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "ALICLP",
-    "Script": "Asian Life Insurance Co. Ltd Promoter Share"
+    "Script": "Asian Life Insurance Co. Ltd Promoter Share",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "AMFI",
-    "Script": "Arambha Microfinance Bittiya Sanstha Ltd."
+    "Script": "Arambha Microfinance Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "ANLB",
-    "Script": "Aatmanirbhar Laghubitta Bittiya Sanstha Limited"
+    "Script": "Aatmanirbhar Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "APEX",
-    "Script": "Apex Development Bank Ltd."
+    "Script": "Apex Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "API",
-    "Script": "Api Power Company Ltd."
+    "Script": "Api Power Company Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "ARDBL",
-    "Script": "Araniko Development Bank Limited"
+    "Script": "Araniko Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "ARDBLP",
-    "Script": "Araniko Development Bank Limited Promoter Share"
+    "Script": "Araniko Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "AVU",
-    "Script": "Arun Vanaspati Udhyog Limited"
+    "Script": "Arun Vanaspati Udhyog Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "AVYAN",
-    "Script": "Aviyan Laghubitta Bittiya Sanstha Limited"
+    "Script": "Aviyan Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "AXIS",
-    "Script": "Axis Development Bank Limited"
+    "Script": "Axis Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BARUN",
-    "Script": "Barun Hydropower Co. Ltd."
+    "Script": "Barun Hydropower Co. Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "BBBL",
-    "Script": "Bhrikuti Vikash Bank Limited"
+    "Script": "Bhrikuti Vikash Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BBBLN",
-    "Script": "Bagheshwori Development Bank Limited"
+    "Script": "Bagheshwori Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BBBLNP",
-    "Script": "Bagheshowari Development Bank Ltd. Promoter Share"
+    "Script": "Bagheshowari Development Bank Ltd. Promoer Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BBBLPO",
-    "Script": "Bhrikuti Bikash Bank Limited Promoter Share"
+    "Script": "Bhrikuti Bikash Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BBC",
-    "Script": "Bishal Bazar Company Limited"
+    "Script": "Bishal Bazar Company Limited",
+    "Sector": "Tradings"
   },
   {
     "Symbol": "BDBL",
-    "Script": "Business Development Bank Limited"
+    "Script": "Business Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BEDC",
-    "Script": "Bhugol Energy Development Company Limited"
+    "Script": "Bhugol Energy Development Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "BFC",
-    "Script": "Best Finance Company Ltd."
+    "Script": "Best Finance Company Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "BFCL",
-    "Script": "Bhaktapur Finance Co. Ltd."
+    "Script": "Bhaktapur Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "BFCPO",
-    "Script": "Best Finance Co. Limited Promoter Share"
+    "Script": "Best Finance Co. Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "BFIL",
-    "Script": "Bhajuratna Finance & Saving Co. Ltd."
+    "Script": "Bhajuratna Finance & Saving Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "BFL",
-    "Script": "Butwal Finance Ltd."
+    "Script": "Butwal Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "BFLPO",
-    "Script": "Butwal Finance Limited Promoter Share"
+    "Script": "Butwal Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "BGDBL",
-    "Script": "Bagmati Development Bank Ltd."
+    "Script": "Bagmati Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BGDBLP",
-    "Script": "Bagmati Development Bank Ltd. Promoter Share"
+    "Script": "Bagmati Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BGWT",
-    "Script": "Bhagawati Hydropower Development Company Limited"
+    "Script": "Bhagawati Hydropower Development Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "BHBL",
-    "Script": "Bhargav Bikash Bank Ltd."
+    "Script": "Bhargav Bikash Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BHBLPO",
-    "Script": "Bhargav Bikash Bank Ltd. Promoter Share"
+    "Script": "Bhargav Bikash Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BHDC",
-    "Script": "Bindhyabasini Hydropower Development Company Limited"
+    "Script": "Bindhyabasini Hydropower Development Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "BHL",
-    "Script": "Balephi Hydropower Limited"
+    "Script": "Balephi Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "BHPL",
-    "Script": "Barahi Hydropower Public Limited"
+    "Script": "Barahi Hydropower Public Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "BJFL",
-    "Script": "Birgunj Finance Ltd."
+    "Script": "Birgunj Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "BJM",
-    "Script": "Biratnagar Jute Mills Limited"
+    "Script": "Biratnagar Jute Mills Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "BLDBL",
-    "Script": "Biratlaxmi Bikas Bank Limited"
+    "Script": "Biratlaxmi Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BLDBLP",
-    "Script": "Biratlaxmi Development Bank Ltd. Promoter Share"
+    "Script": "Biratlaxmi Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BNHC",
-    "Script": "Buddha Bhumi Nepal Hydropower Company Limited"
+    "Script": "Buddha Bhumi Nepal Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "BNL",
-    "Script": "Bottlers Nepal (Balaju) Limited"
+    "Script": "Bottlers Nepal (Balaju) Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "BNT",
-    "Script": "Bottlers Nepal (Terai) Limited"
+    "Script": "Bottlers Nepal (Terai) Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "BOAN",
-    "Script": "Bank Of Asia Nepal Limited"
+    "Script": "Bank Of Asia Nepal Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "BOKD86",
-    "Script": "8.5% Bok Debenture 2086"
+    "Script": "8.5% Bok Debenture 2086",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "BOKL",
-    "Script": "Bank Of Kathmandu Ltd."
+    "Script": "Bank Of Kathmandu Ltd.",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "BOKLPO",
-    "Script": "Bank Of Kathmandu Lumbini Limited Promoter Share"
+    "Script": "Bank Of Kathmandu Lumbini Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "BOKPO",
-    "Script": "Bank Of Kathmandu Limited Promoter Share"
+    "Script": "Bank Of Kathmandu Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "BPCL",
-    "Script": "Butwal Power Company Limited"
+    "Script": "Butwal Power Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "BPW",
-    "Script": "BPW Laghubitta Bittiya Sanstha Limited"
+    "Script": "BPW Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "BRTBL",
-    "Script": "Bright Development Bank Ltd"
+    "Script": "Bright Development Bank Ltd",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BSBL",
-    "Script": "Bishwa Bikas Bank Limited"
+    "Script": "Bishwa Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BSBLPO",
-    "Script": "Bishwa Bikas Bank Limited Promoter Share"
+    "Script": "Bishwa Bikas Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BSL",
-    "Script": "Birat Shoe Limited"
+    "Script": "Birat Shoe Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "BSM",
-    "Script": "Butwal Spinning Mills Limited"
+    "Script": "Butwal Spinning Mills Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "BUDBL",
-    "Script": "Business Universal Development Bank Ltd."
+    "Script": "Business Universal Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "BUDBLP",
-    "Script": "Business Universal Development Bank Ltd. Promoter Share"
+    "Script": "Business Universal Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "C30MF",
-    "Script": "Citizens Super 30 Mutual Fund"
+    "Script": "Citizens Super 30 Mutual Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "CBBL",
-    "Script": "Chhimek Laghubitta Bittiya Sanstha Limited"
+    "Script": "Chhimek Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "CBBLPO",
-    "Script": "Chhimek Laghubitta Bikas Bank Limited Promoter Share"
+    "Script": "Chhimek Laghubitta Bikas Bank Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "CBL",
-    "Script": "Civil Bank Ltd"
+    "Script": "Civil Bank Ltd",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CBLD88",
-    "Script": "Civil Bank Debenture 2088"
+    "Script": "Civil Bank Debenture 2088",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CBLPO",
-    "Script": "Civil Bank Ltd Promoter Share"
+    "Script": "Civil Bank Ltd Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CCBD88",
-    "Script": "Century Debenture 2088"
+    "Script": "Century Debenture 2088",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CCBL",
-    "Script": "Century Commercial Bank Ltd."
+    "Script": "Century Commercial Bank Ltd.",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CCBLPO",
-    "Script": "Century Commercial Bank Ltd. Promoter Share"
+    "Script": "Century Commercial Bank Ltd. Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CDBL",
-    "Script": "City Development Bank Limited"
+    "Script": "City Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CDBLPO",
-    "Script": "City Development Bank Ltd. Promoter"
+    "Script": "City Development Bank Ltd. Promoter",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CEDBL",
-    "Script": "Clean Energy Development Bank Limited"
+    "Script": "Clean Energy Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CEDBLP",
-    "Script": "Clean Energy Development Bank Ltd. Promoter Share"
+    "Script": "Clean Energy Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CEFL",
-    "Script": "City Express Finance Co. Limited"
+    "Script": "City Express Finance Co. Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CEFLPO",
-    "Script": "City Express Finance Co. Ltd. Promoter Share"
+    "Script": "City Express Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CFCL",
-    "Script": "Central Finance Co. Ltd."
+    "Script": "Central Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CFCLPO",
-    "Script": "Central Finance Co. Ltd. Promoter Share"
+    "Script": "Central Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CFL",
-    "Script": "Crystal Finance Ltd."
+    "Script": "Crystal Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CGH",
-    "Script": "Chandragiri Hills Limited"
+    "Script": "Chandragiri Hills Limited",
+    "Sector": "Hotels And Tourism"
   },
   {
     "Symbol": "CHCL",
-    "Script": "Chilime Hydropower Company Limited"
+    "Script": "Chilime Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "CHDC",
-    "Script": "CEDB Hydropower Development Company Limited"
+    "Script": "CEDB Hydropower Development Company Limited",
+    "Sector": "Investment"
   },
   {
     "Symbol": "CHL",
-    "Script": "Chhyangdi Hydropower Ltd."
+    "Script": "Chhyangdi Hydropower Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "CHLBS",
-    "Script": "Chautari Laghubitta Bittya Sanstha Ltd"
+    "Script": "Chautari Laghubitta Bittya Sanstha Ltd",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "CIT",
-    "Script": "Citizen Investment Trust"
+    "Script": "Citizen Investment Trust",
+    "Sector": "Investment"
   },
   {
     "Symbol": "CITY",
-    "Script": "City Hotel Limited"
+    "Script": "City Hotel Limited",
+    "Sector": "Hotels And Tourism"
   },
   {
     "Symbol": "CIVIC",
-    "Script": "Civic Development Bank Ltd"
+    "Script": "Civic Development Bank Ltd",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CIZBD86",
-    "Script": "10.25% Citizens Bank Debenture 2086"
+    "Script": "10.25% Citizens Bank Debenture 2086",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CKHL",
-    "Script": "Chirkhwa Hydropower Limited"
+    "Script": "Chirkhwa Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "CLI",
-    "Script": "Citizen Life Insurance Company Limited"
+    "Script": "Citizen Life Insurance Company Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "CMB",
-    "Script": "Capital Merchant Bank & Finance Co. Ltd."
+    "Script": "Capital Merchant Bank & Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CMBF",
-    "Script": "Cmb Finance Limited"
+    "Script": "Cmb Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CMBFLP",
-    "Script": "Capital Merchant Bank. & Fin. Promoter Share"
+    "Script": "Capital Merchant Bank. & Fin. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CMBFPO",
-    "Script": "Cmb Finance Ltd. Promoter Share"
+    "Script": "Cmb Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CMBSL",
-    "Script": "Civil Merchant Bittiya Santha Ltd."
+    "Script": "Civil Merchant Bittiya Santha Ltd.",
+    "Sector": "Finance"
   },
   {
-    "Symbol": "CMBSLP",
-    "Script": "Civil Merchant Bittiya Sanstha Limited Promoter Share"
+    "Symbol": "CMBSLp",
+    "Script": "Civil Merchant Bittiya Sanstha Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "CMF1",
-    "Script": "Citizens Mutual Fund -1"
+    "Script": "Citizens Mutual Fund -1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "CMF2",
-    "Script": "Citizens Mutual Fund 2"
+    "Script": "Citizens Mutual Fund 2",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "CNDBL",
-    "Script": "Country Development Bank Ltd."
+    "Script": "Country Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CNDBLP",
-    "Script": "Country Development Bank Ltd. Promoter Share"
+    "Script": "Country Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CORBL",
-    "Script": "Corporate Development Bank Limited"
+    "Script": "Corporate Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CSDBL",
-    "Script": "Cosmos Development Bank Ltd."
+    "Script": "Cosmos Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "CTBNL",
-    "Script": "Commerz And Trust Bank Nepal Ltd."
+    "Script": "Commerz And Trust Bank Nepal Ltd.",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CYCL",
-    "Script": "Cyc Nepal Laghubitta Bittiya Sanstha Limited"
+    "Script": "Cyc Nepal Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "CZBIL",
-    "Script": "Citizens Bank International Limited"
+    "Script": "Citizens Bank International Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "CZBILP",
-    "Script": "Citizens Bank International Limited Promoter Share"
+    "Script": "Citizens Bank Internatioal Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "DBBL",
-    "Script": "Deva Bikas Bank Limited"
+    "Script": "Deva Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "DBBLPO",
-    "Script": "Dev Bikasbank Ltd. Promoter Share"
+    "Script": "Dev Bikasbank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "DCBL",
-    "Script": "Development Credit Bank Limited"
+    "Script": "Development Credit Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "DDBL",
-    "Script": "Deprosc Laghubitta Bittiya Sanstha Limited"
+    "Script": "Deprosc Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "DDBLPO",
-    "Script": "Deprosc Laghubitta Promoter Share"
+    "Script": "Deprosc Laghubitta Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "DHPL",
-    "Script": "Dibyashwori Hydropower Ltd."
+    "Script": "Dibyashwori Hydropower Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "DLBS",
-    "Script": "Dhaulagiri Laghubitta Bittiya Sanstha Limited"
+    "Script": "Dhaulagiri Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "DOLTI",
-    "Script": "Dolti Power Company Limited"
+    "Script": "Dolti Power Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "DORDI",
-    "Script": "Dordi Khola Jal Bidyut Company Limited"
+    "Script": "Dordi Khola Jal Bidyut Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "EBL",
-    "Script": "Everest Bank Limited"
+    "Script": "Everest Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "EBLCP",
-    "Script": "Everest Bank Ltd (Pre)."
+    "Script": "Everest Bank Ltd (Pre).",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "EBLD86",
-    "Script": "8.5% Everest Bank Debenture"
+    "Script": "8.5% Everest Bank Debenture",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "EBLPO",
-    "Script": "Everest Bank Ltd.Promoter"
+    "Script": "Everest Bank Ltd.Promoter",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "EDBL",
-    "Script": "Excel Development Bank Ltd."
+    "Script": "Excel Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "EDBLPO",
-    "Script": "Excel Development Bank Ltd. Promoter Share"
+    "Script": "Excel Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "EFL",
-    "Script": "Everest Finance Ltd."
+    "Script": "Everest Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "EFLPO",
-    "Script": "Everest Finance Limited Promoter Share"
+    "Script": "Everest Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "EHPL",
-    "Script": "Eastern Hydropower Limited"
+    "Script": "Eastern Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "EIC",
-    "Script": "Everest Insurance Co. Ltd."
+    "Script": "Everest Insurance Co. Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "EICPO",
-    "Script": "Everest Insurance Co. Ltd. Promoter Share"
+    "Script": "Everest Insurance Co. Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "EKBL",
-    "Script": "Ekata Bikas Bank Ltd."
+    "Script": "Ekata Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "ENL",
-    "Script": "Emerging Nepal Limited"
+    "Script": "Emerging Nepal Limited",
+    "Sector": "Investment"
   },
   {
     "Symbol": "ESC",
-    "Script": "National Pro. And Eco. Dev. Centre"
+    "Script": "National Pro. And Eco. Dev. Centre",
+    "Sector": "Others"
   },
   {
     "Symbol": "FBBL",
-    "Script": "Fewa Bikas Bank Limited"
+    "Script": "Fewa Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "FBBLPO",
-    "Script": "Fewa Bikas Bank Ltd. Promoter Share"
+    "Script": "Fewa Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "FFCL",
-    "Script": "Fewa Finance Co. Ltd."
+    "Script": "Fewa Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "FFCLPO",
-    "Script": "Fewa Finance Co. Ltd. Promoter Share"
+    "Script": "Fewa Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "FHL",
-    "Script": "Fleur Himalayan Limited"
+    "Script": "Fleur Himalayan Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "FMDBL",
-    "Script": "First Micro Finance Laghubitta Bittiya Sanstha Limited"
+    "Script": "First Micro Finance Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "FMDBLP",
-    "Script": "First Micro Finance Development Bank Ltd. Promoter Share"
+    "Script": "First Micro Finance Development Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "FOWAD",
-    "Script": "Forward Microfinance Laghubitta Bittiya Sanstha Limited"
+    "Script": "Forward Microfinance Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "FOWADP",
-    "Script": "Forward Community Microfinance Bittiya Sanstha Ltd Promoter Share"
+    "Script": "Forward Community Microfinance Bittiya Sanstha Ltd Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "GABL",
-    "Script": "Gaumukhee Bikas Bank Ltd."
+    "Script": "Gaumukhee Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GBBD85",
-    "Script": "Garima Debenture 2085"
+    "Script": "Garima Debenture 2085",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GBBL",
-    "Script": "Garima Bikas Bank Limited"
+    "Script": "Garima Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GBBLPO",
-    "Script": "Garima Bikas Bank Limited Promoter Share"
+    "Script": "Garima Bikas Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GBD80/81",
-    "Script": "10.25% Global IME Bank Ltd. Debenture 2080/81"
+    "Script": "10.25% Global Ime Bank Ltd. Debenture 2080/81",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "GBILD86/87",
-    "Script": "Global IME Bank Limited Debenture 2086/87"
+    "Script": "Global Ime Bank Limited Debenture 2086/87",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "GBIME",
-    "Script": "Global IME Bank Limited"
+    "Script": "Global Ime Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "GBIMEP",
-    "Script": "Global IME Bank Ltd. Promoter Share"
+    "Script": "Global Ime Bank Ltd. Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "GBLBS",
-    "Script": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "GBLBSP",
-    "Script": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+    "Script": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "GCIL",
-    "Script": "Ghorahi Cement Industry Limited"
+    "Script": "Ghorahi Cement Industry Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "GDBL",
-    "Script": "Gandaki Bikas Bank Limited"
+    "Script": "Gandaki Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GDBL1",
-    "Script": "Gandaki Bikas Banklimited"
+    "Script": "Gandaki Bikas Banklimited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GDBLPO",
-    "Script": "Gandaki Bikas Bank Limited Promoter Share"
+    "Script": "Gandaki Bikas Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GDBNL",
-    "Script": "Gurkha Development Bank Limited"
+    "Script": "Gurkha Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GFCL",
-    "Script": "Goodwill Finance Limited"
+    "Script": "Goodwill Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GFCLPO",
-    "Script": "Goodwill Finance Co. Ltd. Promoter Share"
+    "Script": "Goodwill Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GFL",
-    "Script": "General Finance Ltd."
+    "Script": "General Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GFLK",
-    "Script": "Gorkha Finance Ltd."
+    "Script": "Gorkha Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GFLKPO",
-    "Script": "Gorkha Finance Limited Promoter Share"
+    "Script": "Gorkha Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GFLPO",
-    "Script": "General Finance Limited Promoter Share"
+    "Script": "General Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GGBSL",
-    "Script": "Ghodighoda Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Ghodighoda Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "GHL",
-    "Script": "Ghalemdi Hydro Limited"
+    "Script": "Ghalemdi Hydro Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "GIBF1",
-    "Script": "Global IME Balanced Fund-1"
+    "Script": "Global Ime Balanced Fund-1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "GIC",
-    "Script": "General Insurance Company Nepal Ltd"
+    "Script": "General Insurance Company Nepal Ltd",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "GILB",
-    "Script": "Global IME Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Global Ime Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "GILBPO",
-    "Script": "Global IME Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+    "Script": "Global IME Laghubitta Bittiya Sanstha Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "GIMES1",
-    "Script": "Global IME Samunnat Scheme-1"
+    "Script": "Global Ime Samunnat Scheme-1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "GLBSL",
-    "Script": "Gurans Laghubitta Bittiya Sanstha Limited"
+    "Script": "Gurans Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "GLH",
-    "Script": "Greenlife Hydropower Limited"
+    "Script": "Greenlife Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "GLICL",
-    "Script": "Gurans Life Insurance Company Ltd."
+    "Script": "Gurans Life Insurance Company Ltd.",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "GLICLP",
-    "Script": "Guras Life Insurance Company Ltd. Promoter Share"
+    "Script": "Guras Life Insurance Company Ltd. Promoter Share",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "GMFBS",
-    "Script": "Ganapati Laghubitta Bittiya Sanstha Limited"
+    "Script": "Ganapati Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "GMFIL",
-    "Script": "Guheshowori Merchant Bank & Finance Co. Ltd."
+    "Script": "Guheshowori Merchant Bank & Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GMFILP",
-    "Script": "Guheyshwori Merchant & Finance Ltd. Promoter Share"
+    "Script": "Guheyshwori Merchant & Finance Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GRAND",
-    "Script": "Grand Bank Nepal Limited"
+    "Script": "Grand Bank Nepal Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "GRANDP",
-    "Script": "Grand Bank Limited Promoter Share"
+    "Script": "Grand Bank Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "GRDBL",
-    "Script": "Green Development Bank Ltd."
+    "Script": "Green Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GRDBLP",
-    "Script": "Green Development Bank Ltd. Promoter Share"
+    "Script": "Green Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GRU",
-    "Script": "Gorakhkali Rubber Udhyog Limited"
+    "Script": "Gorakhkali Rubber Udhyog Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "GSDBL",
-    "Script": "Gaurishankar Development Bank Ltd."
+    "Script": "Gaurishankar Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GSDBLP",
-    "Script": "Gaurishankar Development Bank Ltd. Promoter Share"
+    "Script": "Gaurishankar Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GUFL",
-    "Script": "Gurkhas Finance Ltd."
+    "Script": "Gurkhas Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GUFLPO",
-    "Script": "Gurkhas Finance Ltd. Promoter Share"
+    "Script": "Gurkhas Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "GULMI",
-    "Script": "Gulmi Bikas Bank Ltd."
+    "Script": "Gulmi Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "GVL",
-    "Script": "Green Ventures Limited"
+    "Script": "Green Ventures Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "GWFD83",
-    "Script": "12 % Goodwill Finance Limited Debenture 2083"
+    "Script": "12 % Goodwill Finance Limited Debenture 2083",
+    "Sector": "Finance"
   },
   {
     "Symbol": "H8020",
-    "Script": "Himalayan 80-20"
+    "Script": "Himalayan 80-20",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "HAMA",
-    "Script": "Hama Merchant & Finance Ltd."
+    "Script": "Hama Merchant & Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "HAMAPO",
-    "Script": "Hama Merchant & Finance Ltd. Promoter Share"
+    "Script": "Hama Merchant & Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "HAMRO",
-    "Script": "Hamro Bikas Bank Ltd."
+    "Script": "Hamro Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "HAMROP",
-    "Script": "Hamro Bikas Bank Ltd. Promoter Share"
+    "Script": "Hamro Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "HATH",
-    "Script": "Hathway Finance Company Limited"
+    "Script": "Hathway Finance Company Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "HATHPO",
-    "Script": "Hathway Finance Company Limited Promoter Share"
+    "Script": "Hathway Finance Company Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "HATHY",
-    "Script": "Hathway Investment Nepal Limited"
+    "Script": "Hathway Investment Nepal Limited",
+    "Sector": "Investment"
   },
   {
     "Symbol": "HBDL",
-    "Script": "H&B Development Bank"
+    "Script": "H&B Development Bank",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "HBDLPO",
-    "Script": "H&B Development Bank Promoter Share"
+    "Script": "H&B Development Bank Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "HBL",
-    "Script": "Himalayan Bank Limited"
+    "Script": "Himalayan Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "HBLD83",
-    "Script": "10% Himalayan Bank Debenture 2083"
+    "Script": "10% Himalayan Bank Debenture 2083",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "HBLPO",
-    "Script": "Himalayan Bank Ltd. Promoter"
+    "Script": "Himalayan Bank Ltd. Promoter",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "HBT",
-    "Script": "Harisiddhi Brick And Tiles Limited"
+    "Script": "Harisiddhi Brick And Tiles Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "HDHPC",
-    "Script": "Himal Dolakha Hydropower Company Limited"
+    "Script": "Himal Dolakha Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "HDL",
-    "Script": "Himalayan Distillery Limited"
+    "Script": "Himalayan Distillery Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "HEI",
-    "Script": "Himalayan Everest Insurance Limited"
+    "Script": "Himalayan Everest Insurance Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "HEIP",
-    "Script": "Himalayan Everest Insurance Limited Promoter"
+    "Script": "Himalayan Everest Insurance Limited Promoter",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "HFL",
-    "Script": "Himalayan Finance Limited (Bittiya Sanstha)"
+    "Script": "Himalayan Finance Limited (Bittiya Sanstha)",
+    "Sector": "Finance"
   },
   {
     "Symbol": "HGI",
-    "Script": "Himalayan Gen.Insurance Co.Ltd."
+    "Script": "Himalayan Gen.Insurance Co.Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "HGIC",
-    "Script": "Himalyan General Insurance Co."
+    "Script": "Himalyan General Insurance Co.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "HGIPO",
-    "Script": "Himalayan General Insurance Co. Ltd Promoter Share"
+    "Script": "Himalayan General Insurance Co. Ltd Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "HHL",
-    "Script": "Himalayan Hydropower Limited"
+    "Script": "Himalayan Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "HIDCL",
-    "Script": "Hydorelectricity Investment And Development Company Ltd"
+    "Script": "Hydorelectricity Investment And Development Company Ltd",
+    "Sector": "Investment"
   },
   {
     "Symbol": "HIDCLP",
-    "Script": "Hydorelectricity Investment And Development Company Limited Promoter"
+    "Script": "Hydorelectricity Investment And Development Company Limited Promoter",
+    "Sector": "Investment"
   },
   {
     "Symbol": "HLBSL",
-    "Script": "Himalayan Laghubitta Bittiya Sanstha Limited"
+    "Script": "Himalayan Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "HLI",
-    "Script": "Himalayan Life Insurance Limited"
+    "Script": "Himalayan Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "HPPL",
-    "Script": "Himalayan Power Partner Ltd."
+    "Script": "Himalayan Power Partner Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "HRL",
-    "Script": "Himalayan Reinsurance Limited"
+    "Script": "Himalayan Reinsurance Limited",
+    "Sector": "Others"
   },
   {
     "Symbol": "HTL",
-    "Script": "Himgiri Textile Industries Limited"
+    "Script": "Himgiri Textile Industries Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "HURJA",
-    "Script": "Himalaya Urja Bikas Company Limited"
+    "Script": "Himalaya Urja Bikas Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "ICFC",
-    "Script": "Icfc Finance Limited"
+    "Script": "Icfc Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "ICFCD83",
-    "Script": "12% Icfc Finance Limited Debenture 2083"
+    "Script": "12% Icfc Finance Limited Debenture 2083",
+    "Sector": "Finance"
   },
   {
     "Symbol": "ICFCPO",
-    "Script": "Icfc Finance Limited Promoter Share"
+    "Script": "Icfc Finance Limited Promotor Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "IDBL",
-    "Script": "Infrastructure Development Bank Ltd."
+    "Script": "Infrastructure Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "IDBLPO",
-    "Script": "Infrastructure Development Bank Limited Promoter Share"
+    "Script": "Infrastructure Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "IFIL",
-    "Script": "Imperial Financial Inst. Ltd."
+    "Script": "Imperial Financial Inst. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "IGI",
-    "Script": "IGI Prudential insurance Limited"
+    "Script": "IGI Prudential insurance Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "IGIPO",
-    "Script": "IGI Prudential insurance Limited. Promoter Share"
+    "Script": "IGI Prudential insurance Limited. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "IHL",
-    "Script": "Ingwa Hydropower Limited"
+    "Script": "Ingwa Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "ILBS",
-    "Script": "Infinity Laghubitta Bittiya Sanstha Limited"
+    "Script": "Infinity Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "ILBSP",
-    "Script": "Infinity Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Infinity Laghubitta Bittiya Sanstha Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "ILFC",
-    "Script": "International Leasing & Finance Co. Ltd."
+    "Script": "International Leasing & Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "ILI",
-    "Script": "IME Life Insurance Company Limited"
+    "Script": "IME Life Insurance Company Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "IMEFI",
-    "Script": "Ime Financial Institution"
+    "Script": "Ime Financial Institution",
+    "Sector": "Finance"
   },
   {
     "Symbol": "IMEFIP",
-    "Script": "Ime Financial Institution Promoter Share"
+    "Script": "Ime Financial Institution Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "INDB",
-    "Script": "Innovative Development Bank Ltd."
+    "Script": "Innovative Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "INDBL",
-    "Script": "International Development Bank Ltd"
+    "Script": "International Development Bank Ltd",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "JALPA",
-    "Script": "Jalpa Samudayik Laghubitta Bittiya Sanstha Limited"
+    "Script": "Jalpa Samudayik Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "JBBL",
-    "Script": "Jyoti Bikas Bank Limited"
+    "Script": "Jyoti Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "JBBLPO",
-    "Script": "Jyoti Bikash Bank Ltd. Promoter Share"
+    "Script": "Jyoti Bikash Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "JBLB",
-    "Script": "Jeevan Bikas Laghubitta Bittya Sanstha Ltd"
+    "Script": "Jeevan Bikas Laghubitta Bittya Sanstha Ltd",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "JBLBP",
-    "Script": "Jeevan Bikas Laghubitta Laghubitta Bittya Sanstha Ltd Promoter"
+    "Script": "Jeevan Bikas Laghubitta Bittya Sanstha Ltd Promoter",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "JBNL",
-    "Script": "Janata Bank Nepal Ltd."
+    "Script": "Janata Bank Nepal Ltd.",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "JBNLPO",
-    "Script": "Janata Bank Nepal Ltd. Promoter Share"
+    "Script": "Janata Bank Nepal Ltd. Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "JEFL",
-    "Script": "Jebils Finance Ltd."
+    "Script": "Jebils Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "JEFLPO",
-    "Script": "Jebils Finance Ltd. Promoter Share"
+    "Script": "Jebils Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "JFL",
-    "Script": "Janaki Finance Company Limited"
+    "Script": "Janaki Finance Company Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "JFLPO",
-    "Script": "Janaki Finance Limited Promoter Share"
+    "Script": "Janaki Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "JHBL",
-    "Script": "Jhimruk Bikas Bank Ltd."
+    "Script": "Jhimruk Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "JLI",
-    "Script": "Jyoti Life Insurance Company Limited"
+    "Script": "Jyoti Life Insurance Company Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "JOSHI",
-    "Script": "Joshi Hydropower Development Company Ltd"
+    "Script": "Joshi Hydropower Development Company Ltd",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "JSLBB",
-    "Script": "Janautthan Samudayic Laghubitta Bittya Sanstha Limited"
+    "Script": "Janautthan Samudayic Laghubitta Bittya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "JSLBBP",
-    "Script": "Janautthan Samudayic Laghubitta Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Janautthan Samudayic Laghubitta Bikas Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "JSM",
-    "Script": "Jyoti Sinning Mills Limited"
+    "Script": "Jyoti Sinning Mills Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "KADBL",
-    "Script": "Kanchan Development Bank Limited"
+    "Script": "Kanchan Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KADBLP",
-    "Script": "Kanchan Development Bank Limited Promoter Share"
+    "Script": "Kanchan Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KAFIL",
-    "Script": "Kaski Finance Limited"
+    "Script": "Kaski Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "KAFILP",
-    "Script": "Kaski Finanace Ltd. Promoter"
+    "Script": "Kaski Finanace Ltd. Promoter",
+    "Sector": "Finance"
   },
   {
     "Symbol": "KBBL",
-    "Script": "Kailash Bikas Bank Ltd."
+    "Script": "Kailash Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KBBLPO",
-    "Script": "Kailash Bikas Bank Ltd. Promoter Share"
+    "Script": "Kailash Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KBL",
-    "Script": "Kumari Bank Limited"
+    "Script": "Kumari Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "KBLD86",
-    "Script": "10.25% Kbl Debenture 2086"
+    "Script": "10.25% Kbl Debenture 2086",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "KBLPO",
-    "Script": "Kumari Bank Limited Promotor Share"
+    "Script": "Kumari Bank Limited Promotor Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "KBSH",
-    "Script": "Kutheli Bukhari Small Hydropower Limited"
+    "Script": "Kutheli Bukhari Small Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "KCDBL",
-    "Script": "Kalinchowk Development Bank Ltd."
+    "Script": "Kalinchowk Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KDBL",
-    "Script": "Kasthamandap Development Bank Limited"
+    "Script": "Kasthamandap Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KDBLPO",
-    "Script": "Kasthamandap Dev. Bank Ltd Promoter Share"
+    "Script": "Kasthamandap Dev. Bank Ltd Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KDBY",
-    "Script": "Kumari Dhanabriddhi Yojana"
+    "Script": "Kumari Dhanabriddhi Yojana",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "KDL",
-    "Script": "Kalinchowk Darshan Limited"
+    "Script": "Kalinchowk Darshan Limited",
+    "Sector": "Hotels And Tourism"
   },
   {
     "Symbol": "KEBL",
-    "Script": "Kabeli Bikas Bank Limited"
+    "Script": "Kabeli Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KEF",
-    "Script": "Kumari Equity Fund"
+    "Script": "Kumari Equity Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "KFLPO",
-    "Script": "Kathmandu Finance Ltd. Promoter Share"
+    "Script": "Kathmandu Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "KHDBL",
-    "Script": "Khandbari Development Bank Ltd"
+    "Script": "Khandbari Development Bank Ltd",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KIST",
-    "Script": "Kist Merchant Banking & Finance Lt"
+    "Script": "Kist Merchant Banking & Finance Lt",
+    "Sector": "Finance"
   },
   {
     "Symbol": "KISTPO",
-    "Script": "Kist Bank Limited Promoter Share"
+    "Script": "Kist Bank Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "KKBL",
-    "Script": "Kakre Bihar Bikash Bank Ltd"
+    "Script": "Kakre Bihar Bikash Bank Ltd",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KKHC",
-    "Script": "Khanikhola Hydropower Co. Ltd."
+    "Script": "Khanikhola Hydropower Co. Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "KLBS",
-    "Script": "Khaptad Laghubitta Bittiya Sanstha Limited"
+    "Script": "Khaptad Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "KLBSL",
-    "Script": "Kisan Lagubitta Bittiya Sanstha Limited"
+    "Script": "Kisan Lagubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "KLBSLP",
-    "Script": "Kisan Laghubitta Laghubitta Bittya Sanstha Limited Promoter Share"
+    "Script": "Kisan Lagubitta Bittiya Sanstha Limited Promoter",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "KMBL",
-    "Script": "Kamana Bikas Bank Limited"
+    "Script": "Kamana Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KMBLPO",
-    "Script": "Kamana Bikas Bank Limited Promoter Share"
+    "Script": "Kamana Bikas Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KMBSL",
-    "Script": "Kuber Merchant Bittya Sanstha Ltd."
+    "Script": "Kuber Merchant Bittya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "KMCDB",
-    "Script": "Kalika Laghubitta Bittiya Sanstha Ltd"
+    "Script": "Kalika Laghubitta Bittiya Sanstha Ltd",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "KMCDBP",
-    "Script": "Kalika Microcredit Development Bank Ltd. Promoter Share"
+    "Script": "Kalika Microcredit Development Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "KMFL",
-    "Script": "Kisan Microfinance Bittiya Sanstha Ltd."
+    "Script": "Kisan Microfinance Bittiya Sanstha Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KNBL",
-    "Script": "Kankai Bikas Bank Ltd."
+    "Script": "Kankai Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KNBLPO",
-    "Script": "Kankai Bikas Bank Ltd. Promoter Share"
+    "Script": "Kankai Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KPCL",
-    "Script": "Kalika Power Company Ltd"
+    "Script": "Kalika Power Company Ltd",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "KRBL",
-    "Script": "Karnali Development Bank Limited"
+    "Script": "Karnali Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KRBLPO",
-    "Script": "Karnali Development Bank Limited Promoter Share"
+    "Script": "Karnali Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KSBBL",
-    "Script": "Kamana Sewa Bikas Bank Limited"
+    "Script": "Kamana Sewa Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KSBBLP",
-    "Script": "Kamana Sewa Bikas Bank Limited Promoter Share"
+    "Script": "Kamana Sewa Bikas Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KSLY",
-    "Script": "Kumari Sabal Yojana"
+    "Script": "Kumari Sunaulo Lagani Yojana",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "LBBL",
-    "Script": "Lumbini Bikas Bank Ltd."
+    "Script": "Lumbini Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "LBBLPO",
-    "Script": "Lumbini Bikas Bank Ltd. Promoter Share"
+    "Script": "Lumbini Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "LBFIL",
-    "Script": "Lord Buddha Finance Limited"
+    "Script": "Lord Buddha Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "LBLD86",
-    "Script": "10% Laxmi Bank Debenture 2086"
+    "Script": "10% Laxmi Bank Debenture 2086",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "LBLD88",
-    "Script": "8.5% Laxmi Bank Debenture 2088"
+    "Script": "8.5% Laxmi Bank Debenture 2088",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "LBLPO",
-    "Script": "Laxmi Bank Limited Promoter Share"
+    "Script": "Laxmi Bank Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "LEC",
-    "Script": "Liberty Energy Company Limited"
+    "Script": "Liberty Energy Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "LEMF",
-    "Script": "Laxmi Equity Fund"
+    "Script": "Laxmi Equity Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "LFC",
-    "Script": "Lalitpur Finance Ltd."
+    "Script": "Lalitpur Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "LFCPO",
-    "Script": "Lalitpur Finance Co. Ltd. Promoter Share"
+    "Script": "Lalitpur Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "LFLC",
-    "Script": "Lumbini Finance Ltd."
+    "Script": "Lumbini Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "LFLCPO",
-    "Script": "Lumbini Finance Ltd Promoter Share"
+    "Script": "Lumbini Finance Ltd Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "LGIL",
-    "Script": "Lumbini General Insurance Co. Ltd."
+    "Script": "Lumbini General Insurance Co. Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "LGILPO",
-    "Script": "Lumbini General Insurance Co. Ltd. Promoter Share"
+    "Script": "Lumbini General Insurance Co. Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "LICN",
-    "Script": "Life Insurance Corporation (Nepal) Limited"
+    "Script": "Life Insurance Corporation (Nepal) Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "LLBS",
-    "Script": "Laxmi Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Laxmi Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "LSL",
-    "Script": "Laxmi Sunrise Bank Limited"
+    "Script": "Laxmi Sunrise Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "LUBL",
-    "Script": "Lumbini Bank Limited"
+    "Script": "Lumbini Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "LUBLPO",
-    "Script": "Lumbini Bank Limited Promotor Share"
+    "Script": "Lumbini Bank Limited Promotor Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "LUK",
-    "Script": "Laxmi Capital Market Limited"
+    "Script": "Laxmi Capital Market Limited",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "LVF1",
-    "Script": "Laxmi Value Fund-1"
+    "Script": "Laxmi Value Fund-1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "LVF2",
-    "Script": "Laxmi Value Fund 2"
+    "Script": "Laxmi Value Fund 2 ",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "MAKAR",
-    "Script": "Makar Jitumaya Suri Hydropower Limited"
+    "Script": "Makar Jitumaya Suri Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MANDU",
-    "Script": "Mandu Hydropower Limited"
+    "Script": "Mandu Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MBBL",
-    "Script": "Mahakali Bikas Bank Limited"
+    "Script": "Mahakali Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MBBLPO",
-    "Script": "Mahakali Bikas Bank Ltd. Promoter"
+    "Script": "Mahakali Bikas Bank Ltd. Promoter",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MBJC",
-    "Script": "Madhya Bhotekoshi Jalavidyut Company Limited"
+    "Script": "Madhya Bhotekoshi Jalavidyut Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MBL",
-    "Script": "Machhapuchhre Bank Limited"
+    "Script": "Machhapuchhre Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "MBLD2085",
-    "Script": "10.25% Machhapuchhre Bank Debenture 2085"
+    "Script": "10.25% Machhapuchhre Bank Debenture 2085",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "MBLPO",
-    "Script": "Machhapuchhre Bank Limited Promotor Share"
+    "Script": "Machhapuchhre Bank Limited Promotor Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "MCHL",
-    "Script": "Menchhiyam Hydropower Limited"
+    "Script": "Menchhiyam Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MDB",
-    "Script": "Miteri Development Bank Limited"
+    "Script": "Miteri Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MDBL",
-    "Script": "Malika Bikas Bank Limited"
+    "Script": "Malika Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MDBLPO",
-    "Script": "Malika Development Bank Limited Promoter Share"
+    "Script": "Malika Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MDBPO",
-    "Script": "Miteri Development Bank Ltd. Promoter Share"
+    "Script": "Miteri Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MEGA",
-    "Script": "Mega Bank Nepal Ltd."
+    "Script": "Mega Bank Nepal Ltd.",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "MEGAPO",
-    "Script": "Mega Bank Nepal Ltd. Promoter Share"
+    "Script": "Mega Bank Nepal Ltd. Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "MEHL",
-    "Script": "Manakamana Engineering Hydropower Limited"
+    "Script": "Manakamana Engineering Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MEL",
-    "Script": "Modi Energy Limited"
+    "Script": "Modi Energy Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MEN",
-    "Script": "Mountain Energy Nepal Limited"
+    "Script": "Mountain Energy Nepal Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MERO",
-    "Script": "Mero Microfinance Bittiya Sanstha Ltd."
+    "Script": "Mero Microfinance Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MEROPO",
-    "Script": "Mero Microfinance Bittiya Sanstha Ltd. Promoter Share"
+    "Script": "Mero Microfinance Bittiya Sanstha Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "METRO",
-    "Script": "Metro Development Bank Limited"
+    "Script": "Metro Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MFIL",
-    "Script": "Manjushree Finance Ltd."
+    "Script": "Manjushree Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "MFILPO",
-    "Script": "Manjushree Finance Ltd. Promoter Share"
+    "Script": "Manjushree Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "MFL",
-    "Script": "Maha Laxmi Finance Ltd."
+    "Script": "Maha Laxmi Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "MFLD85",
-    "Script": "9.5% Manjushree Finance Limited Debenture 2085"
+    "Script": "9.5% Manjushree Finance Limited Debenture 2085",
+    "Sector": "Finance"
   },
   {
     "Symbol": "MFLPO",
-    "Script": "Maha Laxmi Finance Co. Ltd. Promoter Share"
+    "Script": "Maha Laxmi Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "MGBL",
-    "Script": "Madhyamanchal Gramin Development Bank Ltd."
+    "Script": "Madhyamanchal Gramin Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MHCL",
-    "Script": "Molung Hydropower Company Limited"
+    "Script": "Molung Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MHL",
-    "Script": "Mandakini Hydropower Limited"
+    "Script": "Mandakini Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MHNL",
-    "Script": "Mountain Hydro Nepal Limited"
+    "Script": "Mountain Hydro Nepal Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MIDBL",
-    "Script": "Mission Development Bank Ltd."
+    "Script": "Mission Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MIDBLP",
-    "Script": "Mission Development Bank Ltd. Promoter Share"
+    "Script": "Mission Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MKCL",
-    "Script": "Muktinath Krishi Company Limited"
+    "Script": "Muktinath Krishi Company Limited",
+    "Sector": "Others"
   },
   {
     "Symbol": "MKDBL",
-    "Script": "Manakamana Development Bank Limited"
+    "Script": "Manakamana Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MKHC",
-    "Script": "Maya Khola Hydropower Company Limited"
+    "Script": "Maya Khola Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MKHL",
-    "Script": "Mai Khola Hydropower Limited"
+    "Script": "Mai Khola Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MKJC",
-    "Script": "Mailung Khola Jal Vidhyut Company Limited"
+    "Script": "Mailung Khola Jal Vidhyut Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MKLB",
-    "Script": "Manakamana Smart Laghubitta Bittiya Sanstha Limited"
+    "Script": "Manakamana Smart Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MLBBL",
-    "Script": "Mithila Laghubitta Bittiya Sanstha Limited"
+    "Script": "Mithila Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MLBBLP",
-    "Script": "Mithila Laghubitta Bikas Bank Ltd. Promoter Share"
+    "Script": "Mithila Laghubitta Bikas Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MLBL",
-    "Script": "Mahalaxmi Bikas Bank Ltd."
+    "Script": "Mahalaxmi Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MLBL1",
-    "Script": "Mahalaxmi Bikasbank Limited"
+    "Script": "Mahalaxmi Bikasbank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MLBLPO",
-    "Script": "Mahalxmi Bikas Bank Ltd. Promotor Share"
+    "Script": "Mahalxmi Bikas Bank Ltd. Promotor Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MLBS",
-    "Script": "Manushi Laghubitta Bittiya Sanstha Limited"
+    "Script": "Manushi Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MLBSL",
-    "Script": "Mahila Lagubitta Bittiya Sanstha Limited"
+    "Script": "Mahila Lagubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MMDBL",
-    "Script": "Mount Makalu Development Bank Ltd."
+    "Script": "Mount Makalu Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MMF1",
-    "Script": "Mega Mutual Fund -1"
+    "Script": "Mega Mutual Fund -1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "MMFDB",
-    "Script": "Mirmire Laghubitta Bittya Sanstha Limited"
+    "Script": "Mirmire Laghubitta Bittya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MMFDBP",
-    "Script": "Mirmire Microfinance Development Bank Ltd. Promoter Share"
+    "Script": "Mirmire Microfinance Development Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MMKJL",
-    "Script": "Mathillo Mailun Khola Jalvidhyut Limited"
+    "Script": "Mathillo Mailun Khola Jalvidhyut Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MNBBL",
-    "Script": "Muktinath Bikas Bank Ltd."
+    "Script": "Muktinath Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MNBBLP",
-    "Script": "Muktinath Bikas Bank Ltd. Promoter Share"
+    "Script": "Muktinath Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MPFL",
-    "Script": "Multipurpose Finance Company Limited"
+    "Script": "Multipurpose Finance Company Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "MPFLPO",
-    "Script": "Multipurpose Finance Company Limited Promoter Share"
+    "Script": "Multipurpose Finance Company Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "MSBBL",
-    "Script": "Manaslu Bikas Bank Ltd."
+    "Script": "Manaslu Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MSHL",
-    "Script": "Mid Solu Hydropower Limited"
+    "Script": "Mid Solu Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "MSLB",
-    "Script": "Mahuli Laghubitta Bittiya Sanstha Limited"
+    "Script": "Mahuli Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MSLBP",
-    "Script": "Mahuli Samudayik Laghubitta Bittiya Sanstha Ltd Promoter Share"
+    "Script": "Mahuli Samudayik Laghubitta Bittiya Sanstha Ltd Promoter",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MSM",
-    "Script": "Morang Sugar Mills Limited"
+    "Script": "Morang Sugar Mills Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "MSMBS",
-    "Script": "Mahila Sahayatra Microfinance Bittiya Sanstha Ltd."
+    "Script": "Mahila Sahayatra Microfinance Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "MTBL",
-    "Script": "Matribhumi Development Bank Ltd."
+    "Script": "Matribhumi Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NABB",
-    "Script": "Nepal Aawas Finance Limited"
+    "Script": "Nepal Aawas Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NABBC",
-    "Script": "Narayani Development Bank Limited"
+    "Script": "Narayani Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NABBCP",
-    "Script": "Narayani Development Bank Limited Promoter"
+    "Script": "Narayani Development Bank Limited Promoter",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NABBPO",
-    "Script": "Nepal Aawas Finance Limited Promoter Share"
+    "Script": "Nepal Aawas Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NABIL",
-    "Script": "Nabil Bank Limited"
+    "Script": "Nabil Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NABILP",
-    "Script": "Nabil Bank Limited Promotor Share"
+    "Script": "Nabil Bank Limited Promotor Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NADDF",
-    "Script": "Nic Asia Debt Fund"
+    "Script": "Nic Asia Debt Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NADEP",
-    "Script": "Nadep Laghubittiya Bittya Sanstha Ltd."
+    "Script": "Nadep Laghubittiya Bittya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NAGRO",
-    "Script": "Nepal Agro Laghubitta Bittiya Sanstha Limited"
+    "Script": "Nepal Agro Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NBB",
-    "Script": "Nepal Bangladesh Bank Limited"
+    "Script": "Nepal Bangladesh Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NBBD2085",
-    "Script": "10.25% Nbbl Debenture 2085"
+    "Script": "10.25% Nbbl Debenture 2085",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NBBL",
-    "Script": "Nagbeli Laghubitta Bikas Bank Ltd."
+    "Script": "Nagbeli Laghubitta Bikas Bank Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NBBLPO",
-    "Script": "Nagbeli Laghubitta Bikas Bank Ltd. Promoter Share"
+    "Script": "Nagbeli Laghubitta Bikas Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NBBPO",
-    "Script": "Nepal Bangladesh Bank Limited Promoter Share"
+    "Script": "Nepal Bangladesh Bank Limited Promoter Share",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "NBBU",
-    "Script": "Nepal Bitumin And Barrel Udhyog Limited"
+    "Script": "Nepal Bitumin And Barrel Udhyog Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "NBCK",
-    "Script": "Nepal Byapar Bikash Company(Koshi) Limited"
+    "Script": "Nepal Byapar Bikash Company(Koshi) Limited",
+    "Sector": "Tradings"
   },
   {
     "Symbol": "NBF1",
-    "Script": "Nabil Balance Fund 1"
+    "Script": "Nabil Balance Fund 1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NBF2",
-    "Script": "Nabil Balanced Fund-2"
+    "Script": "Nabil Balanced Fund-2",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NBF3",
-    "Script": "Nabil Balanced Fund-3"
+    "Script": "Nabil Balanced Fund-3",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NBFL",
-    "Script": "Nepal Bangladesh Finance & Leasing Co. Ltd."
+    "Script": "Nepal Bangladesh Finance & Leasing Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NBILPO",
-    "Script": "Nb Insurance Co. Ltd. Promoter Share"
+    "Script": "Nb Insurance Co. Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "NBL",
-    "Script": "Nepal Bank Limited"
+    "Script": "Nepal Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NBLD82",
-    "Script": "10% Nabil Debenture 2082"
+    "Script": "10% Nabil Debenture 2082",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NBLD85",
-    "Script": "Nabil Debenture 2085"
+    "Script": "Nabil Debenture 2085",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NBLD87",
-    "Script": "8.5% Nepal Bank Debenture 2087"
+    "Script": "8.5% Nepal Bank Debenture 2087",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NBSL",
-    "Script": "Namaste Bittiya Sanstha Ltd."
+    "Script": "Namaste Bittiya Sanstha Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NCCB",
-    "Script": "Nepal Credit And Commercial Bank Limited"
+    "Script": "Nepal Credit And Commercial Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NCCBPO",
-    "Script": "Nepal Credit & Commercial Bank Ltd. Promoter Share"
+    "Script": "Nepal Credit & Commercial Bank Ltd. Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NCCD86",
-    "Script": "9.5% Ncc Debenture 2086"
+    "Script": "9.5% Ncc Debenture 2086",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NCDB",
-    "Script": "Nepal Community Development Bank Ltd."
+    "Script": "Nepal Community Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NCDBL",
-    "Script": "Nepal Consumer Development Bank Ltd."
+    "Script": "Nepal Consumer Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NCDBPO",
-    "Script": "Nepal Community Development Bank Ltd. Promoter Share"
+    "Script": "Nepal Community Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NCM",
-    "Script": "Nidc Capital Markets Ltd."
+    "Script": "Nidc Capital Markets Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NCMMF",
-    "Script": "Ncm Mutual Fund"
+    "Script": "Ncm Mutual Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NCMPO",
-    "Script": "Nidc Capital Markets Ltd. Promoter Share"
+    "Script": "Nidc Capital Markets Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NDB",
-    "Script": "Nepal Development Bank Limited"
+    "Script": "Nepal Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NDBPO",
-    "Script": "Nepal Development Bank Limited Promoter Share"
+    "Script": "Nepal Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NDEP",
-    "Script": "Ndep Development Bank"
+    "Script": "Ndep Development Bank",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NDFL",
-    "Script": "Nava Durga Finance Co. Ltd."
+    "Script": "Nava Durga Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NEF",
-    "Script": "Nabil Equity Fund"
+    "Script": "Nabil Equity Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NEFL",
-    "Script": "Nepal Express Finance Ltd."
+    "Script": "Nepal Express Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NEFLPO",
-    "Script": "Nepal Express Finance Limited Promoter Share"
+    "Script": "Nepal Express Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NESDO",
-    "Script": "Nesdo Sambridha Laghubitta Bittiya Sanstha Limited"
+    "Script": "Nesdo Sambridha Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NFC",
-    "Script": "National Finance Co. Ltd"
+    "Script": "National Finance Co. Ltd",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NFCF",
-    "Script": "Nabil Flexi Cap Fund"
+    "Script": "Nabil Flexi Cap Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NFD",
-    "Script": "Nepal Film Development Company Limited"
+    "Script": "Nepal Film Development Company Limited",
+    "Sector": "Others"
   },
   {
     "Symbol": "NFL",
-    "Script": "Narayani Finance Ltd."
+    "Script": "Narayani Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NFS",
-    "Script": "Nepal Finance Ltd."
+    "Script": "Nepal Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NFSPO",
-    "Script": "Nepal Finance Ltd. Promoter Share"
+    "Script": "Nepal Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NGBBL",
-    "Script": "Nepal Grameen Bikas Bank Ltd."
+    "Script": "Nepal Grameen Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NGBBLP",
-    "Script": "Nepal Grameen Bikas Bank Ltd.-P"
+    "Script": "Nepal Grameen Bikas Bank Ltd.-P",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NGBL",
-    "Script": "Nilgiri Bikas Bank Limited"
+    "Script": "Nilgiri Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NGPL",
-    "Script": "Ngadi Group Power Ltd."
+    "Script": "Ngadi Group Power Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "NHDL",
-    "Script": "Nepal Hydro Developers Ltd."
+    "Script": "Nepal Hydro Developers Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "NHMF",
-    "Script": "Nepal Housing & Merchant Finance Ltd."
+    "Script": "Nepal Housing & Merchant Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NHMFPO",
-    "Script": "Nepal Housing & Merchant Co. Ltd. Promoter Share"
+    "Script": "Nepal Housing & Merchant Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NHPC",
-    "Script": "National Hydro Power Company Limited"
+    "Script": "National Hydro Power Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "NIB",
-    "Script": "Nepal Investment Bank Limited"
+    "Script": "Nepal Investment Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NIBD2082",
-    "Script": "10.5 % Nepal Investment Debenture 2082"
+    "Script": "10.5 % Nepal Investment Debenture 2082",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NIBD84",
-    "Script": "8.5% Nepal Investment Bank Debenture 2084"
+    "Script": "8.5% Nepal Investment Bank Debenture 2084",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NIBLGF",
-    "Script": "NIBL Growth Fund"
+    "Script": "NIBL Growth Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NIBLPF",
-    "Script": "Nibl Pragati Fund"
+    "Script": "Nibl Pragati Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NIBLSF",
-    "Script": "Nibl Sahabhagita Fund"
+    "Script": "Nibl Sahabhagita Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NIBPO",
-    "Script": "Nepal Investment Bank Ltd. Promoter Share"
+    "Script": "Nepal Investment Bank Ltd. Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NIBSF1",
-    "Script": "Nibl Samriddhi Fund 1"
+    "Script": "Nibl Samriddhi Fund 1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NIBSF2",
-    "Script": "Nibl Samriddhi Fund -2"
+    "Script": "Nibl Samriddhi Fund -2",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NICA",
-    "Script": "Nic Asia Bank Ltd."
+    "Script": "Nic Asia Bank Ltd.",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICAD8182",
-    "Script": "Nic Asia Debenture 2081/82"
+    "Script": "Nic Asia Debenture 2081/82",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICAD8283",
-    "Script": "11% Nic Asia Debenture 082/83"
+    "Script": "11% Nic Asia Debenture 082/83",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICAP",
-    "Script": "Nic Asia Bank Limted Promoter Share"
+    "Script": "Nic Asia Bank Limted Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICB",
-    "Script": "Nepal Ind & Commerc.Bank"
+    "Script": "Nepal Ind & Commerc.Bank",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICBF",
-    "Script": "Nic Asia Balanced Fund"
+    "Script": "Nic Asia Balanced Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NICD83/84",
-    "Script": "10.25% Nic Asia Debenture 2083/84"
+    "Script": "10.25% Nic Asia Debenture 2083/84",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICFC",
-    "Script": "Nic Asia Flexi Cap Fund"
+    "Script": "Nic Asia Flexi Cap Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NICGF",
-    "Script": "Nic Asia Growth Fund"
+    "Script": "Nic Asia Growth Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NICL",
-    "Script": "Nepal Insurance Co. Ltd."
+    "Script": "Nepal Insurance Co. Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "NICLBSL",
-    "Script": "Nic Asia Laghubitta Bittiya Sanstha Limited"
+    "Script": "Nic Asia Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NICLBSLP",
-    "Script": "Nic Asia Laghubitta bittya Sanstha Limited Promoter Share"
+    "Script": "Nic Asia Laghubitta Bittiya Sanstha Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NICLPO",
-    "Script": "Nepal Insurance Co. Ltd Promoter Share"
+    "Script": "Nepal Insurance Co. Ltd Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "NICSF",
-    "Script": "Nic Asia Select Fund 30"
+    "Script": "Nic Asia Select Fund 30",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NIDC",
-    "Script": "Nidc Development Bank Ltd."
+    "Script": "Nidc Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NIFRA",
-    "Script": "Nepal Infrastructure Bank Limited"
+    "Script": "Nepal Infrastructure Bank Limited",
+    "Sector": "Investment"
   },
   {
     "Symbol": "NIFRAUR85/86",
-    "Script": "NIFRA Uraj Rinpatra7%-2085/86"
+    "Script": "NIFRA Uraj Rinpatra7%-2085/86",
+    "Sector": "Investment"
   },
   {
     "Symbol": "NIL",
-    "Script": "Neco Insurance Limited"
+    "Script": "Neco Insurance Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "NILPO",
-    "Script": "Neco Insurace Co. Ltd. Promoter"
+    "Script": "Neco Insurace Co. Ltd. Promoter",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "NIMB",
-    "Script": "Nepal Investment Mega Bank Limited"
+    "Script": "Nepal Investment Mega Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NIMBPO",
-    "Script": "Nepal Investment Mega Bank Ltd. Promoter Share"
+    "Script": "Nepal Investment Mega Bank Ltd. Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NKU",
-    "Script": "Nepal Khadya Udhyog Limited"
+    "Script": "Nepal Khadya Udhyog Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "NLBBL",
-    "Script": "Nerude Laghubitta Bittiya Sanstha Limited"
+    "Script": "Nerude Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NLBBLP",
-    "Script": "Nerude Laghubita Bikas Bank Limited Promoter Share"
+    "Script": "Nerude Laghubita Bikas Bank Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NLG",
-    "Script": "Nlg Insurance Company Ltd."
+    "Script": "Nlg Insurance Company Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "NLGPO",
-    "Script": "Nlg Insurance Company Ltd. Promoter Share"
+    "Script": "Nlg Insurance Company Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "NLIC",
-    "Script": "Nepal Life Insurance Co. Ltd."
+    "Script": "Nepal Life Insurance Co. Ltd.",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "NLICL",
-    "Script": "National Life Insurance Co. Ltd."
+    "Script": "National Life Insurance Co. Ltd.",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "NLICLP",
-    "Script": "National Life Insurance Co. Ltd. Promoter Share"
+    "Script": "National Life Insurance Co. Ltd. Promoter Share",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "NLICP",
-    "Script": "Nepal Life Insurance Co. Ltd. Promoter"
+    "Script": "Nepal Life Insurance Co. Ltd. Promoter",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "NLO",
-    "Script": "Nepal Lube Oil Limited"
+    "Script": "Nepal Lube Oil Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "NMB",
-    "Script": "Nmb Bank Limited"
+    "Script": "Nmb Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NMB50",
-    "Script": "Nmb 50"
+    "Script": "Nmb 50",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NMBD2085",
-    "Script": "10 % Nmb Debenture 2085"
+    "Script": "10 % Nmb Debenture 2085",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NMBD87/88",
-    "Script": "Nmb Debenture 8.50% - 2087/88"
+    "Script": "Nmb Debenture 8.50% - 2087/88",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NMBHF1",
-    "Script": "Nmb Hybrid Fund L-1"
+    "Script": "Nmb Hybrid Fund L-1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NMBMF",
-    "Script": "Nmb Microfinance Bittiya Sanstha Ltd."
+    "Script": "Nmb Microfinance Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NMBPO",
-    "Script": "Nmb Bank Limited Promoter Share"
+    "Script": "Nmb Bank Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NMBSBF",
-    "Script": "NMB Saral Bachat Fund - E"
+    "Script": "NMB Saral Bachat Fund - E",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NMBSBFE",
-    "Script": "Nmb Saral Bachat Fund E"
+    "Script": "Nmb Saral Bachat Fund E",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NMBSF1",
-    "Script": "Nmb Sulav Investment Fund-1"
+    "Script": "Nmb Sulav Investment Fund-1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NMFBS",
-    "Script": "National Microfinance Laghubitta Bittiya Sanstha Limited"
+    "Script": "National Microfinance Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NMFBSP",
-    "Script": "National Microfinance Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "National Microfinance Laghubitta Bittiya Sanstha Limited Promoter",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NNFC",
-    "Script": "Narayani National Finance Limited"
+    "Script": "Narayani National Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NNFCPO",
-    "Script": "Narayani National Finance Company Limited Promoter Share"
+    "Script": "Narayani National Finance Company Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NNLB",
-    "Script": "Naya Nepal Laghubitta Bikas Bank Ltd."
+    "Script": "Naya Nepal Laghubitta Bikas Bank Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NNLBPO",
-    "Script": "Naya Nepal Laghubitta Bikas Bank Ltd. Promoter Share"
+    "Script": "Naya Nepal Laghubitta Bikas Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NRIC",
-    "Script": "Nepal Reinsurance Company Limited"
+    "Script": "Nepal Reinsurance Company Limited",
+    "Sector": "Others"
   },
   {
     "Symbol": "NRICP",
-    "Script": "Nepal Reinsurance Company Limited Promoter Share"
+    "Script": "Nepal Reinsurance Company Limited Promoter Share",
+    "Sector": "Others"
   },
   {
     "Symbol": "NRM",
-    "Script": "Nepal Republic Media Limited"
+    "Script": "Nepal Republic Media Limited",
+    "Sector": "Others"
   },
   {
     "Symbol": "NRN",
-    "Script": "Nrn Infrastructure And Development Limited"
+    "Script": "Nrn Infrastructure And Development Limited",
+    "Sector": "Investment"
   },
   {
     "Symbol": "NSIF2",
-    "Script": "NMB Sulav Investment Fund - 2"
+    "Script": "NMB Sulav Investment Fund - 2",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "NSLB",
-    "Script": "Naya Sarathi Laghubitta Bittiya Sanstha Limited"
+    "Script": "Naya Sarathi Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NSLBP",
-    "Script": "Naya Sarathi Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Naya Sarathi Laghubitta Bittiya Sanstha Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NSLMB",
-    "Script": "Nepal Shree Lanka Merchant Banking & Finance Ltd"
+    "Script": "Nepal Shree Lanka Merchant Banking & Finance Ltd",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NSM",
-    "Script": "Nepal Share Markets Ltd."
+    "Script": "Nepal Share Markets Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NSMPO",
-    "Script": "Nepal Share Markets Limited Promoter Share"
+    "Script": "Nepal Share Markets Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "NTC",
-    "Script": "Nepal Doorsanchar Company Limited"
+    "Script": "Nepal Doorsanchar Company Limited",
+    "Sector": "Others"
   },
   {
     "Symbol": "NTL",
-    "Script": "Nepal Tading Limited"
+    "Script": "Nepal Tading Limited",
+    "Sector": "Tradings"
   },
   {
     "Symbol": "NUBL",
-    "Script": "Nirdhan Utthan Laghubitta Bittiya Sanstha Limited"
+    "Script": "Nirdhan Utthan Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NUBLPO",
-    "Script": "Nirdhan Utthan Bank Limited Promoter Share"
+    "Script": "Nirdhan Utthan Bank Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NVG",
-    "Script": "Nepal Vanaspati Ghee Udhyog Limited"
+    "Script": "Nepal Vanaspati Ghee Udhyog Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "NWC",
-    "Script": "Nepal Welfare Company Limited"
+    "Script": "Nepal Welfare Company Limited",
+    "Sector": "Tradings"
   },
   {
     "Symbol": "NWCL",
-    "Script": "Nepal Warehousing Company Limited"
+    "Script": "Nepal Warehousing Company Limited",
+    "Sector": "Others"
   },
   {
     "Symbol": "NYADI",
-    "Script": "Nyadi Hydropower Limited"
+    "Script": "Nyadi Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "ODBL",
-    "Script": "Om Development Bank Ltd."
+    "Script": "Om Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "ODBLPO",
-    "Script": "Om Development Bank Ltd. Promoter Share"
+    "Script": "Om Development Bank Ltd. Promoter",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "OFL",
-    "Script": "Om Finance Ltd."
+    "Script": "Om Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "OFLPO",
-    "Script": "Om Finance Limited Promoter Share"
+    "Script": "Om Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "OHL",
-    "Script": "Oriental Hotels Limited"
+    "Script": "Oriental Hotels Limited",
+    "Sector": "Hotels And Tourism"
   },
   {
     "Symbol": "PADBL",
-    "Script": "Pacific Development Bank Limited"
+    "Script": "Pacific Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PADBLP",
-    "Script": "Pacific Development Bank Ltd. Promoter Share"
+    "Script": "Pacific Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PBD85",
-    "Script": "8.75 % Prime Debenture 2085"
+    "Script": "8.75 % Prime Debenture 2085",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PBD88",
-    "Script": "10% Prime Debenture 2088"
+    "Script": "10% Prime Debenture 2088",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PBLD84",
-    "Script": "10% Prabhu Bank Debenture 2084"
+    "Script": "10% Prabhu Bank Debenture 2084",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PBLD86",
-    "Script": "10.25% Prabhu Bank Debenture 2086"
+    "Script": "10.25% Prabhu Bank Debenture 2086",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PBLD87",
-    "Script": "8.5% Prabhu Bank Debenture 2087"
+    "Script": "8.5% Prabhu Bank Debenture 2087",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PBSL",
-    "Script": "Pathibhara Bikas Bank Limited"
+    "Script": "Pathibhara Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PCBL",
-    "Script": "Prime Commercial Bank Ltd."
+    "Script": "Prime Commercial Bank Ltd.",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PCBLP",
-    "Script": "Prime Commercial Bank Promoter Share"
+    "Script": "Prime Commercial Bank Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PDB",
-    "Script": "Public Development Bank Limited"
+    "Script": "Public Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PDBL",
-    "Script": "Paschimanchal Bikash Bank Limited"
+    "Script": "Paschimanchal Bikash Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PDBLPO",
-    "Script": "Paschimanchal Bikash Bank Ltd. Promoter Share"
+    "Script": "Paschimanchal Bikash Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PFC",
-    "Script": "Paschimanchal Finance Co. Ltd."
+    "Script": "Paschimanchal Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFCL",
-    "Script": "Peoples Finance Ltd."
+    "Script": "Peoples Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFCLL",
-    "Script": "Premier Finance Co. Ltd."
+    "Script": "Premier Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFCLPO",
-    "Script": "Peoples Finance Limited Promoter Share"
+    "Script": "Peoples Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFCPO",
-    "Script": "Paschimanchal Finance Co. Ltd. Promoter Share"
+    "Script": "Paschimanchal Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFIL",
-    "Script": "Prudential Finance Company Limited"
+    "Script": "Prudential Finance Company Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFILPO",
-    "Script": "Prudential Finance Co. Ltd. Promoter Share"
+    "Script": "Prudential Finance Co. Ltd. Promoter",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFL",
-    "Script": "Pokhara Finance Ltd."
+    "Script": "Pokhara Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFLBS",
-    "Script": "Patan Finance Limited"
+    "Script": "Patan Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFLBSP",
-    "Script": "Patan Finance Limited Promoter Share"
+    "Script": "Patan Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PFLPO",
-    "Script": "Pokhara Finance Company Limited Promoter Share"
+    "Script": "Pokhara Finance Company Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PGBL",
-    "Script": "Purwanchal Grameen Bikash Bank Limited"
+    "Script": "Purwanchal Grameen Bikash Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PHCL",
-    "Script": "Peoples Hydropower Company Limited"
+    "Script": "Peoples Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "PIC",
-    "Script": "Premier Insurance Company (Nepal) Limited"
+    "Script": "Premier Insurance Company (Nepal) Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "PICL",
-    "Script": "Prudential Insurance Co. Ltd."
+    "Script": "Prudential Insurance Co. Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "PICLPO",
-    "Script": "Prudential Insurance Co. Ltd. Promoter Share"
+    "Script": "Prudential Insurance Co. Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "PICPO",
-    "Script": "Premier Insurance Co. Ltd. Promoter Share"
+    "Script": "Premier Insurance Co. Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "PLI",
-    "Script": "Prabhu Life Insurance Limited"
+    "Script": "Prabhu Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "PLIC",
-    "Script": "Prime Life Insurance Company Limited"
+    "Script": "Prime Life Insurance Company Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "PLICPO",
-    "Script": "Prime Life Insurance Company Limited Promoter Share"
+    "Script": "Prime Life Insurance Company Limited Promoter Share",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "PMHPL",
-    "Script": "Panchakanya Mai Hydropower Ltd"
+    "Script": "Panchakanya Mai Hydropower Ltd",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "PMLI",
-    "Script": "Prabhu Mahalaxmi Life Insurance Limited"
+    "Script": "Prabhu Mahalaxmi Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "PPCL",
-    "Script": "Panchthar Power Compant Limited"
+    "Script": "Panchthar Power Compant Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "PPL",
-    "Script": "People'S Power Limited"
+    "Script": "People'S Power Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "PRBBL",
-    "Script": "Prabhu Bikas Bank Limited"
+    "Script": "Prabhu Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PRBL",
-    "Script": "Professional Bikas Bank Ltd."
+    "Script": "Professional Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PRDBL",
-    "Script": "Professional Diyalo Bikas Bank Ltd."
+    "Script": "Professional Diyalo Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PRDBLP",
-    "Script": "Professional Diyalo Bikas Bank Ltd. Promoter Share"
+    "Script": "Professional Diyalo Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PRFLPO",
-    "Script": "Prabhu Finance Ltd. Promoter Share"
+    "Script": "Prabhu Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PRIN",
-    "Script": "Prabhu Insurance Ltd."
+    "Script": "Prabhu Insurance Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "PRINPO",
-    "Script": "Prabhu Insurance Company Ltd. Promoter Share"
+    "Script": "Prabhu Insurance Company Ltd. Promoter",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "PROFL",
-    "Script": "Progressive Finance Limited"
+    "Script": "Progressive Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PROFLP",
-    "Script": "Progressive Finance Limited Promoter Share"
+    "Script": "Progressive Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "PRSF",
-    "Script": "Prabhu Smart Fund"
+    "Script": "Prabhu Smart Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "PRVU",
-    "Script": "Prabhu Bank Limited"
+    "Script": "Prabhu Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PRVUPO",
-    "Script": "Prabhu Bank Limited Promoter Share"
+    "Script": "Prabhu Bank Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PSF",
-    "Script": "Prabhu Select Fund"
+    "Script": "Prabhu Select Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "PURBL",
-    "Script": "Purnima Bikash Bank Ltd."
+    "Script": "Purnima Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "PURBLP",
-    "Script": "Purnima Bikash Bank Ltd. Promoter Share"
+    "Script": "Purnima Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "RADHI",
-    "Script": "Radhi Bidyut Company Ltd"
+    "Script": "Radhi Bidyut Company Ltd",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "RARA",
-    "Script": "Rara Bikas Bank Limited"
+    "Script": "Rara Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "RAWA",
-    "Script": "Rawa Energy Development Limited"
+    "Script": "Rawa Energy Development Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "RBBBL",
-    "Script": "Raptibheri Bikas Bank Ltd."
+    "Script": "Raptibheri Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "RBCL",
-    "Script": "Rastriya Beema Company Limited"
+    "Script": "Rastriya Beema Company Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "RBCLPO",
-    "Script": "Rastriya Beema Company Limited Promoter Share"
+    "Script": "Rastriya Beema Company Limited Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "RBSL",
-    "Script": "Resunga Bikas Bank Limited"
+    "Script": "Resunga Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "RDBL",
-    "Script": "Rising Development Bank Ltd."
+    "Script": "Rising Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "REDBL",
-    "Script": "Reliable Development Bank Limited"
+    "Script": "Reliable Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "REDBLP",
-    "Script": "Reliable Development Bank Ltd. Promoter Share"
+    "Script": "Reliable Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "RFPL",
-    "Script": "River Falls Power Limited"
+    "Script": "River Falls Power Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "RHGCL",
-    "Script": "Rapti Hydro And General Construction Limited"
+    "Script": "Rapti Hydro And General Construction Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "RHPL",
-    "Script": "Rasuwagadhi Hydropower Company Limited"
+    "Script": "Rasuwagadhi Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "RIBSL",
-    "Script": "Reliable Investment Bittiya Sanstha"
+    "Script": "Reliable Investment Bittiya Sanstha",
+    "Sector": "Finance"
   },
   {
     "Symbol": "RIBSLP",
-    "Script": "Reliable Investment Bittiya Sanstha Promoter Share"
+    "Script": "Reliable Investment Bittiya Sanstha Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "RIDI",
-    "Script": "Ridi Power Company Limited"
+    "Script": "Ridi Power Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "RJM",
-    "Script": "Raghupati Jute Mills Limited"
+    "Script": "Raghupati Jute Mills Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "RLFL",
-    "Script": "Reliance Finance Ltd."
+    "Script": "Reliance Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "RLFLPO",
-    "Script": "Reliance Finance Ltd. Promoter Share"
+    "Script": "Reliance Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "RLI",
-    "Script": "Reliance Life Insurance Limited"
+    "Script": "Reliance Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "RMBFI",
-    "Script": "Royal Merchant Bank & Finance Co. Ltd."
+    "Script": "Royal Merchant Bank & Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "RMBFPO",
-    "Script": "Royal Merchant Bank & Finance Co. Ltd. Promoter Share"
+    "Script": "Royal Merchant Bank & Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "RMDC",
-    "Script": "Rmdc Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Rmdc Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "RMDCPO",
-    "Script": "Rural Microfinance Development Centre Ltd. Promoter Share"
+    "Script": "Rural Microfinance Development Centre Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "RMF1",
-    "Script": "Rbb Mutual Fund 1"
+    "Script": "Rbb Mutual Fund 1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "RMF2",
-    "Script": "RBB Mutual Fund 2"
+    "Script": "RBB Mutual Fund 2",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "RMFL",
-    "Script": "Reliable Microfinance Bittya Sanstha Ltd."
+    "Script": "Reliable Microfinance Bittya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "RNLI",
-    "Script": "Reliable Nepal Life Insurance Limited"
+    "Script": "Reliable Nepal Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "RRHP",
-    "Script": "Rairang Hydropower Development Company Ltd."
+    "Script": "Rairang Hydropower Development Company Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "RSDC",
-    "Script": "Rsdc Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Rsdc Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "RSDCP",
-    "Script": "Rsdc Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+    "Script": "Rsdc Laghubitta Bittiya Sanstha Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "RULB",
-    "Script": "Rastra Utthan Laghubitta Sanstha Limited"
+    "Script": "Rastra Utthan Laghubitta Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "RURU",
-    "Script": "Ru Ru Jalbidhyut Pariyojana Limited"
+    "Script": "Ru Ru Jalbidhyut Pariyojana Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SABSL",
-    "Script": "Sabaiko Laghubitta Bittiya Sanstha Limited"
+    "Script": "Sabaiko Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SABSLP",
-    "Script": "Sabaiko Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Sabaiko Laghubitta Bittiya Sanstha Limited Promoter",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SADBL",
-    "Script": "Shangrila Development Bank Ltd."
+    "Script": "Shangrila Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SADBLP",
-    "Script": "Shangrila Development Bank Ltd. Promoter Share"
+    "Script": "Shangrila Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SAEF",
-    "Script": "Sanima Equity Fund"
+    "Script": "Sanima Equity Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SAFL",
-    "Script": "Sagarmatha Finance Limited"
+    "Script": "Sagarmatha Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SAFLPO",
-    "Script": "Sagarmatha Finance Limited Promoter Share"
+    "Script": "Sagarmatha Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SAGF",
-    "Script": "Sanima Growth Fund"
+    "Script": "Sanima Growth Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SAHAS",
-    "Script": "Sahas Urja Limited"
+    "Script": "Sahas Urja Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SAJHA",
-    "Script": "Sajha Bikas Bank Ltd."
+    "Script": "Sajha Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SALICO",
-    "Script": "Sagarmatha Lumbini Insurance Co. Limited"
+    "Script": "Sagarmatha Lumbini Insurance Co. Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SAMAJ",
-    "Script": "Samaj Laghubittya Bittiya Sanstha Limited"
+    "Script": "Samaj Laghubittya Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SAND2085",
-    "Script": "Sanima Bank Limited Debenture"
+    "Script": "Sanima Bank Limited Debenture",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SANIMA",
-    "Script": "Sanima Bank Limited"
+    "Script": "Sanima Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SAPDBL",
-    "Script": "Saptakoshi Development Bank Ltd"
+    "Script": "Saptakoshi Development Bank Ltd",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SAPDBLP",
-    "Script": "Saptakoshi Development Bank Ltd Promoter Share"
+    "Script": "Saptakoshi Development Bank Ltd Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SBBL",
-    "Script": "Sanima Bikas Bank Limited"
+    "Script": "Sanima Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SBBLJ",
-    "Script": "Sahayogi Bikas Bank Limited"
+    "Script": "Sahayogi Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SBBLJP",
-    "Script": "Sahayogi Bikas Bank Ltd. Promoter Share"
+    "Script": "Sahayogi Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SBCF",
-    "Script": "Sunrise Bluechip Fund"
+    "Script": "Sunrise Bluechip Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SBD87",
-    "Script": "8.5% Sanima Debenture 2087"
+    "Script": "8.5% Sanima Debenture 2087",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBI",
-    "Script": "Nepal Sbi Bank Limited"
+    "Script": "Nepal Sbi Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBIBD86",
-    "Script": "10% Nepal Sbi Bank Debenture 2086"
+    "Script": "10% Nepal Sbi Bank Debenture 2086",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBID83",
-    "Script": "10.25% Nepal Sbi Bank Debenture 2083"
+    "Script": "10.25% Nepal Sbi Bank Debenture 2083",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBL",
-    "Script": "Siddhartha Bank Limited"
+    "Script": "Siddhartha Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBLD2082",
-    "Script": "10.50% Sbl Debenture 2082"
+    "Script": "10.50% Sbl Debenture 2082",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBLD83",
-    "Script": "10.25% Sbl Debenture 2083"
+    "Script": "10.25% Sbl Debenture 2083",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBLD84",
-    "Script": "8.5% Sbl Debenture 2084"
+    "Script": "8.5% Sbl Debenture 2084",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBLPO",
-    "Script": "Siddhartha Bank Limited Promoter Share"
+    "Script": "Siddhartha Bank Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBPP",
-    "Script": "Shree Bhrikuti Pulp And Paper Limited"
+    "Script": "Shree Bhrikuti Pulp And Paper Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "SBSL",
-    "Script": "Shikhar Finance Limited"
+    "Script": "Shikhar Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SCB",
-    "Script": "Standard Chartered Bank Limited"
+    "Script": "Standard Chartered Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SDBD87",
-    "Script": "Shangri-La Development Bank Debenture 2087"
+    "Script": "Shangri-La Development Bank Debenture 2087",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SDBL",
-    "Script": "Siddhartha Development Bank Ltd."
+    "Script": "Siddhartha Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SDBLPO",
-    "Script": "Siddhartha Development Bank Limited Promoter Share"
+    "Script": "Siddhartha Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SDESI",
-    "Script": "Swadeshi Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Swadeshi Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SDFL",
-    "Script": "Suryadarshan Finance Company Limited"
+    "Script": "Suryadarshan Finance Company Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SDLBSL",
-    "Script": "Sadhana Laghubitta Bittiya Sanstha Limited"
+    "Script": "Sadhana Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SEF",
-    "Script": "Siddhartha Equity Fund"
+    "Script": "Siddhartha Equity Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SEOS",
-    "Script": "Siddhartha Equity Orineted Scheme"
+    "Script": "Siddhartha Equity Orineted Scheme",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SETI",
-    "Script": "Seti Finance Limited"
+    "Script": "Seti Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SETIPO",
-    "Script": "Seti Finance Ltd. Promoter Share"
+    "Script": "Seti Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SEWA",
-    "Script": "Sewa Bikas Bank Limited"
+    "Script": "Sewa Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SEWAPO",
-    "Script": "Sewa Bikas Bank Ltd. Promoter Share"
+    "Script": "Sewa Bikas Bank Ltd. Promoter",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SFC",
-    "Script": "Samjhana Finance Co. Ltd."
+    "Script": "Samjhana Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SFCL",
-    "Script": "Samriddhi Finance Company Limited"
+    "Script": "Samriddhi Finance Company Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SFCLP",
-    "Script": "Samriddhi Finance Company Limited Promoter Share"
+    "Script": "Samriddhi Finance Company Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SFCPO",
-    "Script": "Samjhana Finance Co. Ltd. Promoter Share"
+    "Script": "Samjhana Finace Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SFEF",
-    "Script": "Sunrise Focused Equity Fund"
+    "Script": "Sunrise Focused Equity Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SFFIL",
-    "Script": "Shrijana Finance (Bittaya Sanstha)"
+    "Script": "Shrijana Finance (Bittaya Sanstha)",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SFFILP",
-    "Script": "Shrijana Finance Ltd. Promoter Share"
+    "Script": "Shrijana Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SFL",
-    "Script": "Siddharth Finance Ltd."
+    "Script": "Siddharth Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SFLPO",
-    "Script": "Siddhartha Finance Ltd. Promoter Share"
+    "Script": "Siddhartha Finance Ltd. Promoter",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SFMF",
-    "Script": "Sunrise First Mutual Fund"
+    "Script": "Sunrise First Mutual Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SGHC",
-    "Script": "Swet-Ganga Hydropower & Construction Limited"
+    "Script": "Swet-Ganga Hydropower & Construction Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SGI",
-    "Script": "Sanima General Insurance Limited"
+    "Script": "Sanima General Insurance Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SGIC",
-    "Script": "Sanima GIC Insurance Limited"
+    "Script": "Sanima GIC Insurance Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SHBL",
-    "Script": "Sahara Bikas Bank Ltd."
+    "Script": "Sahara Bikas Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SHEL",
-    "Script": "Singati Hydro Energy Limited"
+    "Script": "Singati Hydro Energy Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SHINE",
-    "Script": "Shine Resunga Development Bank Ltd."
+    "Script": "Shine Resunga Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SHINEP",
-    "Script": "Shine Resunga Development Bank Ltd. Promoter Share"
+    "Script": "Shine Resunga Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SHIVM",
-    "Script": "Shivam Cements Ltd"
+    "Script": "Shivam Cements Ltd",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "SHL",
-    "Script": "Soaltee Hotel Limited"
+    "Script": "Soaltee Hotel Limited",
+    "Sector": "Hotels And Tourism"
   },
   {
     "Symbol": "SHLB",
-    "Script": "Shrijanshil Laghubitta Bittiya Sanstha Limited"
+    "Script": "Shrijanshil Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SHPC",
-    "Script": "Sanima Mai Hydropower Ltd."
+    "Script": "Sanima Mai Hydropower Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SIC",
-    "Script": "Sagarmatha Insurance Co. Ltd."
+    "Script": "Sagarmatha Insurance Co. Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SICL",
-    "Script": "Shikhar Insurance Co. Ltd."
+    "Script": "Shikhar Insurance Co. Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SICLPO",
-    "Script": "Shikhar Insurance Co. Ltd. Promoter Share"
+    "Script": "Shikhar Insurance Co. Ltd. Promoter",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SICPO",
-    "Script": "Sagarmatha Insurance Co. Ltd. Promoter Share"
+    "Script": "Sagarmatha Insurance Co. Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SIFC",
-    "Script": "Shree Investment Finance Co. Ltd."
+    "Script": "Shree Investment Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SIFCPO",
-    "Script": "Shree Investment & Finance Co. Ltd. Promoter Share"
+    "Script": "Shree Investment & Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SIGS1",
-    "Script": "Siddhartha Investment Growth Scheme-1"
+    "Script": "Siddhartha Investment Growth Scheme-1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SIGS2",
-    "Script": "Siddhartha Investment Growth Scheme - 2"
+    "Script": "Siddhartha Investment Growth Scheme - 2",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SIGS3",
-    "Script": "Siddhartha Investment Growth Scheme 3"
+    "Script": "Siddhartha Investment Growth Scheme 3",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SIKLES",
-    "Script": "Sikles Hydropower Limited"
+    "Script": "Sikles Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SIL",
-    "Script": "Siddhartha Insurance Ltd."
+    "Script": "Siddhartha Insurance Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SILPO",
-    "Script": "Siddhartha Insurance Ltd. Promoter Share"
+    "Script": "Siddhartha Insurance Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SINDU",
-    "Script": "Sindhu Bikash Bank Ltd"
+    "Script": "Sindhu Bikash Bank Ltd",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SINDUP",
-    "Script": "Sindhu Bikas Bank Ltd. Promoter Share"
+    "Script": "Sindhu Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SJCL",
-    "Script": "Sanjen Jalavidhyut Company Limited"
+    "Script": "Sanjen Jalavidhyut Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SJLIC",
-    "Script": "Suryajyoti Life Insurance Company Limited"
+    "Script": "Suryajyoti Life Insurance Company Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "SJLICP",
-    "Script": "SuryaJyoti Life Insurance Company Limited Promoter"
+    "Script": "SuryaJyoti Life Insurance Company Limited Promoter",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "SKBBL",
-    "Script": "Sana Kisan Bikas Laghubitta Bittiya Sanstha Limited"
+    "Script": "Sana Kisan Bikas Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SKBBLP",
-    "Script": "Sana Kisan Bikas Bank Ltd. Promoter Share"
+    "Script": "Sana Kisan Bikas Bank Ltd Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SKDBL",
-    "Script": "Saptakoshi Development Bank Ltd."
+    "Script": "Saptakoshi Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SLBBL",
-    "Script": "Swarojgar Laghu Bitta Bikas Bank Ltd."
+    "Script": "Swarojgar Laghu Bitta Bikas Bank Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SLBBLP",
-    "Script": "Swarojgar Laghu Bitta Bikas Bank Ltd. Promoter Share"
+    "Script": "Swarojgar Laghu Bitta Bikas Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SLBS",
-    "Script": "Suryodaya Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Suryodaya Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SLBSL",
-    "Script": "Samudayik Laghubitta Bittiya Sanstha Limited"
+    "Script": "Samudayik Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SLBSP",
-    "Script": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Suryodaya Laghubitta Bittiya Sanstha Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SLCF",
-    "Script": "Sanima Large Cap Fund"
+    "Script": "Sanima Large Cap Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SLFL",
-    "Script": "Subha Laxmi Finance Co. Ltd."
+    "Script": "Subha Laxmi Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SLI",
-    "Script": "Sanima Life Insurance Limited"
+    "Script": "Sanima Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "SLICL",
-    "Script": "Surya Life Insurance Company Limited"
+    "Script": "Surya Life Insurance Company Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "SLICLP",
-    "Script": "Surya Life Insurance Co. Ltd. Promoter Share"
+    "Script": "Surya Life Insurance Co. Ltd. Promoter Share",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "SLK",
-    "Script": "Subha Laxmi Kosh"
+    "Script": "Subha Laxmi Kosh",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "SMATA",
-    "Script": "Samata Gharelu Laghubitta Bittiya Sanstha Limited"
+    "Script": "Samata Gharelu Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SMB",
-    "Script": "Support Microfinance Bittiya Sanstha Ltd."
+    "Script": "Support Microfinance Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SMBF",
-    "Script": "Sagarmatha Merchant Banking And Finance Ltd."
+    "Script": "Sagarmatha Merchant Banking And Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SMBPO",
-    "Script": "Support Microfinance Bittiya Sanstha Ltd. Promoter Share"
+    "Script": "Support Microfinance Bittiya Sanstha Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SMF",
-    "Script": "Swastik Merchant Finance Co. Ltd."
+    "Script": "Swastik Merchant Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SMFBS",
-    "Script": "Swabhimaan Laghubitta Bittiya Sanstha Limited"
+    "Script": "Swabhimaan Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SMFDB",
-    "Script": "Summit Laghubitta Bittiya Sanstha Limited"
+    "Script": "Summit Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SMFDBP",
-    "Script": "Summit Micro Finance Development Bank Ltd. Promoter Share"
+    "Script": "Summit Micro Finance Development Bank Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SMH",
-    "Script": "Super Mai Hydropower Limited"
+    "Script": "Super Mai Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SMHL",
-    "Script": "Super Madi Hydropower Limited"
+    "Script": "Super Madi Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SMJC",
-    "Script": "Sagarmatha Jalabidhyut Company Limited"
+    "Script": "Sagarmatha Jalabidhyut Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SNLI",
-    "Script": "Sun Nepal Life Insurance Company Limited"
+    "Script": "Sun Nepal Life Insurance Company Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "SNMAPO",
-    "Script": "Sanima Bank Ltd. Promoter Share"
+    "Script": "Sanima Bank Ltd. Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SODBL",
-    "Script": "Society Development Bank Ltd."
+    "Script": "Society Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SONA",
-    "Script": "Sonapur Minerals And Oil Limited"
+    "Script": "Sonapur Minerals And Oil Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "SPARS",
-    "Script": "Sparsha Laghubitta Bittiya Sanstha Limited"
+    "Script": "Sparsha Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SPC",
-    "Script": "Samling Power Company Limited"
+    "Script": "Samling Power Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SPDL",
-    "Script": "Synergy Power Development Ltd."
+    "Script": "Synergy Power Development Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SPHL",
-    "Script": "Sayapatri Hydropower Limited"
+    "Script": "Sayapatri Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SPIL",
-    "Script": "Siddhartha Premier Insurance Limited"
+    "Script": "Siddhartha Premier Insurance Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SPILPO",
-    "Script": "Siddhartha Premier Insurance Limited Promoter Share"
+    "Script": "Siddhartha Premier Insurance Limited Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SPL",
-    "Script": "Shuvam Power Limited"
+    "Script": "Shuvam Power Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SRBL",
-    "Script": "Sunrise Bank Limited"
+    "Script": "Sunrise Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SRBLD83",
-    "Script": "10.25% Sunrise Bank Debenture 2083"
+    "Script": "10.25% Sunrise Bank Debenture 2083",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SRBLPO",
-    "Script": "Sunrise Bank Ltd Promoter Share"
+    "Script": "Sunrise Bank Ltd Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SRD80",
-    "Script": "10% Sunrise Debenture 2080"
+    "Script": "10% Sunrise Debenture 2080",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SRLI",
-    "Script": "Sanima Reliance Life Insurance Limited"
+    "Script": "Sanima Reliance Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "SRS",
-    "Script": "Shree Ram Sugar Mills Limited"
+    "Script": "Shree Ram Sugar Mills Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "SSHL",
-    "Script": "Shiva Shree Hydropower Ltd"
+    "Script": "Shiva Shree Hydropower Ltd",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "SSIS",
-    "Script": "Siddhartha Systematic Investment Scheme"
+    "Script": "Siddhartha Systematic Investment Scheme",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "STC",
-    "Script": "Salt Trading Corporation"
+    "Script": "Salt Trading Corporation",
+    "Sector": "Tradings"
   },
   {
     "Symbol": "STFL",
-    "Script": "Standard Finance Ltd."
+    "Script": "Standard Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "STFLPO",
-    "Script": "Standard Finance Limited Promoter Share"
+    "Script": "Standard Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SUBBL",
-    "Script": "Subhechha Bikas Bank Limited"
+    "Script": "Subhechha Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SUBBLP",
-    "Script": "Subhechha Bikas Bank Ltd. Promoter Share"
+    "Script": "Subbecha Bikas Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SUPRME",
-    "Script": "Supreme Development Bank Ltd."
+    "Script": "Supreme Development Bank Ltd.",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SUPRMP",
-    "Script": "Supreme Development Bank Ltd. Promoter Share"
+    "Script": "Supreme Development Bank Ltd. Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "SWBBL",
-    "Script": "Swabalamban Laghubitta Bittiya Sanstha Limited"
+    "Script": "Swabalamban Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SWBBLP",
-    "Script": "Swabalamban Bikas Bank Limited Promoter Share"
+    "Script": "Swabalamban Bikas Bank Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SWMF",
-    "Script": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited"
+    "Script": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SWMFPO",
-    "Script": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited Promoter",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SYFL",
-    "Script": "Synergy Finance Ltd."
+    "Script": "Synergy Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SYFLPO",
-    "Script": "Synergy Finance Ltd. Promoter Share"
+    "Script": "Synergy Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "TAMOR",
-    "Script": "Sanima Middle Tamor Hydropower Limited"
+    "Script": "Sanima Middle Tamor Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "TBBL",
-    "Script": "Triveni Bikas Bank Limited"
+    "Script": "Triveni Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "TBBLP",
-    "Script": "Triveni Bikas Bank Ltd Promoter Share"
+    "Script": "Triveni Bikas Bank Ltd Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "TDBL",
-    "Script": "Tourism Development Bank Limited"
+    "Script": "Tourism Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "TDBLPO",
-    "Script": "Tourism Development Bank Ltd. Promoter Share"
+    "Script": "Tourism Development Bank Ltd. Prmoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "TMDBL",
-    "Script": "Tinau Mission Development Bank Limited"
+    "Script": "Tinau Mission Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "TMDBLP",
-    "Script": "Tinau Mission Development Bank Limited Promoter Share"
+    "Script": "Tinau Mission Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "TNBL",
-    "Script": "Tinau Development Bank Limited"
+    "Script": "Tinau Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "TNBLPO",
-    "Script": "Tinau Development Bank Ltd. Promoter Share"
+    "Script": "Tinau Development Bank Ltd. Promoter",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "TPC",
-    "Script": "Terhathum Power Company Limited"
+    "Script": "Terhathum Power Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "TRH",
-    "Script": "Taragaon Regency Hotel Limited"
+    "Script": "Taragaon Regency Hotel Limited",
+    "Sector": "Hotels And Tourism"
   },
   {
     "Symbol": "TSHL",
-    "Script": "Three Star Hydropower Limited"
+    "Script": "Three Star Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "TVCL",
-    "Script": "Trishuli Jal Vidhyut Company Limited"
+    "Script": "Trishuli Jal Vidhyut Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "UAIL",
-    "Script": "United Ajod Insurance Limited"
+    "Script": "United Ajod Insurance Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "UBBL",
-    "Script": "Udhyam Bikas Bank Limited"
+    "Script": "Udhyam Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "UFCL",
-    "Script": "Union Finance Co. Ltd."
+    "Script": "Union Finance Co. Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "UFCLPO",
-    "Script": "Union Finance Co. Ltd. Promoter Share"
+    "Script": "Union Finance Co. Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "UFIL",
-    "Script": "Unique Finance Ltd."
+    "Script": "Unique Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "UFILPO",
-    "Script": "Unique Finance Ltd. Promoter Share"
+    "Script": "Unique Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "UFL",
-    "Script": "United Finance Ltd."
+    "Script": "United Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "UFLK",
-    "Script": "Universal Finance Ltd."
+    "Script": "Universal Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "UFLKPO",
-    "Script": "Universal Finance Limited Promoter Share"
+    "Script": "Universal Finance Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "UFLPO",
-    "Script": "United Finance Company Limited Promoter Share"
+    "Script": "United Finance Company Limited Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "UHEWA",
-    "Script": "Upper Hewakhola Hydropower Company Limited"
+    "Script": "Upper Hewakhola Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "UIC",
-    "Script": "United Insurance Co. (Nepal) Ltd."
+    "Script": "United Insurance Co. (Nepal) Ltd.",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "UICPO",
-    "Script": "United Insurance Co. (Nepal) Ltd. Promoter Share"
+    "Script": "United Insurance Co. (Nepal) Ltd. Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "ULBSL",
-    "Script": "Upakar Laghubitta Bittiya Sanstha Limited"
+    "Script": "Upakar Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "ULHC",
-    "Script": "Upper Lohore Khola Hydropower Company Limited"
+    "Script": "Upper Lohore Khola Hydropower Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "ULI",
-    "Script": "Union Life Insurance Company Limited"
+    "Script": "Union Life Insurance Company Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "UMB",
-    "Script": "Unnati Micorfinance Bittiya Sanstha Ltd."
+    "Script": "Unnati Micorfinance Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "UMHL",
-    "Script": "United Modi Hydropower Ltd."
+    "Script": "United Modi Hydropower Ltd.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "UMRH",
-    "Script": "United Idi Mardi Rb Hydropower Limited"
+    "Script": "United Idi Mardi Rb Hydropower Limited.",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "UNHPL",
-    "Script": "Union Hydropower Limited"
+    "Script": "Union Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "UNL",
-    "Script": "Unilever Nepal Limited"
+    "Script": "Unilever Nepal Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "UNLB",
-    "Script": "Unique Nepal Laghubitta Bittiya Sanstha Limited"
+    "Script": "Unique Nepal Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "UPCL",
-    "Script": "Universal Power Company Ltd"
+    "Script": "Universal Power Company Ltd",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "UPPER",
-    "Script": "Upper Tamakoshi Hydropower Ltd"
+    "Script": "Upper Tamakoshi Hydropower Ltd",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "USHEC",
-    "Script": "Upper Solu Hydro Electric Company Limited"
+    "Script": "Upper Solu Hydro Electric Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "USHL",
-    "Script": "Upper Syange Hydropower Limited"
+    "Script": "Upper Syange Hydropower Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "USLB",
-    "Script": "Unnati Sahakarya Laghubitta Bittiya Sanstha Limited"
+    "Script": "Unnati Sahakarya Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "VBBL",
-    "Script": "Vibor Bikas Bank Limited"
+    "Script": "Vibor Bikas Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "VFL",
-    "Script": "Valley Finance Limited"
+    "Script": "Valley Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "VLBS",
-    "Script": "Vijaya Laghubitta Bittiya Sanstha Ltd."
+    "Script": "Vijaya Laghubitta Bittiya Sanstha Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "VLBSPO",
-    "Script": "Vijaya Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+    "Script": "Vijaya Laghubitta Bittiya Sanstha Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "VLUCL",
-    "Script": "Vision Lumbini Urja Company Limited"
+    "Script": "Vision Lumbini Urja Company Limited",
+    "Sector": "Hydro Power"
   },
   {
     "Symbol": "VSDBL",
-    "Script": "Vibor Society Development Bank Limited"
+    "Script": "Vibor Society Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "VSDBLP",
-    "Script": "Vibor Society Development Bank Limited Promoter Share"
+    "Script": "Vibor Society Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "WDBL",
-    "Script": "Western Development Bank Limited"
+    "Script": "Western Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "WDBLPO",
-    "Script": "Western Development Bank Limited Promoter Share"
+    "Script": "Western Development Bank Limited Promoter Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "WMBFL",
-    "Script": "World Merchant Banking & Finance Ltd."
+    "Script": "World Merchant Banking & Finance Ltd.",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "WNLB",
-    "Script": "Wean Nepal Laghubitta Bittiya Sansthan Limited"
+    "Script": "Wean Nepal Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "WOMI",
-    "Script": "Womi Microfinance Bittiya Sansthan Limited"
+    "Script": "Womi Microfinance Bittiya Sansthan Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "WOMIPO",
-    "Script": "Womi Microfinance Bittiya Sansthan Ltd. Promoter Share"
+    "Script": "Womi Microfinance Bittiya Sanstha Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "YETI",
-    "Script": "Yeti Development Bank Limited"
+    "Script": "Yeti Development Bank Limited",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "YETIPO",
-    "Script": "Yeti Development Bank Promoter Share"
+    "Script": "Yeti Development Bank Promotor Share",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "YFL",
-    "Script": "Yeti Finance Ltd."
+    "Script": "Yeti Finance Ltd.",
+    "Sector": "Finance"
   },
   {
     "Symbol": "YFLPO",
-    "Script": "Yeti Finance Ltd. Promoter Share"
+    "Script": "Yeti Finance Ltd. Promoter Share",
+    "Sector": "Finance"
   },
   {
     "Symbol": "YHL",
-    "Script": "Yak And Yeti Hotel Limited"
+    "Script": "Yak And Yeti Hotel Limited",
+    "Sector": "Hotels And Tourism"
   },
   {
     "Symbol": "ZFL",
-    "Script": "Zenith Finance Limited"
+    "Script": "Zenith Finance Limited",
+    "Sector": "Finance"
   },
   {
     "Symbol": "SARBTM",
-    "Script": "Sarbottam Cement Limited"
+    "Script": "Sarbottam Cement Limited",
+    "Sector": "Manufacturing And Processing"
   },
   {
     "Symbol": "NICGF2",
-    "Script": "NIC ASIA Growth Fund-2"
+    "Script": "NIC ASIA Growth Fund-2",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "CITPO",
-    "Script": "Citizen Investment Trust Promoter Share"
+    "Script": "Citizen Investment Trust Promoter Share",
+    "Sector": "Investment"
   },
   {
     "Symbol": "EBLD85",
-    "Script": "10.50% Everest Bank Limited Debenture 2085"
+    "Script": "10.50% Everest Bank Limited Debenture 2085",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "HBLD86",
-    "Script": "Himalayan Bank Limited Bond, 2086"
+    "Script": "Himalayan Bank Limited Bond, 2086",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "HLIPO",
-    "Script": "Himalayan Life Insurance Limited"
+    "Script": "Himalayan Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "JBBD87",
-    "Script": "Jyoti Bikash Bank Bond 2087"
+    "Script": "Jyoti Bikash Bank Bond 2087",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "KBLD89",
-    "Script": "11% KBL Debenture 2089"
+    "Script": "11% KBL Debenture 2089",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "KSBBLD87",
-    "Script": "9% Kamana Sewa Bikas Bank Limited Debenture 2087"
+    "Script": "9% Kamana Sewa Bikas Bank Limited Debenture 2087",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MBLD87",
-    "Script": "8.5% Machhapuchchhre Debenture 2087"
+    "Script": "8.5% Machhapuchchhre Debenture 2087",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICGF2",
-    "Script": "NIC ASIA Growth Fund-2"
+    "Script": "NIC ASIA Growth Fund-2",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PMLIP",
-    "Script": "Prabhu Mahalaxmi Life Insurance Limited Promoter Share"
+    "Script": "Prabhu Mahalaxmi Life Insurance Limited promotor",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "SALICOPO",
-    "Script": "Sagarmatha Lumbini Insurance Co. Limited Promoter Share"
+    "Script": "Sagarmatha Lumbini Insurance Co. Limited Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SBID89",
-    "Script": "9% Nepal SBI Bank Rinpatra 2089"
+    "Script": "9% Nepal SBI Bank Rinpatra 2089",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SDLBSLP",
-    "Script": "Sadhana Laghubitta Bittiya Sanstha Limited Promoter Shares"
+    "Script": "Sadhana Laghubitta Bittiya Sanstha Limited Promoter Shares",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SMATAP",
-    "Script": "Samata Gharelu Laghubitta Bittiya Sanstha Limited Promoter"
+    "Script": "Samata Gharelu Laghubitta Bittiya Sanstha Limited Promoter",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "LBL",
-    "Script": "Laxmi Bank Limited"
+    "Script": "Laxmi Bank Limited",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NMLBBL",
-    "Script": "Nerude Mirmire Laghubitta Bittiya Sanstha Limited"
+    "Script": "Nerude Mirmire Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "LBBLD89",
-    "Script": "11% L.B.B.L. Debenture 2089"
+    "Script": "11% L.B.B.L. Debenture 2089",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "LSLPO",
-    "Script": "Laxmi Sunrise Bank Limited Promoter Share"
+    "Script": "Laxmi Sunrise Bank Limited Promoter Share",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "MLBLD89",
-    "Script": "11% Mahalaxmi Debenture 2089"
+    "Script": "11% Mahalaxmi Debenture 2089",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "MND84/85",
-    "Script": "Muktinath Debenture 2084/85"
+    "Script": "Muktinath Debenture 2084/85",
+    "Sector": "Development Banks"
   },
   {
     "Symbol": "NABILD87",
-    "Script": "9% Nabil Debenture 2087"
+    "Script": "9% Nabil Debenture 2087",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICAD 85/86",
-    "Script": "10% NIC Asia Debenture 2085/86"
+    "Script": "10% NIC Asia Debenture 2085/86",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICAD85/86",
-    "Script": "10% NIC Asia Debenture 2085/86"
+    "Script": "10% NIC Asia Debenture 2085/86",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NICD88",
-    "Script": "NIC ASIA Rinpatra 2088"
+    "Script": "NIC ASIA Rinpatra 2088",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NIFRAP",
-    "Script": "Nepal Infrastructure Bank Limited Promoter"
+    "Script": "Nepal Infrastructure Bank Limited Promoter",
+    "Sector": "Investment"
   },
   {
     "Symbol": "NIMBD90",
-    "Script": "10% NIMB Debenture 2090"
+    "Script": "10% NIMB Debenture 2090",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "RBBD83",
-    "Script": "8.5% RBBL Debenture 2083"
+    "Script": "8.5% RBBL Debenture 2083",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBLD89",
-    "Script": "10.75% SBL Debenture 2089"
+    "Script": "10.75% SBL Debenture 2089",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SCBD",
-    "Script": "10.30% Standard Chartered Bank Limited Debenture"
+    "Script": "10.30% Standard Chartered Bank Limited Debenture ",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "KSY",
-    "Script": "Kumari Sabal Yojana"
+    "Script": "Kumari Sabal Yojana",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "CIZBD90",
-    "Script": "10% Citizens Bank Debenture"
+    "Script": "10% Citizens Bank Debenture",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "NADEPP",
-    "Script": "Nadep Laghubitta Bittiya Sanstha Ltd. Promoter Share"
+    "Script": "Nadep Laghubitta Bittiya Sanstha Ltd. Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NIBLSTF",
-    "Script": "NIBL Stable Fund"
+    "Script": "NIBL Stable Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "USLBP",
-    "Script": "Unnati Sahakarya Laghubitta Bittiya Sanstha Limited Promoter Share"
+    "Script": "Unnati Sahakarya Laghubitta Bittiya Sanstha Limited Promoter Share",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "SMPDA",
-    "Script": "Sampada Laghubitta Bittiya Sanstha Limited"
+    "Script": "Sampada Laghubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "BOKD86KA",
-    "Script": "BOK Debenture 2086 KA"
+    "Script": "BOK Debenture 2086 \"KA\"",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "GBILD84/85",
-    "Script": "Global IME Bank Debenture, 2084/85"
+    "Script": "Global IME Bank Debenture, 2084/85",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "KBLD89",
-    "Script": "11% KBL Debenture 2089"
+    "Script": "11% KBL Debenture 2089",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "MATRI",
-    "Script": "Matribhumi Lagubitta Bittiya Sanstha Limited"
+    "Script": "Matribhumi Lagubitta Bittiya Sanstha Limited",
+    "Sector": "Microfinance"
   },
   {
     "Symbol": "NMBD89/90",
-    "Script": "NMB Debenture 10.75%-2089/90"
+    "Script": "NMB Debenture 10.75%-2089/90",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "PBD84",
-    "Script": "10.15% Prime Debenture 2084"
+    "Script": "10.15% Prime Debenture 2084",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "SBD89",
-    "Script": "10.25% Sanima Debenture 2089"
+    "Script": "10.25% Sanima Debenture 2089",
+    "Sector": "Commercial Banks"
   },
   {
     "Symbol": "GMLI",
-    "Script": "Guardian Micro Life Insurance Limited"
+    "Script": "Guardian Micro Life Insurance Limited",
+    "Sector": "Life Insurance"
   },
   {
     "Symbol": "MNMF1",
-    "Script": "Muktinath Mutual Fund 1"
+    "Script": "Muktinath Mutual Fund 1",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "GSY",
-    "Script": "Garima Samriddhi Yojana"
+    "Script": "Garima Samriddhi Yojana",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "UAILPO",
-    "Script": "United Ajod Insurance Limited Promoter Share"
+    "Script": "United Ajod Insurance Limited Promoter Share",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "NMIC",
-    "Script": "Nepal Micro Insurance Company Limited"
+    "Script": "Nepal Micro Insurance Company Limited",
+    "Sector": "Non Life Insurance"
   },
   {
     "Symbol": "SANFLF",
-    "Script": "Sanima Flexi Fund"
+    "Script": "Sanima Flexi Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "MBLEF",
-    "Script": "MBL Equity Fund"
+    "Script": "MBL Equity Fund",
+    "Sector": "Mutual Fund"
   },
   {
     "Symbol": "RSY",
-    "Script": "Reliable Samriddhi Yojana"
+    "Script": "Reliable Samriddhi Yojana",
+    "Sector": "Mutual Fund"
   }
 ]
