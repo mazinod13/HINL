@@ -6,7 +6,6 @@ from datetime import datetime
 from django.views import View
 from django.http import JsonResponse
 from .models import EntrySheet,Calculation,Script
-from .forms import ScriptForm
 import csv
 import json
 import random
@@ -18,17 +17,6 @@ def script_json(request):
     data = list(scripts)
     return JsonResponse(data, safe=False)
 
-#add new script------------
-def add_script(request):
-    if request.method == 'POST':
-        form = ScriptForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('add_script')  # redirect to the same page or another page
-    else:
-        form = ScriptForm()
-
-    return render(request, 'cms/add_script.html', {'form': form})
 #----unique id----
 def generate_suffix(length=3):
     chars = string.ascii_letters + string.digits
@@ -235,7 +223,7 @@ class DashboardView(View):
                 if transaction in ['Buy','buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
                     p_qty = qty
                     p_amount = amount
-                elif transaction in ['Sale', 'Conversion(-)', 'Suspense(-)']:
+                elif transaction in ['Sale','sale', 'Conversion(-)', 'Suspense(-)']:
                     s_qty = qty
                     s_amount = amount
 
@@ -318,11 +306,19 @@ class DashboardView(View):
             bep_rate = summary["p_rate"]
             cl_qty = summary["closing_qty"]
             cl_rate = summary["closing_rate"]
+            
+            
+            try:
+               ltp = Script.objects.get(symbol=symbol).ltp
+            except Script.DoesNotExist:
+             ltp = 0
 
-            summary["unrealized_profit"] = cl_qty * (cl_rate - bep_rate)
+            summary["ltp"] = ltp  # optional: for showing in template
+
+            summary["unrealized_profit"] = cl_qty * (ltp - cl_rate)
             summary["unrealized_percent"] = (
-                (summary["unrealized_profit"] / summary["total_p_amount"]) * 100
-                if summary["total_p_amount"] else 0
+                (summary["unrealized_profit"] / summary["closing_amount"]) * 100
+                if summary["closing_amount"] else 0
             )
         else:
             summary = {
@@ -339,7 +335,8 @@ class DashboardView(View):
                 "closing_rate": 0,
                 "profit": 0,
                 "unrealized_profit": 0,
-                "unrealized_percent": 0
+                "unrealized_percent": 0,
+                "ltp":0,
             }
 
         return render(request, 'cms/dashboard.html', {
@@ -461,3 +458,44 @@ class TopStockListView(View):
         return render(request, 'cms/stock_list.html', {
             'top_stocks': top_stocks
         })
+        
+        
+
+#-------Scripts Management---------------
+
+
+def editable_script_list(request):
+    if request.method == 'POST':
+        # Update existing scripts in original DB order
+        for script in Script.objects.all():  # default PK order
+            # Read posted values
+            new_symbol = request.POST.get(f'symbol_{script.id}', '').strip()
+            new_name   = request.POST.get(f'script_name_{script.id}', '').strip()
+            new_sector = request.POST.get(f'sector_{script.id}', '').strip()
+
+            changed = False
+            if new_symbol and new_symbol != script.symbol:
+                script.symbol = new_symbol
+                changed = True
+            if new_name and new_name != script.script_name:
+                script.script_name = new_name
+                changed = True
+            if new_sector and new_sector != script.sector:
+                script.sector = new_sector
+                changed = True
+
+            if changed:
+                script.save()
+
+        # Handle new script row
+        ns    = request.POST.get('new_symbol', '').strip()
+        nn    = request.POST.get('new_script_name', '').strip()
+        nsec  = request.POST.get('new_sector',   '').strip()
+        if ns:  # require at least symbol
+            Script.objects.create(symbol=ns, script_name=nn, sector=nsec)
+
+        return redirect('cms:script_list_editable')
+
+    # GET: fetch in DB insertion order (primary key)
+    scripts = Script.objects.all()
+    return render(request, 'cms/script_list_editable.html', {'scripts': scripts})

@@ -60,6 +60,10 @@
               <td>{{ summary.closing_rate | floatformat:3 }}</td>
               <td colspan="3"></td>
             </tr>
+            <tr class="fw-bold bg-warning">
+             <td colspan="2">Close Price (LTP)</td>
+             <td colspan="6">{{ summary.ltp | floatformat:2 }}</td>
+            </tr>
             <tr class="bg-success text-white fw-bold">
               <td colspan="2">Profit</td>
               <td colspan="6">{{ summary.profit | floatformat:2 }}</td>

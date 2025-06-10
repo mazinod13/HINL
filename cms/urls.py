@@ -10,7 +10,7 @@ from .views import (
     TopStockListView,
     script_json,
     entry_sheet_editable_list,
-    add_script,
+    editable_script_list,
     upload_csv,
 )
 
@@ -28,5 +28,5 @@ urlpatterns = [
     path('dashboard/<str:symbol>/', DashboardView.as_view(), name='dashboard_detail'),
     path('stocks/', TopStockListView.as_view(), name='stock_list'),
     path('scripts/json/', script_json, name='script_json'),
-    path('scripts/add/', add_script, name='script_add'),
+    path('scripts/editable/',editable_script_list, name='script_list_editable'),
 ]
