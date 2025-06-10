@@ -399,81 +399,96 @@ class TopStockListView(View):
                     cl_rate = (cl_amount / cl_qty) if cl_qty else 0
                     profit = consumption = 0
                 else:
-                    if transaction in ['Buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
+                    if transaction in ['Buy', 'buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
                         p_qty = qty
                         p_amount = amount
-                    elif transaction in ['Sale', 'Conversion(-)', 'Suspense(-)']:
+                    elif transaction in ['Sale', 'sale', 'Conversion(-)', 'Suspense(-)']:
                         s_qty = qty
                         s_amount = amount
 
-                    cl_qty = row_op_qty + p_qty - s_qty
-                    avg_rate = (row_op_amount + p_amount) / (row_op_qty + p_qty) if (row_op_qty + p_qty) else 0
+                    total_qty = row_op_qty + p_qty
+                    total_amount = row_op_amount + p_amount
+                    avg_rate = (total_amount / total_qty) if total_qty else 0
                     consumption = avg_rate * s_qty
-                    cl_amount = row_op_amount + p_amount - consumption
-                    cl_rate = cl_amount / cl_qty if cl_qty else 0
+                    cl_qty = row_op_qty + p_qty - s_qty
+                    cl_amount = total_amount - consumption
+                    cl_rate = (cl_amount / cl_qty) if cl_qty else 0
                     profit = s_amount - consumption
 
                 rows.append({
-                    'p_qty': p_qty, 'p_amount': p_amount,
-                    's_qty': s_qty, 's_amount': s_amount,
+                    'p_qty': p_qty,
+                    'p_amount': p_amount,
+                    's_qty': s_qty,
+                    's_amount': s_amount,
                     'profit': profit,
                     'cl_qty': cl_qty,
                     'cl_amount': cl_amount,
-                    'cl_rate': cl_rate
+                    'cl_rate': cl_rate,
                 })
 
                 op_qty = cl_qty
                 op_amount = cl_amount
 
+            # Summary for this symbol
             total_p_qty = sum(row['p_qty'] for row in rows)
             total_p_amount = sum(row['p_amount'] for row in rows)
-            total_s_qty = sum(row['s_qty'] for row in rows)
             total_s_amount = sum(row['s_amount'] for row in rows)
             profit = sum(row['profit'] for row in rows)
             closing_qty = rows[-1]['cl_qty']
             closing_amount = rows[-1]['cl_amount']
             closing_rate = rows[-1]['cl_rate']
-            p_rate = total_p_amount / total_p_qty if total_p_qty else 0
+            bep = total_p_amount / total_p_qty if total_p_qty else 0
 
-            unrealized_profit = closing_qty * (closing_rate - p_rate)
-            unrealized_percent = (unrealized_profit / total_p_amount) * 100 if total_p_amount else 0
+            # Get latest traded price
+            try:
+                ltp = Script.objects.get(symbol=symbol).ltp
+            except Script.DoesNotExist:
+                ltp = 0
+
+            unrealized_profit = closing_qty * (ltp - closing_rate)
+            unrealized_percent = (unrealized_profit / closing_amount * 100) if closing_amount else 0
 
             top_stocks.append({
-    'symbol': symbol,
-    'script': entries.first().script,
-    'total_p_amount': total_p_amount,   # Total buy amount
-    'total_p_qty': total_p_qty,         # Total buy kitta
-    'total_s_amount': total_s_amount,   # Total sale amount
-    'closing_qty': closing_qty,         # Current holding (Kitta)
-    'closing_amount': closing_amount,   # Current value
-    'closing_rate': closing_rate,       # Current rate
-    'bep': p_rate,                      # Break-even price
-    'profit': profit,                   # Realized profit
-    'unrealized_profit': unrealized_profit,   # Unrealized P/L
-    'unrealized_percent': unrealized_percent
-})
-        # Optional: sort by profit descending
+                'symbol': symbol,
+                'script': entries.first().script,
+                'total_p_amount': total_p_amount,
+                'total_p_qty': total_p_qty,
+                'total_s_amount': total_s_amount,
+                'closing_qty': closing_qty,
+                'closing_amount': closing_amount,
+                'closing_rate': closing_rate,
+                'bep': bep,
+                'ltp': ltp,
+                'profit': profit,
+                'unrealized_profit': unrealized_profit,
+                'unrealized_percent': unrealized_percent
+            })
+
+        # Sort by realized profit
         top_stocks = sorted(top_stocks, key=lambda x: x['profit'], reverse=True)
 
         return render(request, 'cms/stock_list.html', {
             'top_stocks': top_stocks
         })
-        
+
         
 
 #-------Scripts Management---------------
 
+from django.shortcuts import render, redirect
+from cms.models import Script
 
 def editable_script_list(request):
     if request.method == 'POST':
-        # Update existing scripts in original DB order
-        for script in Script.objects.all():  # default PK order
-            # Read posted values
+        # Update existing scripts
+        for script in Script.objects.all():
             new_symbol = request.POST.get(f'symbol_{script.id}', '').strip()
             new_name   = request.POST.get(f'script_name_{script.id}', '').strip()
             new_sector = request.POST.get(f'sector_{script.id}', '').strip()
+            new_ltp    = request.POST.get(f'ltp_{script.id}', '').strip()
 
             changed = False
+
             if new_symbol and new_symbol != script.symbol:
                 script.symbol = new_symbol
                 changed = True
@@ -483,19 +498,40 @@ def editable_script_list(request):
             if new_sector and new_sector != script.sector:
                 script.sector = new_sector
                 changed = True
+            if new_ltp:
+                try:
+                    new_ltp_val = float(new_ltp)
+                    if script.ltp != new_ltp_val:
+                        script.ltp = new_ltp_val
+                        changed = True
+                except ValueError:
+                    # If LTP is invalid, you might want to skip or set to None
+                    pass
 
             if changed:
                 script.save()
 
         # Handle new script row
-        ns    = request.POST.get('new_symbol', '').strip()
-        nn    = request.POST.get('new_script_name', '').strip()
-        nsec  = request.POST.get('new_sector',   '').strip()
-        if ns:  # require at least symbol
-            Script.objects.create(symbol=ns, script_name=nn, sector=nsec)
+        ns   = request.POST.get('new_symbol', '').strip()
+        nn   = request.POST.get('new_script_name', '').strip()
+        nsec = request.POST.get('new_sector', '').strip()
+        nltp = request.POST.get('new_ltp', '').strip()
+
+        if ns:  # Only add if symbol is provided
+            try:
+                ltp_val = float(nltp) if nltp else None
+            except ValueError:
+                ltp_val = None  # Skip if not a valid number
+
+            Script.objects.create(
+                symbol=ns,
+                script_name=nn,
+                sector=nsec,
+                ltp=ltp_val
+            )
 
         return redirect('cms:script_list_editable')
 
-    # GET: fetch in DB insertion order (primary key)
+    # GET: show existing scripts
     scripts = Script.objects.all()
     return render(request, 'cms/script_list_editable.html', {'scripts': scripts})
