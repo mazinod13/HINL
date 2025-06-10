@@ -1,9 +1,9 @@
-# cms/models.py
+from datetime import date
 from django.db import models
-
+#cms_entrysheet
 class EntrySheet(models.Model):
     TRANSACTION_CHOICES = [
-        ('Buy', 'Buy'),
+        ('Buy', 'buy'),
         ('Sale', 'Sale'),
         ('balance b/d', 'Balance b/d'),
         ('IPO', 'IPO'),
@@ -44,7 +44,7 @@ class EntrySheet(models.Model):
         return f"{self.date} - {self.symbol} - {self.transaction}"
 
 
-# cms/models.py
+#cms_calculation
 class Calculation(models.Model):
     entry = models.OneToOneField(
     'EntrySheet',
@@ -54,7 +54,6 @@ class Calculation(models.Model):
     primary_key=True,
     default='00000000abc'  
 )
-
     op_qty = models.DecimalField(max_digits=12, decimal_places=2, default=0)
     op_rate = models.DecimalField(max_digits=12, decimal_places=4, default=0)
     op_amount = models.DecimalField(max_digits=14, decimal_places=2, default=0)
@@ -76,3 +75,13 @@ class Calculation(models.Model):
 
     def __str__(self):
         return f"Calculation for {self.entry.unique_id}"
+
+
+#scripts------------
+class Script(models.Model):
+    symbol = models.CharField(max_length=16, unique=True)
+    script_name = models.CharField(max_length=128)
+    sector = models.CharField(max_length=64)
+
+    def __str__(self):
+        return f"{self.symbol} - {self.script_name}"

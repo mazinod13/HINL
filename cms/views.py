@@ -5,13 +5,31 @@ from django.contrib import messages
 from datetime import datetime
 from django.views import View
 from django.http import JsonResponse
-from .models import EntrySheet,Calculation
-from uuid import uuid4
+from .models import EntrySheet,Calculation,Script
+from .forms import ScriptForm
 import csv
 import json
 import random
 import string
 
+#-----Script-----
+def script_json(request):
+    scripts = Script.objects.all().values('symbol', 'script_name', 'sector')
+    data = list(scripts)
+    return JsonResponse(data, safe=False)
+
+#add new script------------
+def add_script(request):
+    if request.method == 'POST':
+        form = ScriptForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('add_script')  # redirect to the same page or another page
+    else:
+        form = ScriptForm()
+
+    return render(request, 'cms/add_script.html', {'form': form})
+#----unique id----
 def generate_suffix(length=3):
     chars = string.ascii_letters + string.digits
     return ''.join(random.choices(chars, k=length))
@@ -214,7 +232,7 @@ class DashboardView(View):
                 cl_rate = row_op_rate
                 consumption = profit = p_rate = s_rate = 0
             else:
-                if transaction in ['Buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
+                if transaction in ['Buy','buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
                     p_qty = qty
                     p_amount = amount
                 elif transaction in ['Sale', 'Conversion(-)', 'Suspense(-)']:

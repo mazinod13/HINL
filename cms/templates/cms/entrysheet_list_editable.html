@@ -4,26 +4,25 @@
 {% block title %}Editable Entry Sheet{% endblock %}
 
 {% block content %}
-<script>
-// symbol-autofill.js
 
+
+<script>
+//autofill-logic
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('/static/cms/symbol_script_map.json')
+  fetch('/scripts/json/')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load symbol map: ' + response.statusText);
       return response.json();
     })
     .then(dataArray => {
-      // Build lookup: { "MNMF1": { script: "...", sector: "..." }, … }
       const symbolToScript = {};
       dataArray.forEach(item => {
-        symbolToScript[item.Symbol.toUpperCase()] = {
-          script: item.Script,
-          sector: item.Sector
+        symbolToScript[item.symbol.toUpperCase()] = {
+          script: item.script_name,
+          sector: item.sector
         };
       });
 
-      // Delegate input events to body for dynamic rows
       document.body.addEventListener('input', event => {
         const el = event.target;
         const name = el.name || '';
@@ -45,20 +44,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!scriptInput || !sectorInput) return;
 
         if (key === '') {
-          // Clear if empty
           scriptInput.value = '';
           sectorInput.value = '';
           el.classList.remove('is-invalid');
           el.removeAttribute('title');
         } else if (symbolToScript[key]) {
-          // Fill if found
           const info = symbolToScript[key];
           scriptInput.value = info.script;
           sectorInput.value = info.sector;
           el.classList.remove('is-invalid');
           el.removeAttribute('title');
         } else {
-          // Mark invalid if not found
           scriptInput.value = '';
           sectorInput.value = '';
           el.classList.add('is-invalid');
@@ -68,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error loading symbol map:', error));
 });
-
 </script>
 
 <h2 class="mb-4">Editable Entry Sheet</h2>
@@ -151,10 +146,14 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   <!-- Action Buttons -->
-  <div class="d-flex justify-content-between align-items-center mt-4">
+ <div class="d-flex justify-content-between align-items-center mt-4">
+  <div>
     <button type="submit" class="btn btn-success px-4 py-2 shadow-sm">Save Changes</button>
-    <a href="{% url 'cms:upload_csv' %}" class="btn btn-outline-primary px-4 py-2 shadow-sm"> Upload CSV</a>
+    <a href="{% url 'cms:script_add' %}" class="btn btn-primary px-4 py-2 shadow-sm ms-2">Add Script</a>
+
   </div>
+  <a href="{% url 'cms:upload_csv' %}" class="btn btn-primary px-4 py-2 shadow-sm ms-2">Upload CSV</a>
+</div>
 </form>
 
 
