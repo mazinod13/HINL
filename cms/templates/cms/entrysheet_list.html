@@ -25,16 +25,12 @@
         <tbody>
           {% for entry in entries %}
           <tr>
-            <td class="fw-semibold text-secondary">{{ entry.unique_id }}</td>
+            <td class="badge bg-light text-secondary border">{{ entry.unique_id }}</td>
             <td>{{ entry.date|date:"Y/m/d" }}</td>
             <td><span class="badge bg-light text-secondary border">{{ entry.symbol }}</span></td>
             <td>{{ entry.script }}</td>
             <td><span class="badge bg-light text-secondary border">{{ entry.sector }}</span></td>
-            <td>
-              <span class="badge {% if entry.transaction == 'Buy' %}bg-success-subtle text-success-emphasis{% else %}bg-danger-subtle text-danger-emphasis{% endif %}">
-                {{ entry.transaction }}
-              </span>
-            </td>
+            <td>{{ entry.transaction }}</td> 
             <td>{{ entry.kitta }}</td>
             <td>{{ entry.billed_amount }}</td>
             <td>{{ entry.rate }}</td>

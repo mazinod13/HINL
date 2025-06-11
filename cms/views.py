@@ -157,38 +157,99 @@ class EntrySheetDeleteView(DeleteView):
     template_name = 'cms/entrysheet_delete.html'
     success_url = reverse_lazy('cms:entrysheet_list')
     
+#----------CSV UPLOAD----------
+REQUIRED_COLUMNS = ["date", "symbol", "script", "sector", "transaction", "kitta", "billed_amount", "rate", "broker"]
+
+example_csv = """date,symbol,script,sector,transaction,kitta,billed_amount,rate,broker
+2024-07-18,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,6856,2182384.56,318.3174679,89
+2024-07-24,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,5000,1713448.31,342.689662,89
+"""
+
+# Flexible date parser
+def parse_flexible_date(date_str):
+    date_str = date_str.strip()
+    for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%Y%m%d"):
+        try:
+            return datetime.strptime(date_str, fmt).date()
+        except ValueError:
+            continue
+    raise ValueError(f"Invalid date format: {date_str}")
 
 def upload_csv(request):
     if request.method == "POST" and request.FILES.get("csv_file"):
-        print("DEBUG: CSV file detected in POST")
         csv_file = request.FILES["csv_file"]
         decoded_file = csv_file.read().decode("utf-8").splitlines()
         reader = csv.DictReader(decoded_file)
 
-        def safe_int(value):
-            if value and value.strip():
-                value = value.replace(',', '')
-                return int(value)
-            return 0
+        missing_columns = [col for col in REQUIRED_COLUMNS if col not in reader.fieldnames]
+        if missing_columns:
+            messages.error(request, f"CSV is missing required columns: {', '.join(missing_columns)}")
+            return render(request, "cms/upload_csv.html", {"example_csv": example_csv})
 
-        def safe_float(value):
-            if value and value.strip():
-                value = value.replace(',', '')
-                return float(value)
-            return 0.0
+        rows = list(reader)
+        errors = []
 
-        for row in reader:
+        for i, row in enumerate(rows, start=2):
+            for col in REQUIRED_COLUMNS:
+                if col not in row:
+                    errors.append(f"Row {i}: Missing column '{col}'")
+
+            try:
+                parse_flexible_date(row.get("date", ""))
+            except Exception:
+                errors.append(f"Row {i}: Invalid or blank date format")
+
+            for num_field in ["kitta", "billed_amount", "rate"]:
+                val = row.get(num_field, "").replace(',', '').strip()
+                if val:
+                    try:
+                        if num_field == "kitta":
+                            int(val)
+                        else:
+                            float(val)
+                    except Exception:
+                        errors.append(f"Row {i}: Invalid number format in '{num_field}' field")
+
+        if errors:
+            for error in errors:
+                messages.error(request, error)
+            return render(request, "cms/upload_csv.html", {"example_csv": example_csv})
+
+        def safe_int(val):
+            val = val.replace(',', '').strip()
+            return int(val) if val else 0
+
+        def safe_float(val):
+            val = val.replace(',', '').strip()
+            return float(val) if val else 0.0
+
+        for row in rows:
             try:
                 date_str = row.get("date", "").strip()
-                date_obj = datetime.strptime(date_str, "%Y-%m-%d").date() if date_str else None
+                date_obj = parse_flexible_date(date_str) if date_str else None
                 unique_id = generate_unique_id(date_obj) if date_obj else None
+
+                symbol = row.get("symbol", "").strip()
+                script = row.get("script", "").strip()
+                sector = row.get("sector", "").strip()
+
+                # Autofill from Script model if empty
+                if not script or not sector:
+                    try:
+                        script_obj = Script.objects.get(symbol=symbol)
+                        if not script:
+                            script = script_obj.name
+                        if not sector:
+                            sector = script_obj.sector
+                    except Script.DoesNotExist:
+                        messages.warning(request, f"Script info not found for symbol '{symbol}'")
 
                 EntrySheet.objects.create(
                     unique_id=unique_id,
                     date=date_obj,
-                    symbol=row.get("symbol", "").strip(),
-                    script=row.get("script", "").strip(),
-                    sector=row.get("sector", "").strip(),
+                    symbol=symbol,
+                    script=script,
+                    sector=sector,
                     transaction=row.get("transaction", "").strip(),
                     kitta=safe_int(row.get("kitta", "")),
                     billed_amount=safe_float(row.get("billed_amount", "")),
@@ -203,9 +264,7 @@ def upload_csv(request):
         messages.success(request, "CSV uploaded and entries created successfully.")
         return redirect("cms:entrysheet_list")
 
-    print("DEBUG: Rendering upload_csv.html template")
-    return render(request, "cms/upload_csv.html")
-
+    return render(request, "cms/upload_csv.html", {"example_csv": example_csv})
 
 #-----Calculation Sheet---------#
 class DashboardView(View):

@@ -96,7 +96,7 @@
             {% for row in rows %}
             <tr>
               <td>{{ row.unique_id }}</td>
-              <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="date">{{ row.date }}</td>
+              <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="date">{{ row.date|date:"Y/m/d" }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="transaction">{{ row.transaction }}</td>
               <td>{{ row.op_qty }}</td><td>{{ row.op_rate }}</td><td>{{ row.op_amount }}</td>
               <td>{{ row.p_qty }}</td><td>{{ row.p_rate }}</td><td>{{ row.p_amount }}</td>

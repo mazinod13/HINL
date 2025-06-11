@@ -1,13 +1,13 @@
 {% extends "cms/base.html" %}
 {% block content %}
 <div class="card shadow rounded-4 mt-4 border-0">
-  <div class="card-header bg-gradient bg-primary text-white fs-5 fw-semibold rounded-top-4 d-flex justify-content-between align-items-center">
+  <div class="card-header bg-light text-muted fs-5 fw-semibold rounded-top-4 d-flex justify-content-between align-items-center">
     <span><i class="bi bi-bar-chart-line-fill me-2"></i>Top Stock List</span>
   </div>
   <div class="card-body px-4">
     <div class="table-responsive">
       <table class="table table-hover table-bordered align-middle text-center mb-0">
-        <thead class="table-dark text-nowrap">
+        <thead class="table-secondary text-muted text-nowrap">
           <tr>
             <th>Script</th>
             <th>Kitta</th>
@@ -20,9 +20,9 @@
         </thead>
         <tbody>
           {% for stock in top_stocks %}
-          <tr>
+          <tr class="text-muted">
             <td>
-              <a href="{% url 'cms:dashboard_detail' stock.symbol %}" class="fw-semibold text-decoration-none text-primary">
+              <a href="{% url 'cms:dashboard_detail' stock.symbol %}" class="fw-semibold text-decoration-none text-muted">
                 {{ stock.symbol }}
               </a>
             </td>
