@@ -73,47 +73,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <div class="table-responsive">
     <table class="table table-bordered table-hover align-middle">
-      <thead class="table-light">
-        <tr>
-          <th><a href="#" class="sort-header" data-key="0">Date</a></th>
-          <th><a href="#" class="sort-header" data-key="1">Symbol</a></th>
-          <th><a href="#" class="sort-header" data-key="2">Script</a></th>
-          <th>Sector</th>
-          <th>Transaction</th>
-          <th>Kitta</th>
-          <th>Billed Amount</th>
-          <th>Rate</th>
-          <th>Broker</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for entry in entries %}
-        <tr>
-          <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_date" value="{{ entry.date|date:'Y/m/d' }}" placeholder="YYYY/MM/DD" maxlength="10"></td>
-          <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_symbol" value="{{ entry.symbol }}"></td>
-          <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_script" value="{{ entry.script }}"></td>
-          <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_sector" value="{{ entry.sector }}"></td>
-          <td>
-            <select class="form-select form-select-sm" name="entry_{{ entry.id }}_transaction">
-              <option value="Buy" {% if entry.transaction == 'Buy' %}selected{% endif %}>Buy</option>
-              <option value="Sale" {% if entry.transaction == 'Sale' %}selected{% endif %}>Sale</option>
-              <option value="Right" {% if entry.transaction == 'Right' %}selected{% endif %}>Right</option>
-              <option value="Bonus" {% if entry.transaction == 'Bonus' %}selected{% endif %}>Bonus</option>
-              <option value="IPO" {% if entry.transaction == 'IPO' %}selected{% endif %}>IPO</option>
-              <option value="FPO" {% if entry.transaction == 'FPO' %}selected{% endif %}>FPO</option>
-              <option value="Conversion(+)" {% if entry.transaction == 'Conversion(+)' %}selected{% endif %}>Conversion(+)</option>
-              <option value="Conversion(-)" {% if entry.transaction == 'Conversion(-)' %}selected{% endif %}>Conversion(-)</option>
-              <option value="Suspense(+)" {% if entry.transaction == 'Suspense(+)' %}selected{% endif %}>Suspense(+)</option>
-              <option value="Suspense(-)" {% if entry.transaction == 'Suspense(-)' %}selected{% endif %}>Suspense(-)</option>
-              <option value="Balance b/d" {% if entry.transaction == 'Balance b/d' %}selected{% endif %}>Balance b/d</option>
-            </select>
-          </td>
-          <td><input type="number" class="form-control form-control-sm" name="entry_{{ entry.id }}_kitta" value="{{ entry.kitta }}"></td>
-          <td><input type="number" step="0.01" class="form-control form-control-sm" name="entry_{{ entry.id }}_billed_amount" value="{{ entry.billed_amount }}"></td>
-          <td><input type="number" step="0.01" class="form-control form-control-sm" name="entry_{{ entry.id }}_rate" value="{{ entry.rate }}"></td>
-          <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_broker" value="{{ entry.broker }}"></td>
-        </tr>
-        {% endfor %}
+<thead class="table-light">
+  <tr>
+    <th><a href="#" class="sort-header" data-key="0">Date</a></th>
+    <th><a href="#" class="sort-header" data-key="1">Symbol</a></th>
+    <th><a href="#" class="sort-header" data-key="2">Script</a></th>
+    <th>Sector</th>
+    <th>Transaction</th>
+    <th>Kitta</th>
+    <th>Billed Amount</th>
+    <th>Rate</th>
+    <th>Broker</th>
+    <!-- Checkbox column last -->
+    <<th style="width: 40px; cursor: pointer;">
+  <input type="checkbox" id="select-all-rows" title="Select/Deselect All Rows" />
+</th>
+
+  </tr>
+</thead>
+
+<tbody>
+  {% for entry in entries %}
+  <tr>
+    <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_date" value="{{ entry.date|date:'Y/m/d' }}" placeholder="YYYY/MM/DD" maxlength="10"></td>
+    <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_symbol" value="{{ entry.symbol }}"></td>
+    <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_script" value="{{ entry.script }}"></td>
+    <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_sector" value="{{ entry.sector }}"></td>
+    <td>
+      <select class="form-select form-select-sm" name="entry_{{ entry.id }}_transaction">
+        <option value="BUY" {% if entry.transaction|lower == 'buy' %}selected{% endif %}>BUY</option>
+        <option value="SALE" {% if entry.transaction|lower == 'sale' %}selected{% endif %}>SALE</option>
+        <option value="RIGHT" {% if entry.transaction == 'Right' %}selected{% endif %}>RIGHT</option>
+        <option value="BONUS" {% if entry.transaction == 'Bonus' %}selected{% endif %}>BONUS</option>
+        <option value="IPO" {% if entry.transaction == 'IPO' %}selected{% endif %}>IPO</option>
+        <option value="FPO" {% if entry.transaction == 'FPO' %}selected{% endif %}>FPO</option>
+        <option value="Conversion(+)" {% if entry.transaction == 'Conversion(+)' %}selected{% endif %}>Conversion(+)</option>
+        <option value="Conversion(-)" {% if entry.transaction == 'Conversion(-)' %}selected{% endif %}>Conversion(-)</option>
+        <option value="Suspense(+)" {% if entry.transaction == 'Suspense(+)' %}selected{% endif %}>Suspense(+)</option>
+        <option value="Suspense(-)" {% if entry.transaction == 'Suspense(-)' %}selected{% endif %}>Suspense(-)</option>
+        <option value="Balance b/d" {% if entry.transaction == 'Balance b/d' %}selected{% endif %}>Balance b/d</option>
+      </select>
+    </td>
+    <td><input type="number" class="form-control form-control-sm" name="entry_{{ entry.id }}_kitta" value="{{ entry.kitta }}"></td>
+    <td><input type="number" step="0.01" class="form-control form-control-sm" name="entry_{{ entry.id }}_billed_amount" value="{{ entry.billed_amount }}"></td>
+    <td><input type="number" step="0.01" class="form-control form-control-sm" name="entry_{{ entry.id }}_rate" value="{{ entry.rate }}"></td>
+    <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_broker" value="{{ entry.broker }}"></td>
+
+    <!-- Checkbox cell at the end with small width -->
+    <td style="width: 40px; cursor: pointer;" class="color-select-cell" data-entry-id="{{ entry.id }}" title="Click to select row"></td>
+ </tr>
+  {% endfor %}
+
 
         <!-- Row for adding a new entry -->
         <tr class="table-success">
@@ -123,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
           <td><input type="text" class="form-control form-control-sm" name="new_sector"></td>
           <td>
             <select class="form-select form-select-sm" name="new_transaction">
-              <option value="Buy">Buy</option>
-              <option value="Sale">Sale</option>
+              <option value="BUY">BUY</option>
+              <option value="SALE">SALE</option>
               <option value="Right">Right</option>
               <option value="Bonus">Bonus</option>
               <option value="IPO">IPO</option>
@@ -146,12 +156,14 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   <!-- Action Buttons -->
- <div class="d-flex justify-content-between align-items-center mt-4">
+<div class="d-flex justify-content-between align-items-center mt-4">
   <div>
-    <button type="submit" class="btn btn-success px-4 py-2 shadow-sm">Save Changes</button>
-  <a href="{% url 'cms:upload_csv' %}" class="btn btn-primary px-4 py-2 shadow-sm ms-2">Upload CSV</a>
+    <button type="submit" name="action" value="save" class="btn btn-success px-4 py-2 shadow-sm">Save Changes</button>
+    <button type="submit" name="action" value="delete" class="btn btn-danger px-4 py-2 shadow-sm ms-2" onclick="return confirm('Are you sure you want to delete selected rows?');">Delete</button>
+    <a href="{% url 'cms:upload_csv' %}" class="btn btn-primary px-4 py-2 shadow-sm ms-2">Upload CSV</a>
+  </div>
 </div>
-</form>
+
 
 
 <script>
@@ -285,7 +297,91 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+//checkbox--------
+document.addEventListener('DOMContentLoaded', () => {
+  const cells = document.querySelectorAll('.color-select-cell');
+  const selectAllCheckbox = document.getElementById('select-all-rows');
+  let selectedIds = new Set();
+
+  // Toggle individual cells
+  cells.forEach(cell => {
+    cell.addEventListener('click', () => {
+      const entryId = cell.dataset.entryId;
+      if (cell.classList.contains('selected')) {
+        cell.classList.remove('selected');
+        selectedIds.delete(entryId);
+      } else {
+        cell.classList.add('selected');
+        selectedIds.add(entryId);
+      }
+      updateSelectedIdsInput();
+      updateSelectAllCheckbox();
+    });
+  });
+
+  // Toggle all cells via Select All checkbox
+  if (selectAllCheckbox) {
+    selectAllCheckbox.addEventListener('change', () => {
+      if (selectAllCheckbox.checked) {
+        cells.forEach(cell => {
+          cell.classList.add('selected');
+          selectedIds.add(cell.dataset.entryId);
+        });
+      } else {
+        cells.forEach(cell => {
+          cell.classList.remove('selected');
+        });
+        selectedIds.clear();
+      }
+      updateSelectedIdsInput();
+    });
+  }
+
+  // Update hidden input with selected IDs
+  function updateSelectedIdsInput() {
+    let input = document.querySelector('input[name="selected_ids"]');
+    if (!input) {
+      input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'selected_ids';
+      document.querySelector('form').appendChild(input);
+    }
+    input.value = Array.from(selectedIds).join(',');
+  }
+
+  // Update Select All checkbox state based on selections
+  function updateSelectAllCheckbox() {
+    if (!selectAllCheckbox) return;
+    if (selectedIds.size === cells.length) {
+      selectAllCheckbox.checked = true;
+      selectAllCheckbox.indeterminate = false;
+    } else if (selectedIds.size === 0) {
+      selectAllCheckbox.checked = false;
+      selectAllCheckbox.indeterminate = false;
+    } else {
+      selectAllCheckbox.indeterminate = true;
+    }
+  }
+});
+
 </script>
+<style>
+.color-select-cell {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.color-select-cell.selected {
+  background-color: #0d6efd; /* Bootstrap primary blue */
+}
+#select-all-rows {
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+</style>
 
 
 

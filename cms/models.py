@@ -3,13 +3,13 @@ from django.db import models
 #cms_entrysheet
 class EntrySheet(models.Model):
     TRANSACTION_CHOICES = [
-        ('Buy', 'buy'),
-        ('Sale', 'Sale'),
-        ('balance b/d', 'Balance b/d'),
+        ('BUY', 'BUY'),
+        ('SALE', 'SALE'),
+        ('BALANCE B/D', 'Balance b/d'),
         ('IPO', 'IPO'),
         ('FPO', 'FPO'),
-        ('Bonus', 'Bonus'),
-        ('Right', 'Right'),
+        ('BONUS', 'Bonus'),
+        ('RIGHT', 'Right'),
         ('Conversion(+)', 'Conversion(+)'),
         ('Conversion(-)', 'Conversion(-)'),
         ('Suspense(+)', 'Suspense(+)'),

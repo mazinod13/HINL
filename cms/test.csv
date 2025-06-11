@@ -1,12 +1,9 @@
 date,symbol,script,sector,transaction,kitta,billed_amount,rate,broker
-2025-06-10,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Buy,100,15500,155,NMB Capital
-2025-06-09,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Sale,50,8000,160,NIC Asia
-2025-06-08,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Balance b/d,300,46500,155,Nabil Invest
-2025-06-07,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,IPO,200,18000,90,NIBL Ace Capital
-2025-06-06,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,FPO,100,11000,110,Global IME Capital
-2025-06-05,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Bonus,50,0,0,Prabhu Capital
-2025-06-04,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Right,75,8250,110,Sunrise Capital
-2025-06-03,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Conversion(+),20,0,0,Siddhartha Capital
-2025-06-02,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Conversion(-),10,0,0,Siddhartha Capital
-2025-06-01,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Suspense(+),5,775,155,Mega Capital
-2025-05-31,PFCPO,Paschimanchal Finance Co. Ltd. Promoter Share,Finance,Suspense(-),5,750,150,Mega Capital
+2024-07-18,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,6856,2182384.56,318.3174679,89
+2024-07-24,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,5000,1713448.31,342.689662,89
+2024-07-25,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,6641,2301108.96,346.5003704,89
+2024-07-28,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,10,3839.25,383.925,89
+2024-07-30,ADBL,Agricultural Development Bank Limited,Commercial Banks,SALE,8497,3107854.95,365.7590856,89
+2024-07-31,ADBL,Agricultural Development Bank Limited,Commercial Banks,SALE,4000,1512537.34,378.134335,89
+2024-08-01,ADBL,Agricultural Development Bank Limited,Commercial Banks,SALE,3000,1105879.33,368.6264433,89
+2024-08-05,ADBL,Agricultural Development Bank Limited,Commercial Banks,SALE,3010,1176060.26,390.7176944,89

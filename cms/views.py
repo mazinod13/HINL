@@ -73,62 +73,79 @@ def parse_date(d):
 
 def entry_sheet_editable_list(request):
     if request.method == 'POST':
-        updated_entries = {}
+        action = request.POST.get('action')
 
-        # === Update existing entries ===
-        for key, value in request.POST.items():
-            if key.startswith('entry_') and key.count('_') >= 2:
-                _, entry_id, field = key.split('_', 2)
-                if entry_id not in updated_entries:
-                    try:
-                        updated_entries[entry_id] = EntrySheet.objects.get(id=entry_id)
-                    except EntrySheet.DoesNotExist:
-                        continue
-
-                entry = updated_entries[entry_id]
-
+        if action == 'delete':
+            selected_ids = request.POST.get('selected_ids', '')
+            if selected_ids:
+                ids_to_delete = selected_ids.split(',')
                 try:
-                    if field == "date":
-                        value = parse_date(value) if value else None
-                    elif field == "kitta":
-                        value = int(value) if value else 0
-                    elif field in ["rate", "billed_amount"]:
-                        value = float(value) if value else 0.0
-                    setattr(entry, field, value)
+                    entries_to_delete = EntrySheet.objects.filter(id__in=ids_to_delete)
+                    count = entries_to_delete.count()
+                    entries_to_delete.delete()
+                    messages.success(request, f"{count} entries deleted successfully.")
                 except Exception as e:
-                    messages.error(request, f"Error setting '{field}' to '{value}' for entry {entry_id}: {e}")
+                    messages.error(request, f"Error deleting entries: {e}")
+            else:
+                messages.error(request, "No entries selected for deletion.")
+            return redirect('cms:entrysheet_editable_list')
 
-        for entry in updated_entries.values():
-            entry.save()  
+        elif action == 'save':
+            updated_entries = {}
 
-        # === Add new entry ===
-        if request.POST.get('new_symbol', '').strip():
-            try:
-                new_date = parse_date(request.POST.get('new_date') or '')
-                new_entry = EntrySheet(
-                    date=new_date,
-                    symbol=request.POST.get('new_symbol').strip(),
-                    script=request.POST.get('new_script'),
-                    sector=request.POST.get('new_sector'),
-                    transaction=request.POST.get('new_transaction'),
-                    kitta=int(request.POST.get('new_kitta') or 0),
-                    billed_amount=float(request.POST.get('new_billed_amount') or 0.0),
-                    rate=float(request.POST.get('new_rate') or 0.0),
-                    broker=request.POST.get('new_broker'),
-                )
+            # Update existing entries
+            for key, value in request.POST.items():
+                if key.startswith('entry_') and key.count('_') >= 2:
+                    _, entry_id, field = key.split('_', 2)
+                    if entry_id not in updated_entries:
+                        try:
+                            updated_entries[entry_id] = EntrySheet.objects.get(id=entry_id)
+                        except EntrySheet.DoesNotExist:
+                            continue
 
-                new_entry.save()  
-                messages.success(request, "New entry added successfully.")
-            except Exception as e:
-                messages.error(request, f"Error creating new entry: {e}")
+                    entry = updated_entries[entry_id]
 
-        messages.success(request, "Entries saved successfully.")
-        return redirect('cms:entrysheet_editable_list')
+                    try:
+                        if field == "date":
+                            value = parse_date(value) if value else None
+                        elif field == "kitta":
+                            value = int(value) if value else 0
+                        elif field in ["rate", "billed_amount"]:
+                            value = float(value) if value else 0.0
+                        setattr(entry, field, value)
+                    except Exception as e:
+                        messages.error(request, f"Error setting '{field}' to '{value}' for entry {entry_id}: {e}")
 
-    # === GET request ===
+            for entry in updated_entries.values():
+                entry.save()
+
+            # Add new entry
+            if request.POST.get('new_symbol', '').strip():
+                try:
+                    new_date = parse_date(request.POST.get('new_date') or '')
+                    new_entry = EntrySheet(
+                        date=new_date,
+                        symbol=request.POST.get('new_symbol').strip(),
+                        script=request.POST.get('new_script'),
+                        sector=request.POST.get('new_sector'),
+                        transaction=request.POST.get('new_transaction'),
+                        kitta=int(request.POST.get('new_kitta') or 0),
+                        billed_amount=float(request.POST.get('new_billed_amount') or 0.0),
+                        rate=float(request.POST.get('new_rate') or 0.0),
+                        broker=request.POST.get('new_broker'),
+                    )
+
+                    new_entry.save()
+                    messages.success(request, "New entry added successfully.")
+                except Exception as e:
+                    messages.error(request, f"Error creating new entry: {e}")
+
+            messages.success(request, "Entries saved successfully.")
+            return redirect('cms:entrysheet_editable_list')
+
+    # GET request
     entries = EntrySheet.objects.all().order_by('-date')
     return render(request, 'cms/entrysheet_list_editable.html', {'entries': entries})
-
 class EntrySheetUpdateView(UpdateView):
     model = EntrySheet
     template_name = 'cms/entrysheet_edit.html'
@@ -140,42 +157,54 @@ class EntrySheetDeleteView(DeleteView):
     template_name = 'cms/entrysheet_delete.html'
     success_url = reverse_lazy('cms:entrysheet_list')
     
-def upload_csv(request):
 
+def upload_csv(request):
     if request.method == "POST" and request.FILES.get("csv_file"):
         print("DEBUG: CSV file detected in POST")
         csv_file = request.FILES["csv_file"]
         decoded_file = csv_file.read().decode("utf-8").splitlines()
         reader = csv.DictReader(decoded_file)
 
+        def safe_int(value):
+            if value and value.strip():
+                value = value.replace(',', '')
+                return int(value)
+            return 0
+
+        def safe_float(value):
+            if value and value.strip():
+                value = value.replace(',', '')
+                return float(value)
+            return 0.0
+
         for row in reader:
             try:
-                date_obj = datetime.strptime(row["date"], "%Y-%m-%d").date()
-                unique_id = generate_unique_id(date_obj)
+                date_str = row.get("date", "").strip()
+                date_obj = datetime.strptime(date_str, "%Y-%m-%d").date() if date_str else None
+                unique_id = generate_unique_id(date_obj) if date_obj else None
+
                 EntrySheet.objects.create(
                     unique_id=unique_id,
                     date=date_obj,
-                    symbol=row["symbol"],
-                    script=row["script"],
-                    sector=row["sector"],
-                    transaction=row["transaction"],
-                    kitta=int(row["kitta"]),
-                    billed_amount=float(row["billed_amount"]),
-                    rate=float(row["rate"]),
-                    broker=row["broker"],
+                    symbol=row.get("symbol", "").strip(),
+                    script=row.get("script", "").strip(),
+                    sector=row.get("sector", "").strip(),
+                    transaction=row.get("transaction", "").strip(),
+                    kitta=safe_int(row.get("kitta", "")),
+                    billed_amount=safe_float(row.get("billed_amount", "")),
+                    rate=safe_float(row.get("rate", "")),
+                    broker=row.get("broker", "").strip(),
                 )
             except Exception as e:
                 messages.error(request, f"Error processing row {row}: {e}")
                 print(f"ERROR processing row {row}: {e}")
                 continue
 
-
         messages.success(request, "CSV uploaded and entries created successfully.")
         return redirect("cms:entrysheet_list")
 
     print("DEBUG: Rendering upload_csv.html template")
     return render(request, "cms/upload_csv.html")
-
 
 
 #-----Calculation Sheet---------#
@@ -220,10 +249,10 @@ class DashboardView(View):
                 cl_rate = row_op_rate
                 consumption = profit = p_rate = s_rate = 0
             else:
-                if transaction in ['Buy','buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
+                if transaction in ['Buy','buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)','BUY']:
                     p_qty = qty
                     p_amount = amount
-                elif transaction in ['Sale','sale', 'Conversion(-)', 'Suspense(-)']:
+                elif transaction in ['Sale','sale', 'Conversion(-)', 'Suspense(-)','SALE']:
                     s_qty = qty
                     s_amount = amount
 
@@ -399,10 +428,10 @@ class TopStockListView(View):
                     cl_rate = (cl_amount / cl_qty) if cl_qty else 0
                     profit = consumption = 0
                 else:
-                    if transaction in ['Buy', 'buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)']:
+                    if transaction in ['Buy', 'buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)','BUY']:
                         p_qty = qty
                         p_amount = amount
-                    elif transaction in ['Sale', 'sale', 'Conversion(-)', 'Suspense(-)']:
+                    elif transaction in ['Sale', 'sale', 'Conversion(-)', 'Suspense(-)','SALE']:
                         s_qty = qty
                         s_amount = amount
 

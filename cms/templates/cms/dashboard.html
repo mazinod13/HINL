@@ -9,8 +9,8 @@
         <ul class="nav flex-column px-3">
           {% for sym in symbols %}
             <li class="nav-item">
-              <a class="nav-link {% if sym == current_symbol %}fw-bold text-primary{% endif %}" href="{% url 'cms:dashboard_detail' sym %}">
-                {{ sym }}
+              <a class="nav-link text-dark {% if sym == current_symbol %}fw-bold text-primary{% endif %}" href="{% url 'cms:dashboard_detail' sym %}">
+              {{ sym }}
               </a>
             </li>
           {% endfor %}
@@ -84,7 +84,7 @@
         <table class="table table-bordered table-hover align-middle text-center small">
           <thead class="table-secondary">
             <tr>
-              <th>Unique_ID</th><th>Date</th><th>Transaction</th><th>Qty</th><th>Amount</th><th>Rate</th>
+              <th>Unique_ID</th><th>Date</th><th>Transaction</th>
               <th>Op.QTY</th><th>Op.RATE</th><th>Op.AMOUNT</th>
               <th>P.QTY</th><th>P.RATE</th><th>P.AMOUNT</th>
               <th>S.QTY</th><th>S.RATE</th><th>S.AMOUNT</th>
@@ -98,9 +98,6 @@
               <td>{{ row.unique_id }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="date">{{ row.date }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="transaction">{{ row.transaction }}</td>
-              <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="qty">{{ row.qty }}</td>
-              <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="t_amount">{{ row.t_amount }}</td>
-              <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="rate">{{ row.rate }}</td>
               <td>{{ row.op_qty }}</td><td>{{ row.op_rate }}</td><td>{{ row.op_amount }}</td>
               <td>{{ row.p_qty }}</td><td>{{ row.p_rate }}</td><td>{{ row.p_amount }}</td>
               <td>{{ row.s_qty }}</td><td>{{ row.s_rate }}</td><td>{{ row.s_amount }}</td>
