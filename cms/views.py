@@ -238,7 +238,7 @@ def upload_csv(request):
                     try:
                         script_obj = Script.objects.get(symbol=symbol)
                         if not script:
-                            script = script_obj.name
+                            script = script_obj.script_name
                         if not sector:
                             sector = script_obj.sector
                     except Script.DoesNotExist:
@@ -308,7 +308,7 @@ class DashboardView(View):
                 cl_rate = row_op_rate
                 consumption = profit = p_rate = s_rate = 0
             else:
-                if transaction in ['Buy','buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)','BUY']:
+                if transaction in ['Buy','buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)','BUY','BONUS','RIGHT']:
                     p_qty = qty
                     p_amount = amount
                 elif transaction in ['Sale','sale', 'Conversion(-)', 'Suspense(-)','SALE']:
@@ -487,7 +487,7 @@ class TopStockListView(View):
                     cl_rate = (cl_amount / cl_qty) if cl_qty else 0
                     profit = consumption = 0
                 else:
-                    if transaction in ['Buy', 'buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)','BUY']:
+                    if transaction in ['Buy', 'buy', 'IPO', 'FPO', 'Bonus', 'Right', 'Conversion(+)', 'Suspense(+)','BUY','BONUS','RIGHT']:
                         p_qty = qty
                         p_amount = amount
                     elif transaction in ['Sale', 'sale', 'Conversion(-)', 'Suspense(-)','SALE']:

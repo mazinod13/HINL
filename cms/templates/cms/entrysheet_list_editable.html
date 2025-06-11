@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <select class="form-select form-select-sm" name="entry_{{ entry.id }}_transaction">
         <option value="BUY" {% if entry.transaction|lower == 'buy' %}selected{% endif %}>BUY</option>
         <option value="SALE" {% if entry.transaction|lower == 'sale' %}selected{% endif %}>SALE</option>
-        <option value="RIGHT" {% if entry.transaction == 'Right' %}selected{% endif %}>RIGHT</option>
-        <option value="BONUS" {% if entry.transaction == 'Bonus' %}selected{% endif %}>BONUS</option>
+        <option value="RIGHT" {% if entry.transaction|upper == 'RIGHT' %}selected{% endif %}>RIGHT</option>
+        <option value="BONUS" {% if entry.transaction|upper == 'BONUS' %}selected{% endif %}>BONUS</option>
         <option value="IPO" {% if entry.transaction == 'IPO' %}selected{% endif %}>IPO</option>
         <option value="FPO" {% if entry.transaction == 'FPO' %}selected{% endif %}>FPO</option>
         <option value="Conversion(+)" {% if entry.transaction == 'Conversion(+)' %}selected{% endif %}>Conversion(+)</option>
@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <select class="form-select form-select-sm" name="new_transaction">
               <option value="BUY">BUY</option>
               <option value="SALE">SALE</option>
-              <option value="Right">Right</option>
-              <option value="Bonus">Bonus</option>
+              <option value="RIGHT">Right</option>
+              <option value="BONUS">Bonus</option>
               <option value="IPO">IPO</option>
               <option value="FPO">FPO</option>
               <option value="Conversion(+)">Conversion(+)</option>
