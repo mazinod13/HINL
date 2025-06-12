@@ -36,7 +36,7 @@ class EntrySheet(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.unique_id and self.date and self.symbol:
-            formatted_date = self.date.strftime('%Y%m%d')  # e.g., 20250606
+            formatted_date = self.date.strftime('%Y%m%d') 
             self.unique_id = f"{self.symbol}{formatted_date}"
         super().save(*args, **kwargs)
 

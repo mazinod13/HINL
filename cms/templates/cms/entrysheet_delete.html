@@ -12,7 +12,7 @@
           <p class="fs-5 text-center">
             Are you sure you want to delete <strong>{{ entry_ids|length }}</strong> selected entries?
           </p>
-          <form method="post" action="{% url 'cms:entry_bulk_delete' %}" class="d-flex justify-content-center mt-4">
+          <form method="post" class="d-flex justify-content-center mt-4">
             {% csrf_token %}
             {% for entry_id in entry_ids %}
               <input type="hidden" name="selected_entries" value="{{ entry_id }}">

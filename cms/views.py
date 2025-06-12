@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 from django.views.generic import ListView, CreateView, TemplateView,UpdateView,DeleteView
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -6,10 +6,16 @@ from datetime import datetime
 from django.views import View
 from django.http import JsonResponse
 from .models import EntrySheet,Calculation,Script
+from django.utils.decorators import classonlymethod
+from asgiref.sync import sync_to_async
+from django.db.models import Sum, F
+from .utils import next_global_unique_id
 import csv
 import json
 import random
 import string
+import asyncio
+
 
 #-----Script-----
 def script_json(request):
@@ -17,18 +23,19 @@ def script_json(request):
     data = list(scripts)
     return JsonResponse(data, safe=False)
 
-#----unique id----
-def generate_suffix(length=3):
-    chars = string.ascii_letters + string.digits
-    return ''.join(random.choices(chars, k=length))
 
-def generate_unique_id(date_obj):
-    date_str = date_obj.strftime('%Y%m%d')
-    while True:
-        suffix = generate_suffix()
-        unique_id = f"{date_str}{suffix}"
-        if not EntrySheet.objects.filter(unique_id=unique_id).exists():
-            return unique_id
+# module-level cache for the global suffix
+_global_suffix = None
+
+def next_global_unique_id(date_obj):
+    global _global_suffix
+    if _global_suffix is None:
+        # seed from the DB count only once per process
+        _global_suffix = EntrySheet.objects.count()
+    _global_suffix += 1
+
+    date_str = date_obj.strftime('%Y/%m/%d')
+    return f"{date_str}-{_global_suffix:04d}"
 
 # Home view
 class HomeView(TemplateView):
@@ -75,6 +82,7 @@ def entry_sheet_editable_list(request):
     if request.method == 'POST':
         action = request.POST.get('action')
 
+        # ─── DELETE ──────────────────────────────────────────────────────────
         if action == 'delete':
             selected_ids = request.POST.get('selected_ids', '')
             if selected_ids:
@@ -90,10 +98,22 @@ def entry_sheet_editable_list(request):
                 messages.error(request, "No entries selected for deletion.")
             return redirect('cms:entrysheet_editable_list')
 
+        # ─── SAVE (update + add) ─────────────────────────────────────────────
         elif action == 'save':
-            updated_entries = {}
+            # 1) Prepare an in-memory tracker for suffixes per date
+            suffix_tracker = {}  # e.g. { '2024/07/18': 2, ... }
 
-            # Update existing entries
+            def next_unique_id(date_obj):
+                date_str = date_obj.strftime('%Y/%m/%d')
+                # seed from DB only once per date
+                if date_str not in suffix_tracker:
+                    suffix_tracker[date_str] = EntrySheet.objects.filter(date=date_obj).count()
+                # increment and format
+                suffix_tracker[date_str] += 1
+                return f"{date_str}-{suffix_tracker[date_str]:04d}"
+
+            # 2) Update existing entries
+            updated_entries = {}
             for key, value in request.POST.items():
                 if key.startswith('entry_') and key.count('_') >= 2:
                     _, entry_id, field = key.split('_', 2)
@@ -102,50 +122,53 @@ def entry_sheet_editable_list(request):
                             updated_entries[entry_id] = EntrySheet.objects.get(id=entry_id)
                         except EntrySheet.DoesNotExist:
                             continue
-
                     entry = updated_entries[entry_id]
-
                     try:
                         if field == "date":
-                            value = parse_date(value) if value else None
+                            parsed = parse_date(value) if value else None
+                            setattr(entry, 'date', parsed)
                         elif field == "kitta":
-                            value = int(value) if value else 0
+                            setattr(entry, 'kitta', int(value) if value else 0)
                         elif field in ["rate", "billed_amount"]:
-                            value = float(value) if value else 0.0
-                        setattr(entry, field, value)
+                            setattr(entry, field, float(value) if value else 0.0)
+                        else:
+                            setattr(entry, field, value)
                     except Exception as e:
                         messages.error(request, f"Error setting '{field}' to '{value}' for entry {entry_id}: {e}")
 
             for entry in updated_entries.values():
                 entry.save()
 
-            # Add new entry
+            # 3) Add new entry (if any)
             if request.POST.get('new_symbol', '').strip():
                 try:
                     new_date = parse_date(request.POST.get('new_date') or '')
+                    new_symbol = request.POST.get('new_symbol').strip().upper()
                     new_entry = EntrySheet(
                         date=new_date,
-                        symbol=request.POST.get('new_symbol').strip(),
-                        script=request.POST.get('new_script'),
-                        sector=request.POST.get('new_sector'),
-                        transaction=request.POST.get('new_transaction'),
+                        symbol=new_symbol,
+                        script=request.POST.get('new_script', ''),
+                        sector=request.POST.get('new_sector', ''),
+                        transaction=request.POST.get('new_transaction', ''),
                         kitta=int(request.POST.get('new_kitta') or 0),
                         billed_amount=float(request.POST.get('new_billed_amount') or 0.0),
                         rate=float(request.POST.get('new_rate') or 0.0),
-                        broker=request.POST.get('new_broker'),
+                        broker=request.POST.get('new_broker', ''),
                     )
-
+                    # assign the next unique_id for this date
+                    new_entry.unique_id = next_global_unique_id(new_date)
                     new_entry.save()
-                    messages.success(request, "New entry added successfully.")
+                    messages.success(request, f"New entry {new_entry.unique_id} added successfully.")
                 except Exception as e:
                     messages.error(request, f"Error creating new entry: {e}")
 
             messages.success(request, "Entries saved successfully.")
             return redirect('cms:entrysheet_editable_list')
 
-    # GET request
+    # ─── GET ────────────────────────────────────────────────────────────────
     entries = EntrySheet.objects.all().order_by('-date')
     return render(request, 'cms/entrysheet_list_editable.html', {'entries': entries})
+
 class EntrySheetUpdateView(UpdateView):
     model = EntrySheet
     template_name = 'cms/entrysheet_edit.html'
@@ -181,40 +204,37 @@ def upload_csv(request):
         decoded_file = csv_file.read().decode("utf-8").splitlines()
         reader = csv.DictReader(decoded_file)
 
-        missing_columns = [col for col in REQUIRED_COLUMNS if col not in reader.fieldnames]
-        if missing_columns:
-            messages.error(request, f"CSV is missing required columns: {', '.join(missing_columns)}")
+        # ── Validate header ───────────────────────────────────────────
+        missing = [col for col in REQUIRED_COLUMNS if col not in reader.fieldnames]
+        if missing:
+            messages.error(request, f"CSV missing columns: {', '.join(missing)}")
             return render(request, "cms/upload_csv.html", {"example_csv": example_csv})
 
         rows = list(reader)
         errors = []
 
+        # ── Row validation (dates & numeric) ─────────────────────────
         for i, row in enumerate(rows, start=2):
-            for col in REQUIRED_COLUMNS:
-                if col not in row:
-                    errors.append(f"Row {i}: Missing column '{col}'")
-
+            # date parse check
             try:
-                parse_flexible_date(row.get("date", ""))
+                _ = parse_flexible_date(row.get("date", "").strip())
             except Exception:
-                errors.append(f"Row {i}: Invalid or blank date format")
+                errors.append(f"Row {i}: Invalid date '{row.get('date')}'")
 
-            for num_field in ["kitta", "billed_amount", "rate"]:
-                val = row.get(num_field, "").replace(',', '').strip()
+            # numeric checks
+            for field in ("kitta", "billed_amount", "rate"):
+                val = row.get(field, "").replace(",", "").strip()
                 if val:
                     try:
-                        if num_field == "kitta":
-                            int(val)
-                        else:
-                            float(val)
-                    except Exception:
-                        errors.append(f"Row {i}: Invalid number format in '{num_field}' field")
+                        int(val) if field == "kitta" else float(val)
+                    except ValueError:
+                        errors.append(f"Row {i}: Invalid number in '{field}': {val}")
 
         if errors:
-            for error in errors:
-                messages.error(request, error)
+            for e in errors:
+                messages.error(request, e)
             return render(request, "cms/upload_csv.html", {"example_csv": example_csv})
-
+         #safe converters
         def safe_int(val):
             val = val.replace(',', '').strip()
             return int(val) if val else 0
@@ -222,60 +242,55 @@ def upload_csv(request):
         def safe_float(val):
             val = val.replace(',', '').strip()
             return float(val) if val else 0.0
+        
 
+
+        # ── Create entries ────────────────────────────────────────────
         for row in rows:
             try:
-                date_str = row.get("date", "").strip()
-                date_obj = parse_flexible_date(date_str) if date_str else None
-                unique_id = generate_unique_id(date_obj) if date_obj else None
-
-                symbol = row.get("symbol", "").strip()
-                script = row.get("script", "").strip()
-                sector = row.get("sector", "").strip()
-
-                # Autofill from Script model if empty
-                if not script or not sector:
+                date_obj = parse_flexible_date(row["date"].strip())
+                symbol   = row["symbol"].strip().upper()
+                script   = row["script"].strip()
+                sector   = row["sector"].strip()
+                uid = next_global_unique_id(date_obj)
+                
+                # autofill
+                if (not script or not sector) and symbol:
                     try:
-                        script_obj = Script.objects.get(symbol=symbol)
-                        if not script:
-                            script = script_obj.script_name
-                        if not sector:
-                            sector = script_obj.sector
+                        s = Script.objects.get(symbol=symbol)
+                        script = script or s.script_name
+                        sector = sector or s.sector
                     except Script.DoesNotExist:
-                        messages.warning(request, f"Script info not found for symbol '{symbol}'")
-
+                        messages.warning(request, f"No script info for '{symbol}'")
                 EntrySheet.objects.create(
-                    unique_id=unique_id,
-                    date=date_obj,
-                    symbol=symbol,
-                    script=script,
-                    sector=sector,
-                    transaction=row.get("transaction", "").strip(),
-                    kitta=safe_int(row.get("kitta", "")),
-                    billed_amount=safe_float(row.get("billed_amount", "")),
-                    rate=safe_float(row.get("rate", "")),
-                    broker=row.get("broker", "").strip(),
+                    unique_id   = uid,
+                    date        = date_obj,
+                    symbol      = symbol,
+                    script      = script,
+                    sector      = sector,
+                    transaction = row["transaction"].strip(),
+                    kitta       = safe_int(row["kitta"]),
+                    billed_amount = safe_float(row["billed_amount"]),
+                    rate        = safe_float(row["rate"]),
+                    broker      = row["broker"].strip(),
                 )
             except Exception as e:
-                messages.error(request, f"Error processing row {row}: {e}")
-                print(f"ERROR processing row {row}: {e}")
+                messages.error(request, f"Error on row {row}: {e}")
                 continue
 
         messages.success(request, "CSV uploaded and entries created successfully.")
         return redirect("cms:entrysheet_list")
-
     return render(request, "cms/upload_csv.html", {"example_csv": example_csv})
-
 #-----Calculation Sheet---------#
-class DashboardView(View):
+class CalculaionView(View):
     def get(self, request, symbol=None):
         symbols = EntrySheet.objects.values_list('symbol', flat=True).distinct()
 
         if not symbol:
             if symbols:
-                return redirect('cms:dashboard_detail', symbol=symbols[0])
+                return redirect('cms:calculationsheet_detail', symbol=symbols[0])
             else:
-                return render(request, 'cms/dashboard.html', {
+                return render(request, 'cms/calculationsheet.html', {
                     'rows': [],
                     'symbols': [],
                     'current_symbol': None,
@@ -390,8 +405,6 @@ class DashboardView(View):
             summary["p_rate"] = summary["total_p_amount"] / summary["total_p_qty"] if summary["total_p_qty"] else 0
             summary["s_rate"] = summary["total_s_amount"] / summary["total_s_qty"] if summary["total_s_qty"] else 0
             summary["profit"] = sum(row.get("profit", 0) for row in rows)
-
-            bep_rate = summary["p_rate"]
             cl_qty = summary["closing_qty"]
             cl_rate = summary["closing_rate"]
             
@@ -427,7 +440,7 @@ class DashboardView(View):
                 "ltp":0,
             }
 
-        return render(request, 'cms/dashboard.html', {
+        return render(request, 'cms/calculationsheet.html', {
             'rows': rows,
             'symbols': symbols,
             'current_symbol': symbol,
@@ -525,7 +538,12 @@ class TopStockListView(View):
             closing_qty = rows[-1]['cl_qty']
             closing_amount = rows[-1]['cl_amount']
             closing_rate = rows[-1]['cl_rate']
-            bep = total_p_amount / total_p_qty if total_p_qty else 0
+            if closing_qty < 1:
+                bep = 0
+            else:
+                raw_bep = (closing_amount - profit) / closing_qty
+                bep = raw_bep if raw_bep >= 0 else 0
+
 
             # Get latest traded price
             try:
@@ -593,7 +611,6 @@ def editable_script_list(request):
                         script.ltp = new_ltp_val
                         changed = True
                 except ValueError:
-                    # If LTP is invalid, you might want to skip or set to None
                     pass
 
             if changed:
@@ -604,12 +621,11 @@ def editable_script_list(request):
         nn   = request.POST.get('new_script_name', '').strip()
         nsec = request.POST.get('new_sector', '').strip()
         nltp = request.POST.get('new_ltp', '').strip()
-
-        if ns:  # Only add if symbol is provided
+        if ns:  
             try:
                 ltp_val = float(nltp) if nltp else None
             except ValueError:
-                ltp_val = None  # Skip if not a valid number
+                ltp_val = None  
 
             Script.objects.create(
                 symbol=ns,
@@ -623,3 +639,176 @@ def editable_script_list(request):
     # GET: show existing scripts
     scripts = Script.objects.all()
     return render(request, 'cms/script_list_editable.html', {'scripts': scripts})
+
+
+#---------Final Dashboard--------------
+class DashboardView(View):
+    template_name = 'cms/dashboard.html'
+
+    async def get(self, request, symbol=None):
+        symbols = await sync_to_async(list)(
+            EntrySheet.objects.values_list('symbol', flat=True).distinct()
+        )
+
+        if not symbol:
+            if symbols:
+                return redirect('cms:dashboard', symbol=symbols[0])
+            else:
+                return await sync_to_async(render)(
+                    request, self.template_name, {'symbols': symbols}
+                )
+
+        # Fetch entries
+        entries = await sync_to_async(list)(
+            EntrySheet.objects.filter(symbol=symbol).order_by('date', 'id')
+        )
+
+        # Process entries to rows
+        rows = []
+        for entry in entries:
+            try:
+                calc = await Calculation.objects.aget(entry=entry)
+            except Calculation.DoesNotExist:
+                continue
+
+            rows.append({
+                'id': entry.id,
+                'date': entry.date,
+                'transaction': entry.transaction,
+                'qty': entry.kitta,
+                't_amount': entry.billed_amount,
+                'rate': entry.rate,
+                'op_qty': calc.op_qty,
+                'op_rate': calc.op_rate,
+                'p_qty': calc.p_qty,
+                'p_amount': calc.p_amount,
+                's_qty': calc.s_qty,
+                's_amount': calc.s_amount,
+                'consumption': calc.consumption,
+                'profit': calc.profit,
+                'cl_qty': calc.cl_qty,
+                'cl_rate': calc.cl_rate,
+                'cl_amount': calc.cl_amount,
+                'broker': entry.broker,
+            })
+
+        # Calculate summary
+        total_p_qty = sum(r['p_qty'] for r in rows)
+        total_p_amount = sum(r['p_amount'] for r in rows)
+        total_s_qty = sum(r['s_qty'] for r in rows)
+        total_s_amount = sum(r['s_amount'] for r in rows)
+        realized_profit = sum(r['profit'] for r in rows)
+
+        if rows:
+            closing_qty = rows[-1]['cl_qty']
+            closing_amount = rows[-1]['cl_amount']
+            closing_rate = rows[-1]['cl_rate']
+        else:
+            closing_qty = closing_amount = closing_rate = 0
+
+        try:
+            script = await Script.objects.aget(symbol=symbol)
+            ltp = script.ltp or 0
+        except Script.DoesNotExist:
+            ltp = 0
+            
+        profit=realized_profit
+        unrealized_profit = closing_qty * (ltp - closing_rate) if closing_qty else 0
+        if closing_qty < 1:
+                bep = 0
+        else:
+                raw_bep = (closing_amount - profit) / closing_qty
+                bep = raw_bep if raw_bep >= 0 else 0
+
+        
+         # Totals across all symbols
+        total_book_value = 0
+        total_market_value = 0
+        total_realized_profit = 0
+        total_unrealized_profit = 0
+        
+        for sym in symbols:
+            latest_entry = await sync_to_async(
+                EntrySheet.objects.filter(symbol=sym).order_by('-date', '-id').first
+            )()
+            if not latest_entry:
+                continue
+
+            try:
+                calc = await Calculation.objects.aget(entry=latest_entry)
+            except Calculation.DoesNotExist:
+                continue
+
+            try:
+                script = await Script.objects.aget(symbol=sym)
+                sym_ltp = script.ltp or 0
+            except Script.DoesNotExist:
+                sym_ltp = 0
+
+            total_book_value += calc.cl_amount
+            total_market_value += calc.cl_qty * sym_ltp
+            total_realized_profit += calc.s_amount-calc.consumption # assuming calc.profit is realized profit for symbol
+
+            # Calculate unrealized profit for symbol
+            total_unrealized_profit += calc.cl_qty * (sym_ltp - calc.cl_rate)
+        if total_book_value:
+                nav = (total_market_value + total_realized_profit) / total_book_value
+        else:
+                 nav = 0
+            
+        summary = {
+            'total_p_qty': total_p_qty,
+            'total_p_amount': total_p_amount,
+            'p_rate': (total_p_amount / total_p_qty) if total_p_qty else 0,
+            'total_s_qty': total_s_qty,
+            'total_s_amount': total_s_amount,
+            's_rate': (total_s_amount / total_s_qty) if total_s_qty else 0,
+            'closing_qty': closing_qty,
+            'closing_amount': closing_amount,
+            'closing_rate': closing_rate,
+            'realized_profit': realized_profit,
+            'unrealized_profit': unrealized_profit,
+            'nav': nav,
+            'ltp': ltp,
+            'bep':bep,
+            'total_book_value': total_book_value,
+            'total_market_value': total_market_value,
+            'total_realized_profit':total_realized_profit,
+            'total_unrealized_profit':total_unrealized_profit,
+            
+            
+        }
+
+        context = {
+            'symbols': symbols,
+            'all_symbols': symbols,
+            'current_symbol': symbol,
+            'rows': rows,
+            'summary': summary,
+        }
+
+        return await sync_to_async(render)(request, self.template_name, context)
+
+    async def post(self, request, symbol=None):
+        try:
+            data = json.loads(request.body)
+        except json.JSONDecodeError:
+            return JsonResponse({'status': 'error', 'message': 'Invalid JSON'}, status=400)
+
+        field_map = {
+            'qty': 'kitta',
+            't_amount': 'billed_amount',
+            'rate': 'rate',
+        }
+
+        for item in data.get('items', []):
+            eid = item.get('id')
+            field = item.get('field')
+            value = item.get('value')
+
+            if field in field_map and eid:
+                await sync_to_async(
+                    EntrySheet.objects.filter(id=eid).update
+                )(**{field_map[field]: value})
+
+        return JsonResponse({'status': 'ok'})

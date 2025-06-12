@@ -22,7 +22,7 @@
           {% for stock in top_stocks %}
           <tr class="text-muted">
             <td>
-              <a href="{% url 'cms:dashboard_detail' stock.symbol %}" class="fw-semibold text-decoration-none text-muted">
+              <a href="{% url 'cms:calculationsheet_detail' stock.symbol %}" class="fw-semibold text-decoration-none text-muted">
                 {{ stock.symbol }}
               </a>
             </td>

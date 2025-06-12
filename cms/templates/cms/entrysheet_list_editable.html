@@ -205,43 +205,58 @@ document.addEventListener('DOMContentLoaded', function () {
   // Apply to all date fields (existing + new)
   document.querySelectorAll('input[name$="_date"], input[name="new_date"]').forEach(autoFormatDateInput);
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Function to calculate and update rate
-  function attachRateCalculation(kittaInput, billedInput, rateInput) {
-    const calculate = () => {
+ document.addEventListener('DOMContentLoaded', function () {
+    // Fix or calculate rate for existing entries
+    function fixRate(kittaInput, billedInput, rateInput) {
       const kitta = parseFloat(kittaInput.value);
       const billed = parseFloat(billedInput.value);
-      if (!isNaN(kitta) && kitta !== 0 && !isNaN(billed)) {
-        rateInput.value = (billed / kitta).toFixed(2);
+      const rate = parseFloat(rateInput.value);
+
+      if (!isNaN(kitta) && !isNaN(billed) && kitta !== 0) {
+        const correctRate = +(billed / kitta).toFixed(2);
+        if (isNaN(rate) || Math.abs(correctRate - rate) > 0.01) {
+          rateInput.value = correctRate;
+        }
       } else {
         rateInput.value = '';
       }
-    };
+    }
 
-    kittaInput.addEventListener('input', calculate);
-    billedInput.addEventListener('input', calculate);
-  }
+    // Existing entries
+    document.querySelectorAll('tr').forEach(row => {
+      const kittaInput = row.querySelector('input[name^="entry_"][name$="_kitta"]');
+      const billedInput = row.querySelector('input[name^="entry_"][name$="_billed_amount"]');
+      const rateInput = row.querySelector('input[name^="entry_"][name$="_rate"]');
 
-  // For existing entries
-  document.querySelectorAll('tr').forEach(row => {
-    const kittaInput = row.querySelector('input[name^="entry_"][name$="_kitta"]');
-    const billedInput = row.querySelector('input[name^="entry_"][name$="_billed_amount"]');
-    const rateInput = row.querySelector('input[name^="entry_"][name$="_rate"]');
-    if (kittaInput && billedInput && rateInput) {
-      attachRateCalculation(kittaInput, billedInput, rateInput);
+      if (kittaInput && billedInput && rateInput) {
+        fixRate(kittaInput, billedInput, rateInput);
+
+        // Recalculate dynamically if values change
+        kittaInput.addEventListener('input', () => fixRate(kittaInput, billedInput, rateInput));
+        billedInput.addEventListener('input', () => fixRate(kittaInput, billedInput, rateInput));
+      }
+    });
+
+    // New entry row
+    const newKitta = document.querySelector('input[name="new_kitta"]');
+    const newAmount = document.querySelector('input[name="new_billed_amount"]');
+    const newRate = document.querySelector('input[name="new_rate"]');
+
+    function updateNewRate() {
+      const kitta = parseFloat(newKitta.value);
+      const amount = parseFloat(newAmount.value);
+      if (!isNaN(kitta) && !isNaN(amount) && kitta !== 0) {
+        newRate.value = (amount / kitta).toFixed(2);
+      } else {
+        newRate.value = '';
+      }
+    }
+
+    if (newKitta && newAmount && newRate) {
+      newKitta.addEventListener('input', updateNewRate);
+      newAmount.addEventListener('input', updateNewRate);
     }
   });
-
-  // For new entry row
-  const newKitta = document.querySelector('input[name="new_kitta"]');
-  const newBilled = document.querySelector('input[name="new_billed_amount"]');
-  const newRate = document.querySelector('input[name="new_rate"]');
-  if (newKitta && newBilled && newRate) {
-    attachRateCalculation(newKitta, newBilled, newRate);
-  }
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('form');
 

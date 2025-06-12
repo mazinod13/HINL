@@ -1,6 +1,13 @@
 date,symbol,script,sector,transaction,kitta,billed_amount,rate,broker
-2024-07-18,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,6856,2182384.56,318.3174679,89
-2024-08-05,ADBL,Agricultural Development Bank Limited,Commercial Banks,SALE,3010,1176060.26,390.7176944,89
-2024/09/01,ADBL,Agricultural Development Bank Limited,Commercial Banks,BONUS,100,,0.0,
-20240908,ADBL,,,RIGHT,150,15,100.0,45
-
+2024-07-18,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,6856,2182384.56,318.32,89
+2024-08-05,ADBL,Agricultural Development Bank Limited,Commercial Banks,SALE,3010,1176060.26,390.72,89
+2024-09-01,ADBL,Agricultural Development Bank Limited,Commercial Banks,BONUS,100,,0.00,
+2024-09-08,ADBL,Agricultural Development Bank Limited,Commercial Banks,RIGHT,15,1500.00,100.00,45
+2024-07-20,NABIL,Nepal Arab Bank Limited,Commercial Banks,BUY,5000,3500000.00,700.00,90
+2024-08-10,NABIL,Nepal Arab Bank Limited,Commercial Banks,SALE,2000,1400000.00,700.00,90
+2024-09-15,NABIL,Nepal Arab Bank Limited,Commercial Banks,RIGHT,250,50000.00,200.00,90
+2024-07-15,NTC,Nepal Telecom,Telecom,BUY,10000,5500000.00,550.00,12
+2024-08-25,NTC,Nepal Telecom,Telecom,SALE,4000,2200000.00,550.00,12
+2024-09-05,NTC,Nepal Telecom,Telecom,BONUS,500,,0.00,
+2024-07-22,NLIC,Nepal Life Insurance Company,Insurance,BUY,3000,1350000.00,450.00,34
+2024-08-30,NLIC,Nepal Life Insurance Company,Insurance,SALE,1200,540000.00,450.00,34

@@ -1,0 +1,165 @@
+{% extends "cms/base.html" %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-12 col-md-2 bg-light sidebar py-4 mb-3 mb-md-0">
+      <div class="position-sticky">
+        <h5 class="px-3">Symbols</h5>
+        <ul class="nav flex-column px-3">
+          {% for sym in symbols %}
+            <li class="nav-item">
+              <a class="nav-link text-dark {% if sym == current_symbol %}fw-bold text-primary{% endif %}" href="{% url 'cms:calculationsheet_detail' sym %}">
+              {{ sym }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-12 col-md-10 ms-sm-auto px-md-4 py-4">
+      <div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
+        <div>
+          <h2 class="mb-1">CalculationSheet: <span class="text-primary">{{ current_symbol }}</span></h2>
+          <small class="text-muted">{{ script_name }}</small>
+        </div>
+      </div>
+
+      <!-- Summary Table -->
+      <div class="table-responsive mb-4">
+        <table class="table table-bordered align-middle table-sm text-center">
+          <thead class="table-light">
+            <tr>
+              <th rowspan="2">Start Date</th>
+              <th rowspan="2">End Date</th>
+              <th colspan="3">Total Purchase</th>
+              <th colspan="3">Total Sales</th>
+            </tr>
+            <tr>
+              <th>Kitta</th><th>Amount</th><th>Rate</th>
+              <th>Kitta</th><th>Amount</th><th>Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ summary.start_date }}</td>
+              <td>{{ summary.end_date }}</td>
+              <td>{{ summary.total_p_qty }}</td>
+              <td>{{ summary.total_p_amount }}</td>
+              <td>{{ summary.p_rate | floatformat:3 }}</td>
+              <td>{{ summary.total_s_qty }}</td>
+              <td>{{ summary.total_s_amount }}</td>
+              <td>{{ summary.s_rate | floatformat:3 }}</td>
+            </tr>
+            <tr class="fw-bold bg-light">
+              <td colspan="2">Closing Balance</td>
+              <td>{{ summary.closing_qty }}</td>
+              <td>{{ summary.closing_amount }}</td>
+              <td>{{ summary.closing_rate | floatformat:3 }}</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr class="fw-bold bg-warning">
+             <td colspan="2">Close Price (LTP)</td>
+             <td colspan="6">{{ summary.ltp | floatformat:2 }}</td>
+            </tr>
+            <tr class="bg-success text-white fw-bold">
+              <td colspan="2">Profit</td>
+              <td colspan="6">{{ summary.profit | floatformat:2 }}</td>
+            </tr>
+            <tr class="bg-danger text-white fw-bold">
+              <td colspan="2">Unrealized Profit / (Loss)</td>
+              <td colspan="6">
+                {{ summary.unrealized_profit | floatformat:2 }} |
+                {{ summary.unrealized_percent | floatformat:2 }}%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Editable Data Table -->
+      <div class="table-responsive mb-4">
+        <table class="table table-bordered table-hover align-middle text-center small">
+          <thead class="table-secondary">
+            <tr>
+              <th>Unique_ID</th><th>Date</th><th>Transaction</th>
+              <th>Op.QTY</th><th>Op.RATE</th><th>Op.AMOUNT</th>
+              <th>P.QTY</th><th>P.RATE</th><th>P.AMOUNT</th>
+              <th>S.QTY</th><th>S.RATE</th><th>S.AMOUNT</th>
+              <th>Consumption</th><th>Profit</th>
+              <th>Cl.QTY</th><th>Cl.RATE</th><th>Cl.AMOUNT</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in rows %}
+            <tr>
+              <td>{{ row.unique_id }}</td>
+              <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="date">{{ row.date|date:"Y/m/d" }}</td>
+              <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="transaction">{{ row.transaction }}</td>
+              <td>{{ row.op_qty }}</td><td>{{ row.op_rate }}</td><td>{{ row.op_amount }}</td>
+              <td>{{ row.p_qty }}</td><td>{{ row.p_rate }}</td><td>{{ row.p_amount }}</td>
+              <td>{{ row.s_qty }}</td><td>{{ row.s_rate }}</td><td>{{ row.s_amount }}</td>
+              <td>{{ row.consumption }}</td><td>{{ row.profit }}</td>
+              <td>{{ row.cl_qty }}</td><td>{{ row.cl_rate }}</td><td>{{ row.cl_amount }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Save Button -->
+      <div class="text-end">
+        <button id="save-changes" class="btn btn-lg btn-primary px-4">Save Changes</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
+const csrftoken = getCookie('csrftoken');
+const editedItems = [];
+
+document.querySelectorAll('.editable').forEach(el => {
+  el.addEventListener('focusout', () => {
+    const id = el.dataset.id;
+    const field = el.dataset.field;
+    const value = el.innerText.trim();
+    editedItems.push({ id, field, value });
+  });
+});
+
+document.getElementById('save-changes').addEventListener('click', () => {
+  fetch(window.location.href, {
+    method: 'POST',
+    headers: {
+      'X-CSRFToken': csrftoken,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ items: editedItems })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log("Saved:", data);
+    location.reload();
+  });
+});
+</script>
+{% endblock %}
