@@ -6,16 +6,16 @@ from datetime import datetime
 from django.views import View
 from django.http import JsonResponse
 from .models import EntrySheet,Calculation,Script
-from django.utils.decorators import classonlymethod
 from asgiref.sync import sync_to_async
-from django.db.models import Sum, F
-from .utils import next_global_unique_id
 import csv
 import json
-import random
-import string
-import asyncio
+from .utils import update_scripts_from_google_sheet
+from django.urls import reverse
 
+def refresh_scripts(request):
+    updated = update_scripts_from_google_sheet()
+    messages.success(request, f"{updated} scripts updated.")
+    return redirect(reverse("cms:script_list_editable"))
 
 #-----Script-----
 def script_json(request):
@@ -34,7 +34,7 @@ def next_global_unique_id(date_obj):
         _global_suffix = EntrySheet.objects.count()
     _global_suffix += 1
 
-    date_str = date_obj.strftime('%Y/%m/%d')
+    date_str = date_obj.strftime('%Y%m%d')
     return f"{date_str}-{_global_suffix:04d}"
 
 # Home view
@@ -135,7 +135,7 @@ def entry_sheet_editable_list(request):
                             setattr(entry, field, value)
                     except Exception as e:
                         messages.error(request, f"Error setting '{field}' to '{value}' for entry {entry_id}: {e}")
-
+            update_scripts_from_google_sheet()
             for entry in updated_entries.values():
                 entry.save()
 
@@ -592,7 +592,7 @@ def editable_script_list(request):
             new_name   = request.POST.get(f'script_name_{script.id}', '').strip()
             new_sector = request.POST.get(f'sector_{script.id}', '').strip()
             new_ltp    = request.POST.get(f'ltp_{script.id}', '').strip()
-
+            new_ltpdate = request.POST.get(f'ltpdate_{script.id}', '').strip()
             changed = False
 
             if new_symbol and new_symbol != script.symbol:
@@ -612,6 +612,16 @@ def editable_script_list(request):
                         changed = True
                 except ValueError:
                     pass
+                
+            if new_ltpdate:
+                try:
+                    parsed = datetime.strptime(new_ltpdate, '%Y-%m-%d').date()
+                    if getattr(script, 'ltpdate', None) != parsed:
+                     script.ltpdate = parsed
+                    changed = True
+                except ValueError:
+              # optionally: messages.warning(request, f"Bad date for {script.symbol}")
+                 pass   
 
             if changed:
                 script.save()
@@ -639,8 +649,6 @@ def editable_script_list(request):
     # GET: show existing scripts
     scripts = Script.objects.all()
     return render(request, 'cms/script_list_editable.html', {'scripts': scripts})
-
-
 #---------Final Dashboard--------------
 class DashboardView(View):
     template_name = 'cms/dashboard.html'
@@ -673,6 +681,7 @@ class DashboardView(View):
 
             rows.append({
                 'id': entry.id,
+                'unique_id':entry.unique_id,
                 'date': entry.date,
                 'transaction': entry.transaction,
                 'qty': entry.kitta,

@@ -53,24 +53,24 @@
               <td>{{ summary.total_s_amount }}</td>
               <td>{{ summary.s_rate | floatformat:3 }}</td>
             </tr>
-            <tr class="fw-bold bg-light">
-              <td colspan="2">Closing Balance</td>
-              <td>{{ summary.closing_qty }}</td>
-              <td>{{ summary.closing_amount }}</td>
-              <td>{{ summary.closing_rate | floatformat:3 }}</td>
+            <tr class="fw-bold">
+              <td colspan="2" style="color: red" class="fw-bold bg-warning">Closing Balance</td>
+              <td style="color: red" class="fw-bold bg-warning">{{ summary.closing_qty }}</td>
+              <td style="color: red" class="fw-bold bg-warning">{{ summary.closing_amount }}</td>
+              <td style="color: red" class="fw-bold bg-warning">{{ summary.closing_rate | floatformat:3 }}</td>
               <td colspan="3"></td>
             </tr>
             <tr class="fw-bold bg-warning">
-             <td colspan="2">Close Price (LTP)</td>
-             <td colspan="6">{{ summary.ltp | floatformat:2 }}</td>
+             <td colspan="2" class="fw-bold bg-warning" style="color: red">Close Price (LTP)</td>
+             <td colspan="6" class="fw-bold bg-warning" style="color: red">{{ summary.ltp | floatformat:2 }}</td>
             </tr>
             <tr class="bg-success text-white fw-bold">
-              <td colspan="2">Profit</td>
-              <td colspan="6">{{ summary.profit | floatformat:2 }}</td>
+              <td colspan="2" class="fw-bold bg-success">Profit</td>
+              <td colspan="6" class="fw-bold bg-success">{{ summary.profit | floatformat:2 }}</td>
             </tr>
             <tr class="bg-danger text-white fw-bold">
-              <td colspan="2">Unrealized Profit / (Loss)</td>
-              <td colspan="6">
+              <td colspan="2" class="fw-bold bg-secondary">Unrealized Profit / (Loss)</td>
+              <td colspan="6" class="fw-bold bg-secondary" >
                 {{ summary.unrealized_profit | floatformat:2 }} |
                 {{ summary.unrealized_percent | floatformat:2 }}%
               </td>
@@ -94,7 +94,8 @@
           </thead>
           <tbody>
             {% for row in rows %}
-            <tr>
+             <tr class="{% if row.transaction|lower == 'buy' %}table-success{% elif row.transaction|lower == 'sale' %}table-danger{% endif %}">
+              <td>{{ row.unique_id }}</td>
               <td>{{ row.unique_id }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="date">{{ row.date|date:"Y/m/d" }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="transaction">{{ row.transaction }}</td>

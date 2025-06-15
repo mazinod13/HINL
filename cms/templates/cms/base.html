@@ -11,68 +11,139 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-    .sidebar {
+    /* Sidebar: start collapsed at width 0, show when .show is present */
+    #sidebar {
       width: 220px;
       min-height: 100vh;
       background-color: #343a40;
+      transition: width .3s;
     }
-    .sidebar .nav-link {
+    #sidebar:not(.show) {
+      width: 0;
+    }
+    #sidebar .nav-link {
       color: #fff;
     }
-    .sidebar .nav-link:hover {
-      background-color: #495057;
-    }
-    .content {
-      flex-grow: 1;
-      padding: 2rem;
-    }
+  #sidebar .nav-link {
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.2s;
+  }
+
+
+  .content {
+    flex-grow: 1;
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+    margin-left: 60px; /* collapsed width */
+  }
   </style>
 </head>
 <body>
 
-<!-- Sidebar Navigation -->
-<div class="sidebar d-flex flex-column p-3">
-  <a class="navbar-brand text-white mb-4" href="{% url 'cms:home' %}">Stock Management</a>
-  <ul class="nav nav-pills flex-column">
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'cms:entrysheet_list' %}">Entry Sheet</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'cms:entrysheet_editable_list' %}">Add Entry</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'cms:calculationsheet' %}">CalculationSheet</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'cms:stock_list' %}">Top Stocks</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'cms:script_list_editable' %}">Script_List</a>
-    </li>
-      <li class="nav-item">
-      <a class="nav-link" href="{% url 'cms:dashboard' %}">Dashboard</a>
-    </li>
-  </ul>
-</div>
+ <!-- Sidebar Navigation (collapse) -->
+  <div class="sidebar " id="sidebar" style="visibility: hidden;">
+    <div class="d-flex flex-column p-3 h-100">
+      <a class="navbar-brand text-white mb-4" href="{% url 'cms:home' %}">Stock Management</a>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cms:entrysheet_list' %}">Entry Sheet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cms:entrysheet_editable_list' %}">Add Entry</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cms:calculationsheet' %}">CalculationSheet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cms:stock_list' %}">Top Stocks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cms:script_list_editable' %}">Script List</a>
+        </li>
 
-<!-- Main Content Area -->
-<div class="content">
-  {% block content %}
-  {% endblock %}
-</div>
+        <!-- Dashboard link: only one, conditional on current_symbol -->
+        <li class="nav-item">
+          {% if current_symbol %}
+            <a class="nav-link" href="{% url 'cms:dashboard' symbol=current_symbol %}">
+              Dashboard
+            </a>
+          {% else %}
+            <a class="nav-link" href="{% url 'cms:dashboard' %}">
+              Dashboard
+            </a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+  </div>
 
-<!-- Styles for Form Validation -->
-<style>
-  input.is-invalid {
-    border: 1px solid red;
-    background-color: #ffe6e6;
-  }
-</style>
+  <!-- Main Content Area -->
+  <div class="content">
+    <!-- Toggle Button -->
+    <button id="sidebarToggle" class="btn btn-outline-secondary mb-3" type="button">
+  ☰
+</button>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="http://localhost:35729/livereload.js"></script>
+
+    {% block content %}{% endblock %}
+  </div>
+
+
+  <!-- Optional extra CSS -->
+  <style>
+    input.is-invalid {
+      border: 1px solid red;
+      background-color: #ffe6e6;
+    }
+
+    /* Example row coloring classes */
+    .buy-row { background-color: rgba(25, 135, 84, 0.1); }
+    .sale-row { background-color: rgba(220, 53, 69, 0.1); }
+
+    /* Dropdown focus styling */
+    .dropdown-menu li.focused,
+    .dropdown-menu li.focused > a {
+      background-color: #0d6efd;
+      color: white !important;
+    }
+  </style>
+
+  <!-- Bootstrap JS -->
+<script>
+  (function () {
+    const STORAGE_KEY = 'sidebarVisible';
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('sidebarToggle');
+
+    // 1. Load previous state before anything renders
+    const wasVisible = localStorage.getItem(STORAGE_KEY) === 'true';
+    if (wasVisible) {
+      sidebar.classList.add('show');
+    } else {
+      sidebar.classList.remove('show');
+    }
+
+    // 2. Prevent flicker
+    sidebar.style.visibility = 'visible';
+
+    // 3. Add click handler for toggle
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('show');
+      const isVisible = sidebar.classList.contains('show');
+      localStorage.setItem(STORAGE_KEY, isVisible);
+    });
+  })();
+</script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
 
 </body>
 </html>

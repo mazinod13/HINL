@@ -3,8 +3,14 @@
 <div class="card shadow rounded-4 mt-4 border-0">
   <div class="card-header bg-light text-secondary fs-5 fw-semibold rounded-top-4 d-flex justify-content-between align-items-center">
     <span><i class="bi bi-journal-text me-2"></i>Entry List</span>
+     <div class="d-flex justify-content-end mb-3">
+      <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addEntryModal">Add Entry</button>
+      <button class="btn btn-primary px-4 py-2 shadow-sm ms-2" data-bs-toggle="modal" data-bs-target="#uploadCSVModal">Upload CSV</button>
+    </div>
   </div>
   <div class="card-body px-4">
+     <div class="card-body px-4">
+   
     <div class="table-responsive">
       <table class="table table-hover table-bordered align-middle text-center" id="entry-table">
         <thead class="table-secondary text-nowrap">
@@ -22,27 +28,183 @@
             <!-- Removed Actions header -->
           </tr>
         </thead>
-        <tbody>
-          {% for entry in entries %}
-          <tr>
-            <td class="badge bg-light text-secondary border">{{ entry.unique_id }}</td>
-            <td>{{ entry.date|date:"Y/m/d" }}</td>
-            <td><span class="badge bg-light text-secondary border">{{ entry.symbol }}</span></td>
-            <td>{{ entry.script }}</td>
-            <td><span class="badge bg-light text-secondary border">{{ entry.sector }}</span></td>
-            <td>{{ entry.transaction }}</td> 
-            <td>{{ entry.kitta }}</td>
-            <td>{{ entry.billed_amount }}</td>
-            <td>{{ entry.rate }}</td>
-            <td>{{ entry.broker }}</td>
-          </tr>
-          {% empty %}
-          <tr>
-            <td colspan="10" class="text-muted">No entries found.</td>
-          </tr>
-          {% endfor %}
-        </tbody>
+<tbody>
+  {% for entry in entries %}
+   <tr class="{% if entry.transaction|lower == 'buy' %}table-success{% elif entry.transaction|lower == 'sale' %}table-danger{% endif %}">
+    <td><span class="badge bg-light text-secondary border">{{ entry.unique_id }}</span></td>
+    <td>{{ entry.date|date:"Y/m/d" }}</td>
+    <td><span class="badge bg-light text-secondary border">{{ entry.symbol }}</span></td>
+    <td>{{ entry.script }}</td>
+    <td><span class="badge bg-light text-secondary border">{{ entry.sector }}</span></td>
+    <td>{{ entry.transaction }}</td> 
+    <td>{{ entry.kitta }}</td>
+    <td>{{ entry.billed_amount }}</td>
+    <td>{{ entry.rate }}</td>
+    <td>{{ entry.broker }}</td>
+  </tr>
+  {% empty %}
+  <tr>
+    <td colspan="10" class="text-muted">No entries found.</td>
+  </tr>
+  {% endfor %}
+</tbody>
+
       </table>
+
+
+<!-- ────────── Add Entry Modal ────────── -->
+<div class="modal fade" id="addEntryModal" tabindex="-1" aria-labelledby="addEntryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <form method="post"
+          action="{% url 'cms:entrysheet_editable_list' %}"
+          class="modal-content">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="save">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addEntryModalLabel">Add New Entry</h5>
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row g-3">
+          <!-- Date -->
+          <div class="col-md-4">
+            <label class="form-label">Date</label>
+            <input type="text"
+                   name="new_date"
+                   class="form-control form-control-sm"
+                   placeholder="YYYY/MM/DD"
+                   maxlength="10"
+                   pattern="\d{4}/\d{2}/\d{2}"
+                   required>
+          </div>
+
+          <!-- Symbol / autofill will hook into this -->
+          <div class="col-md-4">
+            <label class="form-label">Symbol</label>
+            <input type="text"
+                   name="new_symbol"
+                   class="form-control form-control-sm"
+                   required>
+          </div>
+
+          <!-- Script (auto‑filled) -->
+          <div class="col-md-4">
+            <label class="form-label">Script</label>
+            <input type="text"
+                   name="new_script"
+                   class="form-control form-control-sm">
+          </div>
+
+          <!-- Sector (auto‑filled) -->
+          <div class="col-md-6">
+            <label class="form-label">Sector</label>
+            <input type="text"
+                   name="new_sector"
+                   class="form-control form-control-sm">
+          </div>
+
+          <!-- Transaction Type -->
+          <div class="col-md-6">
+            <label class="form-label">Transaction</label>
+            <select class="form-select form-select-sm"
+                    name="new_transaction"
+                    required>
+              <option disabled selected value="">Select…</option>
+              <option value="BUY">BUY</option>
+              <option value="SALE">SALE</option>
+              <option value="RIGHT">RIGHT</option>
+              <option value="BONUS">BONUS</option>
+              <option value="IPO">IPO</option>
+              <option value="FPO">FPO</option>
+              <option value="Conversion(+)">Conversion(+)</option>
+              <option value="Conversion(-)">Conversion(-)</option>
+              <option value="Suspense(+)">Suspense(+)</option>
+              <option value="Suspense(-)">Suspense(-)</option>
+              <option value="Balance b/d">Balance b/d</option>
+            </select>
+          </div>
+
+          <!-- Kitta -->
+          <div class="col-md-4">
+            <label class="form-label">Kitta</label>
+            <input type="number"
+                   name="new_kitta"
+                   class="form-control form-control-sm"
+                   min="0"
+                   step="1">
+          </div>
+
+          <!-- Billed Amount -->
+          <div class="col-md-4">
+            <label class="form-label">Billed Amount</label>
+            <input type="number"
+                   name="new_billed_amount"
+                   class="form-control form-control-sm"
+                   min="0"
+                   step="0.01">
+          </div>
+
+          <!-- Rate (auto‑calculated) -->
+          <div class="col-md-4">
+            <label class="form-label">Rate</label>
+            <input type="number"
+                   name="new_rate"
+                   class="form-control form-control-sm"
+                   step="0.01"
+                   readonly>
+          </div>
+
+          <!-- Broker -->
+          <div class="col-md-12">
+            <label class="form-label">Broker</label>
+            <input type="text"
+                   name="new_broker"
+                   class="form-control form-control-sm"
+                   placeholder="e.g. NMB Capital">
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit"
+                name="action"
+                value="save"
+                class="btn btn-success px-4">
+          Create Entry
+        </button>
+        <button type="button"
+                class="btn btn-outline-secondary"
+                data-bs-dismiss="modal">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--Upload CSV-->
+<div class="modal fade" id="uploadCSVModal" tabindex="-1" aria-labelledby="uploadCSVModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form method="POST" action="{% url 'cms:upload_csv' %}" enctype="multipart/form-data" class="modal-content">
+      {% csrf_token %}
+      <div class="modal-header">
+        <h5 class="modal-title">Upload CSV</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="file" name="csv_file" class="form-control" accept=".csv" required>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </div>
+    </form>
+  </div>
+</div>
+
     </div>
   </div>
 </div>
@@ -53,4 +215,87 @@
     new Tablesort(document.getElementById('entry-table'));
   });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('/scripts/json/')
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to load symbol map: ' + response.statusText);
+      return response.json();
+    })
+    .then(dataArray => {
+      const symbolToScript = {};
+      dataArray.forEach(item => {
+        symbolToScript[item.symbol.toUpperCase()] = {
+          script: item.script_name,
+          sector: item.sector
+        };
+      });
+
+      document.body.addEventListener('input', event => {
+        const el = event.target;
+        const name = el.name || '';
+        const entryMatch = name.match(/^entry_(.+)_symbol$/);
+        const isNew = (name === 'new_symbol');
+        if (!entryMatch && !isNew) return;
+
+        const key = el.value.trim().toUpperCase();
+        let scriptInput, sectorInput;
+
+        if (isNew) {
+          scriptInput = document.querySelector('input[name="new_script"]');
+          sectorInput = document.querySelector('input[name="new_sector"]');
+        } else {
+          const id = entryMatch[1];
+          scriptInput = document.querySelector(`input[name="entry_${id}_script"]`);
+          sectorInput = document.querySelector(`input[name="entry_${id}_sector"]`);
+        }
+        if (!scriptInput || !sectorInput) return;
+
+        if (key === '') {
+          scriptInput.value = '';
+          sectorInput.value = '';
+          el.classList.remove('is-invalid');
+          el.removeAttribute('title');
+        } else if (symbolToScript[key]) {
+          const info = symbolToScript[key];
+          scriptInput.value = info.script;
+          sectorInput.value = info.sector;
+          el.classList.remove('is-invalid');
+          el.removeAttribute('title');
+        } else {
+          scriptInput.value = '';
+          sectorInput.value = '';
+          el.classList.add('is-invalid');
+          el.setAttribute('title', 'Symbol not found in database');
+        }
+      });
+    })
+    .catch(error => console.error('Error loading symbol map:', error));
+});
+</script>
+<!--Rate auto calculate-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const newKitta  = document.querySelector('input[name="new_kitta"]');
+  const newAmount = document.querySelector('input[name="new_billed_amount"]');
+  const newRate   = document.querySelector('input[name="new_rate"]');
+
+  function updateNewRate() {
+    const k = parseFloat(newKitta.value);
+    const a = parseFloat(newAmount.value);
+    if (!isNaN(k) && !isNaN(a) && k !== 0) {
+      newRate.value = (a / k).toFixed(2);
+    } else {
+      newRate.value = '';
+    }
+  }
+
+  if (newKitta && newAmount && newRate) {
+    newKitta.addEventListener('input', updateNewRate);
+    newAmount.addEventListener('input', updateNewRate);
+  }
+});
+</script>
+
 {% endblock %}

@@ -83,7 +83,8 @@ class Script(models.Model):
     script_name = models.CharField(max_length=128)
     sector = models.CharField(max_length=64)
     ltp    = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
-    
+    ltpdate = models.DateField(null=True, blank=True)
+
 
     def __str__(self):
         return f"{self.symbol} - {self.script_name}"

@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <tbody>
   {% for entry in entries %}
-  <tr>
+   <tr class="{% if entry.transaction|lower == 'buy' %}table-success{% elif entry.transaction|lower == 'sale' %}table-danger{% endif %}">
     <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_date" value="{{ entry.date|date:'Y/m/d' }}" placeholder="YYYY/MM/DD" maxlength="10"></td>
     <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_symbol" value="{{ entry.symbol }}"></td>
     <td><input type="text" class="form-control form-control-sm" name="entry_{{ entry.id }}_script" value="{{ entry.script }}"></td>
@@ -160,7 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
   <div>
     <button type="submit" name="action" value="save" class="btn btn-success px-4 py-2 shadow-sm">Save Changes</button>
     <button type="submit" name="action" value="delete" class="btn btn-danger px-4 py-2 shadow-sm ms-2" onclick="return confirm('Are you sure you want to delete selected rows?');">Delete</button>
-    <a href="{% url 'cms:upload_csv' %}" class="btn btn-primary px-4 py-2 shadow-sm ms-2">Upload CSV</a>
   </div>
 </div>
 

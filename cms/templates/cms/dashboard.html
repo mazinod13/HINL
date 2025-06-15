@@ -11,16 +11,24 @@
 
 <thead class="fw-semibold">
 
-  <!-- SYMBOL + SUMMARY TABLE START -->
   <tr class="table-secondary">
     <!-- SYMBOL COLUMN | colspan=2 to shift summary left -->
-    <td rowspan="3" colspan="2" class="text-start align-middle" style="width: 150px; position: relative;">
+   <td rowspan="3" colspan="2" class="text-center align-middle bg-warning text-dark fs-5" style="width: 150px; position: relative;">
+
 
       <div class="dropdown">
         <a class="dropdown-toggle text-decoration-none fw-bold text-primary" href="#" role="button" id="symbolDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
           {{ current_symbol }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="symbolDropdown" style="max-height: 200px; overflow-y: auto;">
+                <!-- Search box -->
+         <li class="mb-2">
+         <input type="text" id="symbolSearch" class="form-control form-control-sm" placeholder="Search symbol..." onkeyup="filterSymbols()">
+         </li>
+
+    <!-- Symbol items -->
+    <div id="symbolList">
+         
           {% for sym in all_symbols %}
             <li>
               <a class="dropdown-item {% if sym == current_symbol %}active{% endif %}" href="{% url 'cms:dashboard' symbol=sym %}">
@@ -34,14 +42,13 @@
 
     </td>
 
-    <!-- All other columns shifted left by one -->
-    <td class="text-start">Closing Bal</td>
-    <td class="text-end">{{ summary.closing_qty|floatformat:0 }}</td>
-    <td class="text-end">{{ summary.closing_amount|floatformat:0 }}</td>
-    <td class="text-end">{{ summary.closing_rate|floatformat:2 }}</td>
-    <td class="text-start">Realized P/L</td>
-    <td class="text-end">{{ summary.realized_profit|floatformat:2 }}</td>
-    <td rowspan="2" class="align-middle fw-bold bg-light">NAV</td>
+    <td class="text-start bg-warning " style="color: red">Closing Bal</td>
+    <td class="text-end bg-warning" style="color: red">{{ summary.closing_qty|floatformat:0 }}</td>
+    <td class="text-end bg-warning" style="color: red">{{ summary.closing_amount|floatformat:0 }}</td>
+    <td class="text-end bg-warning" style="color: red">{{ summary.closing_rate|floatformat:2 }}</td>
+    <td class="text-start bg-success">Realized P/L</td>
+    <td class="text-end bg-success">{{ summary.realized_profit|floatformat:2 }}</td>
+    <td rowspan="2" class="align-middle fw-bold bg-warning">NAV</td>
   </tr>
 
   <tr class="table-light small">
@@ -58,39 +65,40 @@
     <td class="text-end">{{ summary.total_s_qty|floatformat:0 }}</td>
     <td class="text-end">{{ summary.total_s_amount|floatformat:0 }}</td>
     <td class="text-end">{{ summary.s_rate|floatformat:2 }}</td>
-    <td class="text-start">Total P/L</td>
-    <td class="text-end fw-semibold">{{ summary.realized_profit|add:summary.unrealized_profit|floatformat:2 }}</td>
-    <td class="text-end">{{ summary.nav|floatformat:2 }}</td>
+    <td class="text-start bg-success">Total P/L</td>
+    <td class="text-end bg-success fw-semibold">{{ summary.realized_profit|add:summary.unrealized_profit|floatformat:2 }}</td>
+    <td class="text-end bg-warning fs-5" style="color: green">{{ summary.nav|floatformat:2 }}</td>
   </tr>
 
   <!-- COLUMN HEADERS FOR TRANSACTIONS -->
   <tr class="table-light text-center small border-top">
-    <th>Unique_ID</th>
-    <th>Date</th>
-    <th>Buy/Sale</th>
-    <th>Qty</th>
-    <th>T. Amount</th>
-    <th>Rate</th>
-    <th>R. Profit</th>
-    <th>Broker No.</th>
+    <th class="bg-secondary">Unique_ID</th>
+    <th class="bg-secondary">Date</th>
+    <th class="bg-secondary">Buy/Sale</th>
+    <th class="bg-secondary">Qty</th>
+    <th class="bg-secondary">T. Amount</th>
+    <th class="bg-secondary">Rate</th>
+    <th class="bg-secondary">R. Profit</th>
+    <th class="bg-secondary">Broker No.</th>
   </tr>
 
 </thead>
-
 <tbody>
   {% for r in rows %}
-  <tr class="{% if r.transaction|lower == 'buy' %}bg-success bg-opacity-10{% elif r.transaction|lower == 'sale' %}bg-danger bg-opacity-10{% else %}bg-white{% endif %}">
-    <td class="small text-start">{{ r.unique_id }}</td>    <!-- align left -->
-    <td class="text-start">{{ r.date|date:"Y-m-d" }}</td> <!-- align left -->
-    <td>{{ r.transaction }}</td>
-    <td class="text-end">{{ r.qty }}</td>
-    <td class="text-end">{{ r.t_amount|floatformat:2 }}</td>
-    <td class="text-end">{{ r.rate|floatformat:2 }}</td>
-    <td class="text-end">{{ r.profit|floatformat:2 }}</td>
-    <td>{{ r.broker }}</td>
-  </tr>
+      
+     <tr class="{% if r.transaction|lower == 'buy' %}table-success{% elif r.transaction|lower == 'sale' %}table-danger{% endif %}">
+      <td class="small text-start">{{ r.unique_id }}</td>
+      <td class="text-start">{{ r.date|date:"Y-m-d" }}</td>
+      <td>{{ r.transaction }}</td>
+      <td class="text-end">{{ r.qty }}</td>
+      <td class="text-end">{{ r.t_amount|floatformat:2 }}</td>
+      <td class="text-end">{{ r.rate|floatformat:2 }}</td>
+      <td class="text-end">{{ r.profit|floatformat:2 }}</td>
+      <td>{{ r.broker }}</td>
+    </tr>
   {% endfor %}
 </tbody>
+
 
 
     </table>
@@ -115,11 +123,11 @@
       </div>
       <div class="border p-2 small">
         <table class="table table-borderless mb-0">
-          <tr><th>Total Book Value</th><td>{{ summary.total_book_value|floatformat:2 }}</td></tr>
-          <tr><th>Total Market Value</th><td>{{ summary.total_market_value|floatformat:2 }}</td></tr>
-          <tr><th>Total Realized Profit</th><td>{{ summary.total_realized_profit|floatformat:2 }}</td></tr>
-          <tr><th>Total Unrealized Profit</th><td>{{ summary.total_unrealized_profit|floatformat:2 }}</td></tr>
-          <tr><th>Total Profit</th><td>{{ summary.total_realized_profit|add:summary.total_unrealized_profit|floatformat:2 }}</td></tr>
+          <tr><th style="fw-semibold">Total Book Value</th><td>{{ summary.total_book_value|floatformat:2 }}</td></tr>
+          <tr><th style="fw-semibold">Total Market Value</th><td>{{ summary.total_market_value|floatformat:2 }}</td></tr>
+          <tr><th style="fw-semibold">Total Realized Profit</th><td>{{ summary.total_realized_profit|floatformat:2 }}</td></tr>
+          <tr><th style="fw-semibold">Total Unrealized Profit</th><td>{{ summary.total_unrealized_profit|floatformat:2 }}</td></tr>
+          <tr><th style="fw-semibold">Total Profit</th><td>{{ summary.total_realized_profit|add:summary.total_unrealized_profit|floatformat:2 }}</td></tr>
           <tr class="bg-info text-white fw-bold"><th>NAV</th><td>{{ summary.nav|floatformat:2 }}</td></tr>
         </table>
       </div>
@@ -127,4 +135,79 @@
 
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.getElementById('symbolDropdown');
+    const searchInput = document.getElementById('symbolSearch');
+    const listContainer = document.getElementById('symbolList');
+
+    let focusedIndex = -1; // Which item is currently focused
+
+    // Autofocus the search box when dropdown opens
+    dropdown.addEventListener('click', function () {
+      setTimeout(() => {
+        searchInput.focus();
+        resetFocus();
+      }, 50);
+    });
+
+    // Keyboard navigation
+    searchInput.addEventListener("keydown", function (e) {
+      const items = Array.from(listContainer.querySelectorAll("li")).filter(li => li.style.display !== "none");
+      if (!items.length) return;
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        focusedIndex = (focusedIndex + 1) % items.length;
+        updateFocus(items);
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        focusedIndex = (focusedIndex - 1 + items.length) % items.length;
+        updateFocus(items);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        if (focusedIndex >= 0 && focusedIndex < items.length) {
+          const link = items[focusedIndex].querySelector("a");
+          if (link) {
+            window.location.href = link.href;
+          }
+        }
+      } else if (e.key === "Escape") {
+        searchInput.blur();
+      }
+    });
+
+    // Remove any existing focused class
+    function removeFocus(item) {
+      item.querySelector("a").classList.remove("active", "focused");
+      item.classList.remove("focused");
+    }
+
+    // Reset focus state
+    function resetFocus() {
+      const items = listContainer.querySelectorAll("li");
+      items.forEach(removeFocus);
+      focusedIndex = -1;
+    }
+
+    // Update which item is focused (highlight visually)
+    function updateFocus(items) {
+      // Clear old focus
+      items.forEach(removeFocus);
+      if (focusedIndex >= 0 && focusedIndex < items.length) {
+        const focusedItem = items[focusedIndex];
+        focusedItem.classList.add("focused");
+        const link = focusedItem.querySelector("a");
+        if (link) {
+          link.classList.add("active");
+          // Scroll focused item into view if needed
+          focusedItem.scrollIntoView({ block: "nearest" });
+        }
+      }
+    }
+  });
+</script>
+
+
+
 {% endblock %}
