@@ -581,74 +581,108 @@ class TopStockListView(View):
 
 #-------Scripts Management---------------
 
-from django.shortcuts import render, redirect
-from cms.models import Script
-
 def editable_script_list(request):
     if request.method == 'POST':
-        # Update existing scripts
-        for script in Script.objects.all():
-            new_symbol = request.POST.get(f'symbol_{script.id}', '').strip()
-            new_name   = request.POST.get(f'script_name_{script.id}', '').strip()
-            new_sector = request.POST.get(f'sector_{script.id}', '').strip()
-            new_ltp    = request.POST.get(f'ltp_{script.id}', '').strip()
-            new_ltpdate = request.POST.get(f'ltpdate_{script.id}', '').strip()
-            changed = False
+        action = request.POST.get('action')
 
-            if new_symbol and new_symbol != script.symbol:
-                script.symbol = new_symbol
-                changed = True
-            if new_name and new_name != script.script_name:
-                script.script_name = new_name
-                changed = True
-            if new_sector and new_sector != script.sector:
-                script.sector = new_sector
-                changed = True
-            if new_ltp:
-                try:
-                    new_ltp_val = float(new_ltp)
-                    if script.ltp != new_ltp_val:
-                        script.ltp = new_ltp_val
-                        changed = True
-                except ValueError:
-                    pass
-                
-            if new_ltpdate:
-                try:
-                    parsed = datetime.strptime(new_ltpdate, '%Y-%m-%d').date()
-                    if getattr(script, 'ltpdate', None) != parsed:
-                     script.ltpdate = parsed
-                    changed = True
-                except ValueError:
-              # optionally: messages.warning(request, f"Bad date for {script.symbol}")
-                 pass   
-
-            if changed:
-                script.save()
-
-        # Handle new script row
-        ns   = request.POST.get('new_symbol', '').strip()
-        nn   = request.POST.get('new_script_name', '').strip()
-        nsec = request.POST.get('new_sector', '').strip()
-        nltp = request.POST.get('new_ltp', '').strip()
-        if ns:  
+        # ─── Handle “Refresh from Google Sheet” ────────────────────
+        if action == 'refresh':
             try:
-                ltp_val = float(nltp) if nltp else None
-            except ValueError:
-                ltp_val = None  
+                updated = update_scripts_from_google_sheet()
+                messages.success(request, f"{updated} scripts updated from Google Sheet.")
+            except Exception as e:
+                messages.error(request, f"Error refreshing scripts: {e}")
+            return redirect('cms:script_list_editable')
 
-            Script.objects.create(
-                symbol=ns,
-                script_name=nn,
-                sector=nsec,
-                ltp=ltp_val
-            )
+        # ─── Handle “Save Changes” ─────────────────────────────────
+        if action == 'save':
+            # 1) Update existing scripts
+            for script in Script.objects.all():
+                changed = False
 
-        return redirect('cms:script_list_editable')
+                # text fields
+                new_symbol  = request.POST.get(f'symbol_{script.id}', '').strip()
+                new_name    = request.POST.get(f'script_name_{script.id}', '').strip()
+                new_sector  = request.POST.get(f'sector_{script.id}', '').strip()
 
-    # GET: show existing scripts
-    scripts = Script.objects.all()
-    return render(request, 'cms/script_list_editable.html', {'scripts': scripts})
+                if new_symbol and new_symbol != script.symbol:
+                    script.symbol = new_symbol
+                    changed = True
+                if new_name and new_name != script.script_name:
+                    script.script_name = new_name
+                    changed = True
+                if new_sector and new_sector != script.sector:
+                    script.sector = new_sector
+                    changed = True
+
+                # numeric LTP (don’t bail out the row on parse errors)
+                new_ltp_raw = request.POST.get(f'ltp_{script.id}', '').strip()
+                new_ltp = None
+                if new_ltp_raw:
+                    try:
+                        new_ltp = float(new_ltp_raw)
+                    except ValueError:
+                        messages.warning(request, f"Invalid LTP for {script.symbol}: {new_ltp_raw}")
+
+                if new_ltp is not None and script.ltp != new_ltp:
+                    script.ltp = new_ltp
+                    changed = True
+
+                # date LTPDATE
+                new_date_raw = request.POST.get(f'ltpdate_{script.id}', '').strip()
+                new_date = None
+                if new_date_raw:
+                    try:
+                        new_date = datetime.strptime(new_date_raw, '%Y-%m-%d').date()
+                    except ValueError:
+                        messages.warning(request, f"Invalid LTP date for {script.symbol}: {new_date_raw}")
+
+                if new_date is not None and script.ltpdate != new_date:
+                    script.ltpdate = new_date
+                    changed = True
+
+                if changed:
+                    script.save()
+
+            # 2) Create the new‐script row if a symbol was given
+            ns  = request.POST.get('new_symbol', '').strip()
+            if ns:
+                nn   = request.POST.get('new_script_name', '').strip()
+                nsec = request.POST.get('new_sector', '').strip()
+                nltp = request.POST.get('new_ltp', '').strip()
+                ndt  = request.POST.get('new_ltpdate', '').strip()
+
+                create_kwargs = {
+                    'symbol':      ns,
+                    'script_name': nn,
+                    'sector':      nsec,
+                }
+
+                if nltp:
+                    try:
+                        create_kwargs['ltp'] = float(nltp)
+                    except ValueError:
+                        create_kwargs['ltp'] = None
+
+                if ndt:
+                    try:
+                        create_kwargs['ltpdate'] = datetime.strptime(ndt, '%Y-%m-%d').date()
+                    except ValueError:
+                        pass
+
+                Script.objects.create(**create_kwargs)
+                messages.success(request, f"Added new script {ns}")
+
+            messages.success(request, "Scripts saved.")
+            return redirect('cms:script_list_editable')
+
+    # GET: render form
+    scripts = Script.objects.all().order_by('id')
+    return render(request, 'cms/script_list_editable.html', {
+        'scripts': scripts
+    })
+
+
 #---------Final Dashboard--------------
 class DashboardView(View):
     template_name = 'cms/dashboard.html'
