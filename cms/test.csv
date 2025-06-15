@@ -1,5 +1,22 @@
 date,symbol,script,sector,transaction,kitta,billed_amount,rate,broker
-2024-07-18,ADBL,Agricultural Development Bank Limited,Commercial Banks,BUY,6856,2182384.56,318.32,89
-2024-08-05,ADBL,Agricultural Development Bank Limited,Commercial Banks,SALE,3010,1176060.26,390.72,89
-2024-09-01,ADBL,Agricultural Development Bank Limited,Commercial Banks,BONUS,100,,0.00,
-2024-09-08,ADBL,Agricultural Development Bank Limited,Commercial Banks,RIGHT,15,1500.00,100.00,45
+2025-06-14,ADBL,Asian Development Bank Ltd.,Banking,Buy,1200,1356000.00,1130.00,23
+2025-06-13,ADBL,Asian Development Bank Ltd.,Banking,Sale,800,900800.00,1126.00,45
+2025-06-12,ADBL,Asian Development Bank Ltd.,Banking,Buy,500,564000.00,1128.00,67
+2025-06-11,ADBL,Asian Development Bank Ltd.,Banking,Sale,350,391750.00,1119.29,78
+2025-06-10,ADBL,Asian Development Bank Ltd.,Banking,Buy,1000,1127000.00,1127.00,12
+2025-06-09,ADBL,Asian Development Bank Ltd.,Banking,Sale,450,507750.00,1128.33,23
+2025-06-08,ADBL,Asian Development Bank Ltd.,Banking,Buy,600,675600.00,1126.00,45
+2025-06-07,ADBL,Asian Development Bank Ltd.,Banking,Sale,300,338400.00,1128.00,67
+2025-06-06,ADBL,Asian Development Bank Ltd.,Banking,Buy,750,840750.00,1121.00,78
+2025-06-05,ADBL,Asian Development Bank Ltd.,Banking,Sale,200,225000.00,1125.00,12
+2025-06-04,ADBL,Asian Development Bank Ltd.,Banking,Buy,400,450800.00,1127.00,23
+2025-06-03,ADBL,Asian Development Bank Ltd.,Banking,Sale,550,619900.00,1127.09,45
+2025-06-02,ADBL,Asian Development Bank Ltd.,Banking,Buy,650,730600.00,1124.00,67
+2025-06-01,ADBL,Asian Development Bank Ltd.,Banking,Sale,300,338400.00,1128.00,78
+2025-05-31,ADBL,Asian Development Bank Ltd.,Banking,Buy,150,169200.00,1128.00,12
+2025-05-30,ADBL,Asian Development Bank Ltd.,Banking,Sale,500,563500.00,1127.00,23
+2025-05-29,ADBL,Asian Development Bank Ltd.,Banking,Buy,250,281750.00,1127.00,45
+2025-05-28,ADBL,Asian Development Bank Ltd.,Banking,Sale,800,901600.00,1127.00,67
+2025-05-27,ADBL,Asian Development Bank Ltd.,Banking,Buy,350,393450.00,1124.14,78
+2025-05-26,ADBL,Asian Development Bank Ltd.,Banking,Sale,450,507600.00,1128.00,12
+

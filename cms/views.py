@@ -752,8 +752,10 @@ class DashboardView(View):
         try:
             script = await Script.objects.aget(symbol=symbol)
             ltp = script.ltp or 0
+            ltpdate = script.ltpdate  
         except Script.DoesNotExist:
             ltp = 0
+            ltpdate = None
             
         profit=realized_profit
         unrealized_profit = closing_qty * (ltp - closing_rate) if closing_qty else 0
@@ -813,6 +815,7 @@ class DashboardView(View):
             'unrealized_profit': unrealized_profit,
             'nav': nav,
             'ltp': ltp,
+            'ltpdate':ltpdate,
             'bep':bep,
             'total_book_value': total_book_value,
             'total_market_value': total_market_value,
@@ -822,12 +825,53 @@ class DashboardView(View):
             
         }
 
+                # Prepare Top Stocks List
+        top_stocks = []
+        for sym in symbols:
+            latest_entry = await sync_to_async(
+                EntrySheet.objects.filter(symbol=sym).order_by('-date', '-id').first
+            )()
+            if not latest_entry:
+                continue
+
+            try:
+                calc = await Calculation.objects.aget(entry=latest_entry)
+                script = await Script.objects.aget(symbol=sym)
+            except (Calculation.DoesNotExist, Script.DoesNotExist):
+                continue
+
+            ltp = script.ltp or 0
+            cl_qty = calc.cl_qty
+            cl_amount = calc.cl_amount
+            cl_rate = calc.cl_rate
+            profit = calc.s_amount - calc.consumption
+
+            bep = (cl_amount - profit) / cl_qty if cl_qty else 0
+            unrealized_profit = cl_qty * (ltp - cl_rate)
+            unrealized_percent = ((ltp - cl_rate) / cl_rate) * 100 if cl_rate else 0
+
+            top_stocks.append({
+                'symbol': sym,
+                'closing_qty': cl_qty,
+                'closing_amount': cl_amount,
+                'closing_rate': cl_rate,
+                'bep': bep,
+                'profit': profit,
+                'unrealized_profit': unrealized_profit,
+                'unrealized_percent': unrealized_percent,
+            })
+
+        # Optionally sort by unrealized profit
+        top_stocks = sorted(top_stocks, key=lambda x: x['unrealized_profit'], reverse=True)
+
         context = {
             'symbols': symbols,
             'all_symbols': symbols,
             'current_symbol': symbol,
             'rows': rows,
             'summary': summary,
+            'top_stocks': top_stocks,
+            
         }
 
         return await sync_to_async(render)(request, self.template_name, context)

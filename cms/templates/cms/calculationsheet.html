@@ -96,7 +96,6 @@
             {% for row in rows %}
              <tr class="{% if row.transaction|lower == 'buy' %}table-success{% elif row.transaction|lower == 'sale' %}table-danger{% endif %}">
               <td>{{ row.unique_id }}</td>
-              <td>{{ row.unique_id }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="date">{{ row.date|date:"Y/m/d" }}</td>
               <td contenteditable="true" class="editable" data-id="{{ row.id }}" data-field="transaction">{{ row.transaction }}</td>
               <td>{{ row.op_qty }}</td><td>{{ row.op_rate }}</td><td>{{ row.op_amount }}</td>

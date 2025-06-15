@@ -1,161 +1,289 @@
 {% extends "cms/base.html" %}
+{% block title %}Dashboard – {{ current_symbol }}{% endblock %}
+
 {% block content %}
 <div class="container-fluid">
   <div class="row">
 
+    <!-- SYMBOL + SUMMARY TABLE (always visible) -->
+    <main class="col-12 col-md-7">
+      <div class=" mb-2">
+        <table class="table table-bordered table-sm text-center align-middle small mb-0">
+          <thead class="fw-semibold">
+            <tr class="table-secondary">
+              <!-- SYMBOL dropdown cell -->
+              <td rowspan="3" colspan="2" class="text-center align-middle bg-warning text-dark fs-5" style="width: 150px; position: relative;">
+                <div class="dropdown" data-bs-auto-close="outside">
+                  <a class="dropdown-toggle text-decoration-none fw-bold text-primary"
+                     href="#" role="button" id="symbolDropdown"
+                     data-bs-toggle="dropdown" aria-expanded="false"
+                     style="cursor: pointer;">
+                    {{ current_symbol }}
+                  </a>
+                    <ul class="dropdown-menu p-2" aria-labelledby="symbolDropdown" style="width: 200px;">
+                      <li class="mb-2">
+                        <input type="text" id="symbolSearch" class="form-control form-control-sm" placeholder="Search symbol..." onkeyup="filterSymbols()">
+                     </li>
+                     <li><hr class="dropdown-divider"></li>
+                     <li style="max-height: 160px; overflow-y: auto;">
+                      <ul id="symbolList" class="list-unstyled mb-0">
+                         {% for sym in all_symbols %}
+                           <li>
+                            <a class="dropdown-item {% if sym == current_symbol %}active{% endif %}" href="{% url 'cms:dashboard' symbol=sym %}">
+                             {{ sym }}
+                            </a>
+                          </li>
+                         {% endfor %}
+                        </ul>
+                       </li>
+                      </ul>
 
-<!-- SYMBOL + SUMMARY + TRANSACTION TABLE -->
-<main class="col-12 col-md-7">
-  <div class="table-responsive">
-    <table class="table table-bordered table-sm text-center align-middle small mb-0">
-
-<thead class="fw-semibold">
-
-  <tr class="table-secondary">
-    <!-- SYMBOL COLUMN | colspan=2 to shift summary left -->
-   <td rowspan="3" colspan="2" class="text-center align-middle bg-warning text-dark fs-5" style="width: 150px; position: relative;">
-
-
-      <div class="dropdown">
-        <a class="dropdown-toggle text-decoration-none fw-bold text-primary" href="#" role="button" id="symbolDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
-          {{ current_symbol }}
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="symbolDropdown" style="max-height: 200px; overflow-y: auto;">
-                <!-- Search box -->
-         <li class="mb-2">
-         <input type="text" id="symbolSearch" class="form-control form-control-sm" placeholder="Search symbol..." onkeyup="filterSymbols()">
-         </li>
-
-    <!-- Symbol items -->
-    <div id="symbolList">
-         
-          {% for sym in all_symbols %}
-            <li>
-              <a class="dropdown-item {% if sym == current_symbol %}active{% endif %}" href="{% url 'cms:dashboard' symbol=sym %}">
-                {{ sym }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-
-      </div>
-
-    </td>
-
-    <td class="text-start bg-warning " style="color: red">Closing Bal</td>
-    <td class="text-end bg-warning" style="color: red">{{ summary.closing_qty|floatformat:0 }}</td>
-    <td class="text-end bg-warning" style="color: red">{{ summary.closing_amount|floatformat:0 }}</td>
-    <td class="text-end bg-warning" style="color: red">{{ summary.closing_rate|floatformat:2 }}</td>
-    <td class="text-start bg-success">Realized P/L</td>
-    <td class="text-end bg-success">{{ summary.realized_profit|floatformat:2 }}</td>
-    <td rowspan="2" class="align-middle fw-bold bg-warning">NAV</td>
-  </tr>
-
-  <tr class="table-light small">
-    <td class="text-start">Total Purchase</td>
-    <td class="text-end">{{ summary.total_p_qty|floatformat:0 }}</td>
-    <td class="text-end">{{ summary.total_p_amount|floatformat:0 }}</td>
-    <td class="text-end">{{ summary.p_rate|floatformat:2 }}</td>
-    <td class="text-start">Unrealized P/L</td>
-    <td class="text-end">{{ summary.unrealized_profit|floatformat:2 }}</td>
-  </tr>
-
-  <tr class="table-light small border-bottom">
-    <td class="text-start">Total Sales</td>
-    <td class="text-end">{{ summary.total_s_qty|floatformat:0 }}</td>
-    <td class="text-end">{{ summary.total_s_amount|floatformat:0 }}</td>
-    <td class="text-end">{{ summary.s_rate|floatformat:2 }}</td>
-    <td class="text-start bg-success">Total P/L</td>
-    <td class="text-end bg-success fw-semibold">{{ summary.realized_profit|add:summary.unrealized_profit|floatformat:2 }}</td>
-    <td class="text-end bg-warning fs-5" style="color: green">{{ summary.nav|floatformat:2 }}</td>
-  </tr>
-
-  <!-- COLUMN HEADERS FOR TRANSACTIONS -->
-  <tr class="table-light text-center small border-top">
-    <th class="bg-secondary">Unique_ID</th>
-    <th class="bg-secondary">Date</th>
-    <th class="bg-secondary">Buy/Sale</th>
-    <th class="bg-secondary">Qty</th>
-    <th class="bg-secondary">T. Amount</th>
-    <th class="bg-secondary">Rate</th>
-    <th class="bg-secondary">R. Profit</th>
-    <th class="bg-secondary">Broker No.</th>
-  </tr>
-
-</thead>
-<tbody>
-  {% for r in rows %}
-      
-     <tr class="{% if r.transaction|lower == 'buy' %}table-success{% elif r.transaction|lower == 'sale' %}table-danger{% endif %}">
-      <td class="small text-start">{{ r.unique_id }}</td>
-      <td class="text-start">{{ r.date|date:"Y-m-d" }}</td>
-      <td>{{ r.transaction }}</td>
-      <td class="text-end">{{ r.qty }}</td>
-      <td class="text-end">{{ r.t_amount|floatformat:2 }}</td>
-      <td class="text-end">{{ r.rate|floatformat:2 }}</td>
-      <td class="text-end">{{ r.profit|floatformat:2 }}</td>
-      <td>{{ r.broker }}</td>
-    </tr>
-  {% endfor %}
-</tbody>
-
-
-
-    </table>
-  </div>
-</main>
-
-
-    <!-- Information Panel (Right) -->
-    <aside class="col-12 col-md-3">
-      <div class="border p-2 mb-3 bg-light">
-        <h5 class="text-center">Information Panel</h5>
-        <table class="table table-borderless small">
-          <tr><th>Symbol</th><td>{{ current_symbol }}</td></tr>
-          <tr><th>Volume</th><td>{{ summary.closing_qty }}</td></tr>
-          <tr><th>Cost</th><td>{{ summary.closing_rate|floatformat:2 }}</td></tr>
-          <tr><th>LTP ({{ today|date:"Y-m-d" }})</th><td>{{ summary.ltp|floatformat:2 }}</td></tr>
-          <tr><th>BEP (Rs.)</th><td>{{ summary.bep|floatformat:2 }}</td></tr>
-          <tr><th>Realized P/L</th><td>{{ summary.realized_profit|floatformat:2 }}</td></tr>
-          <tr><th>Unrealized P/L</th><td>{{ summary.unrealized_profit|floatformat:2 }}</td></tr>
-          <tr><th>Total Profit</th><td>{{ summary.realized_profit|add:summary.unrealized_profit|floatformat:2 }}</td></tr>
+                </div>
+              </td>
+              <!-- Summary columns -->
+              <td class="text-start bg-warning text-danger">Closing Bal</td>
+              <td class="text-end bg-warning text-danger">
+                {% if summary %}{{ summary.closing_qty|floatformat:0 }}{% endif %}
+              </td>
+              <td class="text-end bg-warning text-danger">
+                {% if summary %}{{ summary.closing_amount|floatformat:0 }}{% endif %}
+              </td>
+              <td class="text-end bg-warning text-danger">
+                {% if summary %}{{ summary.closing_rate|floatformat:2 }}{% endif %}
+              </td>
+              <td class="text-start bg-success text-white">Realized P/L</td>
+              <td class="text-end bg-success text-white">
+                {% if summary %}{{ summary.realized_profit|floatformat:2 }}{% endif %}
+              </td>
+              <td rowspan="2" class="align-middle fw-bold bg-warning text-dark">NAV</td>
+            </tr>
+            <tr class="table-light small">
+              <td class="text-start">Total Purchase</td>
+              <td class="text-end">
+                {% if summary %}{{ summary.total_p_qty|floatformat:0 }}{% endif %}
+              </td>
+              <td class="text-end">
+                {% if summary %}{{ summary.total_p_amount|floatformat:0 }}{% endif %}
+              </td>
+              <td class="text-end">
+                {% if summary %}{{ summary.p_rate|floatformat:2 }}{% endif %}
+              </td>
+              <td class="text-start">Unrealized P/L</td>
+              <td class="text-end">
+                {% if summary %}{{ summary.unrealized_profit|floatformat:2 }}{% endif %}
+              </td>
+            </tr>
+            <tr class="table-light small border-bottom">
+              <td class="text-start">Total Sales</td>
+              <td class="text-end">
+                {% if summary %}{{ summary.total_s_qty|floatformat:0 }}{% endif %}
+              </td>
+              <td class="text-end">
+                {% if summary %}{{ summary.total_s_amount|floatformat:0 }}{% endif %}
+              </td>
+              <td class="text-end">
+                {% if summary %}{{ summary.s_rate|floatformat:2 }}{% endif %}
+              </td>
+              <td class="text-start bg-success text-white">Total P/L</td>
+              <td class="text-end bg-success text-white fw-semibold">
+                {% if summary %}{{ summary.realized_profit|add:summary.unrealized_profit|floatformat:2 }}{% endif %}
+              </td>
+              <td class="text-end bg-warning text-success fs-5">
+                {% if summary %}{{ summary.nav|floatformat:2 }}{% endif %}
+              </td>
+            </tr>
+          </thead>
         </table>
       </div>
-      <div class="border p-2 small">
-        <table class="table table-borderless mb-0">
-          <tr><th style="fw-semibold">Total Book Value</th><td>{{ summary.total_book_value|floatformat:2 }}</td></tr>
-          <tr><th style="fw-semibold">Total Market Value</th><td>{{ summary.total_market_value|floatformat:2 }}</td></tr>
-          <tr><th style="fw-semibold">Total Realized Profit</th><td>{{ summary.total_realized_profit|floatformat:2 }}</td></tr>
-          <tr><th style="fw-semibold">Total Unrealized Profit</th><td>{{ summary.total_unrealized_profit|floatformat:2 }}</td></tr>
-          <tr><th style="fw-semibold">Total Profit</th><td>{{ summary.total_realized_profit|add:summary.total_unrealized_profit|floatformat:2 }}</td></tr>
-          <tr class="bg-info text-white fw-bold"><th>NAV</th><td>{{ summary.nav|floatformat:2 }}</td></tr>
-        </table>
+
+      <!-- NAV TABS for sections: Transaction, Profit Summary, Top Stocks, Portfolio Summary -->
+      <ul class="nav nav-tabs mb-2" id="dashboardTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-transactions" data-bs-toggle="tab"
+                  data-bs-target="#pane-transactions" type="button" role="tab"
+                  aria-controls="pane-transactions" aria-selected="true">
+            Transaction
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-info" data-bs-toggle="tab"
+                  data-bs-target="#pane-info" type="button" role="tab"
+                  aria-controls="pane-info" aria-selected="false">
+            Profit Summary
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-topstocks" data-bs-toggle="tab"
+                  data-bs-target="#pane-topstocks" type="button" role="tab"
+                  aria-controls="pane-topstocks" aria-selected="false">
+            Top Stocks
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-totals" data-bs-toggle="tab"
+                  data-bs-target="#pane-totals" type="button" role="tab"
+                  aria-controls="pane-totals" aria-selected="false">
+            Portfolio Summary
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="dashboardTabContent">
+        <!-- Transactions pane -->
+        <div class="tab-pane fade show active" id="pane-transactions" role="tabpanel" aria-labelledby="tab-transactions">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm text-center align-middle small mb-0">
+              <thead class="table-light fw-semibold">
+                <tr>
+                  <th>Unique_ID</th>
+                  <th>Date</th>
+                  <th>Buy/Sale</th>
+                  <th>Qty</th>
+                  <th>T. Amount</th>
+                  <th>Rate</th>
+                  <th>R. Profit</th>
+                  <th>Broker No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for r in rows %}
+                  <tr class="{% if r.transaction|lower == 'buy' %}table-success{% elif r.transaction|lower == 'sale' %}table-danger{% endif %}">
+                    <td class="small text-start">{{ r.unique_id }}</td>
+                    <td class="text-start">{{ r.date|date:"Y-m-d" }}</td>
+                    <td>{{ r.transaction }}</td>
+                    <td class="text-end">{{ r.qty }}</td>
+                    <td class="text-end">{{ r.t_amount|floatformat:2 }}</td>
+                    <td class="text-end">{{ r.rate|floatformat:2 }}</td>
+                    <td class="text-end">{{ r.profit|floatformat:2 }}</td>
+                    <td>{{ r.broker }}</td>
+                  </tr>
+                {% empty %}
+                  <tr><td colspan="8" class="text-center small text-muted">No transactions found.</td></tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <canvas id="chart-transactions" height="150"></canvas>
+          </div>
+        </div>
+
+        <!-- Profit Summary pane -->
+        <div class="tab-pane fade" id="pane-info" role="tabpanel" aria-labelledby="tab-info">
+          <div class="border p-2 bg-light mb-2">
+            <h5 class="text-center">Profit Summary</h5>
+            <table class="table table-borderless small mb-0">
+              {% if summary %}
+                <tr><th>Symbol</th><td>{{ current_symbol }}</td></tr>
+                <tr><th>Volume</th><td>{{ summary.closing_qty }}</td></tr>
+                <tr><th>Cost</th><td>{{ summary.closing_rate|floatformat:2 }}</td></tr>
+                <tr><th>LTP ({{ summary.ltpdate|date:"Y-m-d" }})</th><td>{{ summary.ltp|floatformat:2 }}</td></tr>
+                <tr><th>BEP (Rs.)</th><td>{{ summary.bep|floatformat:2 }}</td></tr>
+                <tr><th>Realized P/L</th><td>{{ summary.realized_profit|floatformat:2 }}</td></tr>
+                <tr><th>Unrealized P/L</th><td>{{ summary.unrealized_profit|floatformat:2 }}</td></tr>
+                <tr><th>Total Profit</th>
+                  <td>{{ summary.realized_profit|add:summary.unrealized_profit|floatformat:2 }}</td></tr>
+              {% else %}
+                <tr><td colspan="2" class="text-center text-muted">No summary data.</td></tr>
+              {% endif %}
+            </table>
+            <canvas id="chart-profit" height="150"></canvas>
+          </div>
+        </div>
+
+        <!-- Top Stocks pane -->
+        <div class="tab-pane fade" id="pane-topstocks" role="tabpanel" aria-labelledby="tab-topstocks">
+          <div class="border p-2 bg-light mb-2">
+            <h5 class="text-center">Top Stock Holdings</h5>
+            <div class="table-responsive">
+              <table class="table table-bordered table-sm text-center align-middle small mb-0">
+                <thead class="table-light fw-semibold">
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Qty</th>
+                    <th>Amount</th>
+                    <th>Rate</th>
+                    <th>Realized P/L</th>
+                    <th>Unrealized P/L</th>
+                    <th>BEP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for stock in top_stocks %}
+                    <tr>
+                      <td class="text-start">{{ stock.symbol }}</td>
+                      <td class="text-end">{{ stock.closing_qty|default:0 }}</td>
+                      <td class="text-end">{{ stock.closing_amount|floatformat:2 }}</td>
+                      <td class="text-end">{{ stock.closing_rate|floatformat:2 }}</td>
+                      <td class="text-end {% if stock.profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                        {{ stock.profit|floatformat:2 }}
+                      </td>
+                      <td class="text-end {% if stock.unrealized_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                        {{ stock.unrealized_profit|floatformat:2 }}
+                      </td>
+                      <td class="text-end">{{ stock.bep|floatformat:2 }}</td>
+                    </tr>
+                  {% empty %}
+                    <tr><td colspan="7" class="text-center small text-muted">No top stocks data.</td></tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              <!--<canvas id="chart-topstocks" height="150"></canvas>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Summary pane -->
+        <div class="tab-pane fade" id="pane-totals" role="tabpanel" aria-labelledby="tab-totals">
+          <div class="border p-2 bg-light mb-2">
+            <h5 class="text-center">Portfolio Summary</h5>
+            <table class="table table-borderless small mb-0">
+              {% if summary %}
+                <tr><th>Total Book Value</th><td>{{ summary.total_book_value|floatformat:2 }}</td></tr>
+                <tr><th>Total Market Value</th><td>{{ summary.total_market_value|floatformat:2 }}</td></tr>
+                <tr><th>Total Realized Profit</th><td>{{ summary.total_realized_profit|floatformat:2 }}</td></tr>
+                <tr><th>Total Unrealized Profit</th><td>{{ summary.total_unrealized_profit|floatformat:2 }}</td></tr>
+                <tr><th>Total Profit</th>
+                  <td>{{ summary.total_realized_profit|add:summary.unrealized_profit|floatformat:2 }}</td></tr>
+                <tr class="bg-info text-white fw-bold"><th>NAV</th><td>{{ summary.nav|floatformat:2 }}</td></tr>
+              {% else %}
+                <tr><td colspan="2" class="text-center text-muted">No portfolio data.</td></tr>
+              {% endif %}
+            </table>
+         <!-- <canvas id="chart-totals" height="150"></canvas>-->  
+          </div>
+        </div>
       </div>
-    </aside>
+    </main>
 
   </div>
 </div>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const dropdown = document.getElementById('symbolDropdown');
-    const searchInput = document.getElementById('symbolSearch');
-    const listContainer = document.getElementById('symbolList');
-
-    let focusedIndex = -1; // Which item is currently focused
-
-    // Autofocus the search box when dropdown opens
-    dropdown.addEventListener('click', function () {
+document.addEventListener("DOMContentLoaded", function () {
+  // Symbol dropdown search JS
+  const searchInput = document.getElementById('symbolSearch');
+  const listContainer = document.getElementById('symbolList');
+  let focusedIndex = -1;
+  const dropdownToggle = document.getElementById('symbolDropdown');
+  if (dropdownToggle) {
+    dropdownToggle.addEventListener('click', function () {
       setTimeout(() => {
-        searchInput.focus();
-        resetFocus();
+        if (searchInput) { searchInput.focus(); resetFocus(); }
       }, 50);
     });
-
-    // Keyboard navigation
+  }
+  window.filterSymbols = function () {
+    if (!searchInput) return;
+    const filter = searchInput.value.toLowerCase();
+    const items = listContainer.querySelectorAll("li");
+    items.forEach(li => {
+      li.style.display = li.textContent.trim().toLowerCase().includes(filter) ? "" : "none";
+    });
+    resetFocus();
+  };
+  if (searchInput) {
     searchInput.addEventListener("keydown", function (e) {
       const items = Array.from(listContainer.querySelectorAll("li")).filter(li => li.style.display !== "none");
       if (!items.length) return;
-
       if (e.key === "ArrowDown") {
         e.preventDefault();
         focusedIndex = (focusedIndex + 1) % items.length;
@@ -168,46 +296,113 @@
         e.preventDefault();
         if (focusedIndex >= 0 && focusedIndex < items.length) {
           const link = items[focusedIndex].querySelector("a");
-          if (link) {
-            window.location.href = link.href;
-          }
+          if (link) window.location.href = link.href;
         }
       } else if (e.key === "Escape") {
         searchInput.blur();
       }
     });
-
-    // Remove any existing focused class
-    function removeFocus(item) {
-      item.querySelector("a").classList.remove("active", "focused");
-      item.classList.remove("focused");
-    }
-
-    // Reset focus state
-    function resetFocus() {
-      const items = listContainer.querySelectorAll("li");
-      items.forEach(removeFocus);
-      focusedIndex = -1;
-    }
-
-    // Update which item is focused (highlight visually)
-    function updateFocus(items) {
-      // Clear old focus
-      items.forEach(removeFocus);
-      if (focusedIndex >= 0 && focusedIndex < items.length) {
-        const focusedItem = items[focusedIndex];
-        focusedItem.classList.add("focused");
-        const link = focusedItem.querySelector("a");
-        if (link) {
-          link.classList.add("active");
-          // Scroll focused item into view if needed
-          focusedItem.scrollIntoView({ block: "nearest" });
-        }
+  }
+  function removeFocus(item) {
+    const link = item.querySelector("a");
+    if (link) link.classList.remove("active","focused");
+    item.classList.remove("focused");
+  }
+  function resetFocus() {
+    listContainer.querySelectorAll("li").forEach(removeFocus);
+    focusedIndex = -1;
+  }
+  function updateFocus(items) {
+    items.forEach(removeFocus);
+    if (focusedIndex>=0 && focusedIndex<items.length) {
+      const fi = items[focusedIndex];
+      fi.classList.add("focused");
+      const link = fi.querySelector("a");
+      if(link){
+        link.classList.add("active");
+        fi.scrollIntoView({block:"nearest"});
       }
     }
-  });
+  }
+});
 </script>
+<style>
+  #symbolList {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+#symbolList::-webkit-scrollbar {
+  width: 6px;
+}
+#symbolList::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+</style>
 
 
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<!-- JSON data for JS -->
+{{ rows|json_script:"transactions-data" }}
+{{ summary|json_script:"summary-data" }}
+{{ top_stocks|json_script:"topstocks-data" }}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const txData  = JSON.parse(document.getElementById('transactions-data').textContent);
+  const sumData = JSON.parse(document.getElementById('summary-data').textContent);
+  const tsData  = JSON.parse(document.getElementById('topstocks-data').textContent);
+
+  // 1) Transactions line chart
+  new Chart(document.getElementById('chart-transactions'), {
+    type: 'line',
+    data: {
+      labels: txData.map(r=>r.date),
+      datasets: [{ label:'Qty', data: txData.map(r=>r.qty), fill:false, tension:0.1 }]
+    }
+  });
+
+  // 2) Profit pie
+  new Chart(document.getElementById('chart-profit'), {
+    type: 'pie',
+    data: {
+      labels: ['Realized','Unrealized'],
+      datasets:[{ data: [sumData.realized_profit, sumData.unrealized_profit], hoverOffset:4 }]
+    }
+  });
+
+  // 3) Top stocks bar
+  new Chart(document.getElementById('chart-topstocks'), {
+    type: 'bar',
+    data: {
+      labels: tsData.map(s=>s.symbol),
+      datasets:[
+        { label:'Value', data: tsData.map(s=>s.closing_amount) },
+        { label:'Unreal PL', data: tsData.map(s=>s.unrealized_profit) }
+      ]
+    }
+  });
+
+  // 4) Portfolio radar
+  new Chart(document.getElementById('chart-totals'), {
+    type: 'radar',
+    data: {
+      labels:['Book','Market','Realized','Unrealized'],
+      datasets:[{
+        label:'Portfolio',
+        data:[
+          sumData.total_book_value,
+          sumData.total_market_value,
+          sumData.total_realized_profit,
+          sumData.total_unrealized_profit
+        ],
+        fill:true, tension:0.1
+      }]
+    }
+  });
+});
+</script>
 {% endblock %}
